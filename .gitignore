@@ -4,4 +4,4 @@
 .DS_Store?
 
 #InDesign Temp Files
-.idlk
+*.idlk

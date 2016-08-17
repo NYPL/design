@@ -10,8 +10,8 @@ a {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: calc(62rem - 1rem - (6rem + 1rem));
-  padding: 2rem 1rem 0 7rem; }
+  max-width: calc(62rem - 1rem - (7rem + 1rem));
+  padding: 2rem 1rem 0 8rem; }
 
 ul.horizontal {
   display: flex;
@@ -25,13 +25,13 @@ ul.horizontal {
       margin-right: 0; }
 
 .nypl-logo {
-  background: url("../img/nypl.svg") no-repeat scroll 0px 0px/6rem auto white;
+  background: url("../img/nypl.svg") no-repeat scroll 0px 0px/7rem auto white;
   display: block;
-  height: 3.42rem;
+  height: 4rem;
   overflow: hidden;
-  text-indent: 12rem;
+  text-indent: 14rem;
   white-space: nowrap;
-  width: 6rem; }
+  width: 7rem; }
 
 #header {
   border-bottom: 1px solid #dddbd9;

@@ -1,0 +1,103 @@
+html {
+  background-color: #fff;
+  font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  text-decoration: none; }
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: calc(62rem - 1rem - (6rem + 1rem));
+  padding: 2rem 1rem 0 7rem; }
+
+ul.horizontal {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  ul.horizontal li {
+    margin-right: 0.35em; }
+    ul.horizontal li:last-child {
+      margin-right: 0; }
+
+.nypl-logo {
+  background: url("../img/nypl.svg") no-repeat scroll 0px 0px/6rem auto white;
+  display: block;
+  height: 3.42rem;
+  overflow: hidden;
+  text-indent: 12rem;
+  white-space: nowrap;
+  width: 6rem; }
+
+#header {
+  border-bottom: 1px solid #dddbd9;
+  border-top: 2px solid #ed1c24; }
+  #header .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(62rem - 2rem);
+    padding: 0 1rem; }
+  #header .logo {
+    margin-top: 1rem; }
+  #header .content {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column; }
+  #header .service-buttons {
+    font-size: 0.8rem;
+    padding: 0;
+    text-transform: uppercase; }
+    #header .service-buttons a {
+      color: #100f0e;
+      display: inline-block;
+      padding: 0 0.5em;
+      transition: all 0.2s; }
+      #header .service-buttons a:hover {
+        background-color: #ed1c24;
+        color: white; }
+      #header .service-buttons a.donate {
+        background-color: #ed1c24;
+        color: white; }
+      #header .service-buttons a.donate:hover {
+        background-color: #100f0e;
+        color: #ed1c24; }
+  #header .nav-buttons {
+    font-size: 1.125rem;
+    font-weight: bold; }
+    #header .nav-buttons a {
+      color: #100f0e;
+      display: inline-block;
+      padding: 0.2em 0.4em;
+      transition: all 0.2s; }
+      #header .nav-buttons a:hover {
+        background-color: #ed1c24;
+        color: white; }
+
+.main-search {
+  margin: 1rem 0;
+  position: relative;
+  width: 15rem; }
+  .main-search .placeholder {
+    color: white;
+    left: 0.5rem;
+    position: absolute;
+    top: 0.2rem; }
+  .main-search input {
+    border: none;
+    color: white;
+    padding: 0; }
+  .main-search input[type="text"] {
+    background-color: #1DA1D4;
+    height: 2rem;
+    padding: 0 0.5rem;
+    width: calc(100% - 4rem); }
+  .main-search input[type="button"], .main-search input[type="submit"] {
+    background-color: #1980a9;
+    height: 2rem;
+    width: 3rem; }
+
+/*# sourceMappingURL=styles.css.map */

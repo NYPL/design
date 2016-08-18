@@ -1,4 +1,8 @@
-$max-width: 62rem; // 1024/16 = 64 minus 1 padding
+$basefontraw: 16;
+$maxwidthraw: 1312;
+$basefont: #{$basefontraw}px;
+$maxwidthpx: #{$maxwidthraw}px;
+$max-width: #{($maxwidthraw/$basefontraw)}rem;
 $logo-width: 7rem;
 $logo-height: 4rem;
 
@@ -8,7 +12,13 @@ $nypldarkgreen: #437529;
 $nypllightgreen: lighten($nypldarkgreen, 20%);
 $nyplsearchcolor: #1DA1D4;
 $nyplsearchcolordark: #1980a9;
+$nyplsearchcolorlight: lighten(#1DA1D4, 20%);
 $nyplgray: #7B756F;
 $nypldarkgray: darken($nyplgray, 40%);
 $nypllightgray: lighten($nyplgray, 40%);
 $linkcolor: $nyplred;
+$linkvisitedcolor: darken($nyplred, 20%);
+
+$pagecolor: $nypldarkgray;
+$pagecolorlight: $nypllightgray;
+$pagetextcolor: $nypldarkgray;

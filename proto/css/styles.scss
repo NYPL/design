@@ -1,22 +1,43 @@
 @import "variables";
+@import "nypl-moon";
 
 html {
   background-color: #fff;
   font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
-  font-size: 16px;
+  font-size: $basefont;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  @include Kievit-Book;
+  color: $pagetextcolor;
+}
+
 a {
+  border-bottom: 1px solid $linkcolor;
   text-decoration: none;
+
+  &:hover, &:visited:hover {
+    border-bottom-color: $linkcolor;
+    color: $linkcolor;
+  }
+
+  &:link {
+    color: $linkcolor;
+  }
+
+  &:visited {
+    border-bottom-color: $linkvisitedcolor;
+    color: $linkvisitedcolor;
+  }
 }
 
 .content-wrapper {
   // border: 1px solid;
   margin: 0 auto;
   max-width: calc(#{$max-width} - 1rem - (#{$logo-width} + 1rem));
-  padding: 2rem 1rem 0 ($logo-width + 1rem);
+  padding: 1rem 1rem 1rem ($logo-width + 1rem);
 }
 
 ul.horizontal {
@@ -37,6 +58,7 @@ ul.horizontal {
 
 .nypl-logo {
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/#{$logo-width} auto white;
+  border: none;
   display: block;
   height: $logo-height;
   overflow: hidden;
@@ -45,7 +67,7 @@ ul.horizontal {
   width: $logo-width;
 }
 
-#header {
+header {
   border-bottom: 1px solid $nypllightgray;
   border-top: 2px solid $nyplred;
 
@@ -73,14 +95,16 @@ ul.horizontal {
     text-transform: uppercase;
 
     a {
+      border: none;
       color: $nypldarkgray;
       display: inline-block;
       padding: 0 0.5em;
+      position: relative;
+      text-decoration: none;
       transition: all 0.2s;
 
       &:hover {
-        background-color: $linkcolor;
-        color: white;
+        color: $linkcolor;
       }
 
       &.donate {
@@ -92,37 +116,69 @@ ul.horizontal {
         background-color: $nypldarkgray;
         color: $linkcolor;
       }
+
+      &.collapsible:after {
+        display: inline-block;
+        font-size: 0.85em;
+        margin-left: 0.5em;
+      }
     }
   }
 
   .nav-buttons {
-    font-size: 1.125rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    // font-weight: bold;
 
     a {
+      border: none;
       color: $nypldarkgray;
       display: inline-block;
       padding: 0.2em 0.4em;
+      text-decoration: none;
       transition: all 0.2s;
 
       &:hover {
-        background-color: $linkcolor;
-        color: white;
+        color: $linkcolor;
       }
     }
   }
 }
 
-.main-search {
-  margin: 1rem 0;
-  position: relative;
-  width: 15rem;
+select.styled {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: $nypldarkgray;
+  height: 2rem;
+  padding: 0 1.5rem 0 0.5rem;
+  width: 110%;
+}
 
-  .placeholder {
-    color: white;
-    left: 0.5rem;
-    position: absolute;
-    top: 0.2rem;
+.main-search {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  position: relative;
+  // width: 15rem;
+
+  .search-query-content {
+    position: relative;
+  }
+
+  label {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0 0.75rem 0 0.25rem;
+  }
+
+  .search-select {
+    background: $nyplsearchcolorlight;
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
   }
 
   input {
@@ -131,16 +187,32 @@ ul.horizontal {
     padding: 0;
   }
 
-  input[type="text"] {
+  .search-query-text {
     background-color: $nyplsearchcolor;
     height: 2rem;
     padding: 0 0.5rem;
-    width: calc(100% - 4rem);
+    width: 20rem;
+
+    &:focus {
+      background-color: white;
+      box-shadow: inset 0 0 0 0.1em $nyplsearchcolordark, 0 0 0 0.15em $nyplsearchcolordark;
+      color: $nyplsearchcolordark;
+      outline: none;
+    }
   }
 
   input[type="button"], input[type="submit"] {
     background-color: $nyplsearchcolordark;
     height: 2rem;
     width: 3rem;
+  }
+}
+
+.page-header {
+  // background-color: $pagecolorlight;
+
+  h1 {
+    font-size: 2.6rem;
+    margin: 0;
   }
 }

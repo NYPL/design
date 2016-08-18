@@ -10,24 +10,29 @@
 </head>
 <body>
 
-<div id="header">
+<header>
   <div class="content-wrapper">
 
     <div class="logo"><a href="//nypl.org" class="nypl-logo" title="Go to NYPL.org">The New York Public Library</a></div>
 
     <div class="content">
       <ul class="service-buttons horizontal">
-        <li><a href="#" class="collapsible">Log in</a></li>
+        <li><a href="#" class="collapsible nypl-icon-wedge-down">Log in</a></li>
         <li><a href="#">Locations</a></li>
         <li><a href="#">Get a library card</a></li>
-        <li><a href="#" class="collapsible">Get email updates</a></li>
+        <li><a href="#" class="collapsible nypl-icon-wedge-down">Get email updates</a></li>
         <li><a href="#" class="donate">Donate</a></li>
         <li><a href="#">Shop</a></li>
       </ul>
 
       <form action="" id="main-search" class="search main-search">
-        <label class="placeholder" for="query">Search</label>
-        <input type="text" id="query" name="query" value=""><input type="button" name="Search" value="Go">
+        <div class="search-query-content">
+          <input type="text" class="search-query-text" name="search-query-text" value=""><input type="button" name="Search" value="Go">
+        </div>
+        <div class="search-select">
+          <input type="radio" id="books-type" name="search-type" value="" checked="checked"><label for="books-type">Books/Music/DVD catalog</label>
+          <input type="radio" id="nypl-type" name="search-type" value=""><label for="nypl-type">NYPL.org website</label>
+        </div>
       </form>
 
       <ul class="nav-buttons horizontal">
@@ -42,15 +47,53 @@
     </div>
 
   </div>
-</div>
+</header>
 
-<div class="main-page">
-  <div class="content-wrapper">
-    <h1>Title</h1>
-    <p>Parag 1</p>
-    <p>Parag 2</p>
+<main class="main-page">
+
+
+  <div class="page-header">
+    <div class="content-wrapper">
+      <div class="breadcrumb"><a href="/">Home</a> > <a href="#">Library Card</a> > Manage your library card</div>
+      <h1>Manage Your Library Card</h1>
+    </div>
   </div>
-</div>
+
+  <div class="content-wrapper">
+
+    <section class="secondary">
+      <h2>Pay a Fine</h2>
+      <p>Didn't return an item on time? Learn about fines on overdue materials, including payment methods.</p>
+    </section>
+
+    <section class="secondary">
+      <h2>Forgot Your PIN?</h2>
+      <p>Reset your four-digit PIN via email or visit a location near you.</p>
+    </section>
+
+    <section class="secondary">
+      <h2>Renew Your Card</h2>
+      <p>Every cardholder must renew his or her library card every three years. Find out how.</p>
+    </section>
+
+    <section class="secondary">
+      <h2>Replace a Lost or Stolen Card</h2>
+      <p>If your card is lost or stolen, report it immediately. You can email, call us, or visit us in person.</p>
+    </section>
+
+    <section class="secondary">
+      <h2>Manage Your Account Online</h2>
+      <p>View and renew items out on loan and place holds from your home or cell phone.</p>
+    </section>
+
+    <section class="secondary">
+      <h2>About Borrowing Materials</h2>
+      <p>Review item borrowing limits, loan periods, renewal and return information, and more.</p>
+    </section>
+
+  </div>
+
+</main>
 
 </body>
 </html>

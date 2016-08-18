@@ -1,3 +1,215 @@
+/* FONT FACE MIXIN
+ * ---------------
+ * Usage: @include font-face('Kievit-Regular', 'http://...');
+ * Desc: Do not include the font file extension, this mixin
+ * will generate the proper extensions.
+*/
+/* KIEVIT */
+/* Kievit Light */
+@font-face {
+  font-family: Kievit-Light;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.ttf") format("truetype"); }
+/* Kievit Book */
+@font-face {
+  font-family: Kievit-Book;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.ttf") format("truetype"); }
+/* Kievit Book Italic */
+@font-face {
+  font-family: Kievit-Book-Italic;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.ttf") format("truetype"); }
+/* Kievit Medium */
+@font-face {
+  font-family: Kievit-Medium;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.ttf") format("truetype"); }
+/* Kievit Meduim Italic */
+@font-face {
+  font-family: Kievit-Medium-Italic;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.ttf") format("truetype"); }
+/* Kievit Bold */
+@font-face {
+  font-family: Kievit-Bold;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.ttf") format("truetype"); }
+/* KIEVIT Small Caps */
+/* KIEVIT INCLUDES */
+@font-face {
+  font-family: nypl-moon;
+  src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85");
+  src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+[class*=" nypl-icon-"]:after, [class^=nypl-icon-]:after {
+  font-family: nypl-moon;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.nypl-icon-arrow-meganav-large:after {
+  content: "\E801"; }
+
+.nypl-icon-arrow-meganav:after {
+  content: "\E800"; }
+
+.nypl-icon-card:after {
+  content: "\E623"; }
+
+.nypl-icon-book:after {
+  content: "\E624"; }
+
+.nypl-icon-play-large:after {
+  content: "\E625"; }
+
+.nypl-icon-play-med:after {
+  content: "\E626"; }
+
+.nypl-icon-play-small:after {
+  content: "\E603"; }
+
+.nypl-icon-headphones:after {
+  content: "\E627"; }
+
+.nypl-icon-solo-x:after {
+  content: "\E611"; }
+
+.nypl-icon-mail:after {
+  content: "\E61C"; }
+
+.nypl-icon-login:after {
+  content: "\E61D"; }
+
+.nypl-icon-logo-mark:after {
+  content: "\E61E"; }
+
+.nypl-icon-logo-type:after {
+  content: "\E61F"; }
+
+.nypl-icon-locator-no-dot:after {
+  content: "\E620"; }
+
+.nypl-icon-locator-small:after {
+  content: "\E616"; }
+
+.nypl-icon-locator-large:after {
+  content: "\E615"; }
+
+.nypl-icon-burger-nav:after {
+  content: "\E614"; }
+
+.nypl-icon-wedge-right:after {
+  content: "\E621"; }
+
+.nypl-icon-wedge-left:after {
+  content: "\E622"; }
+
+.nypl-icon-wedge-down:after {
+  content: "\E600"; }
+
+.nypl-icon-wedge-up:after {
+  content: "\E601"; }
+
+.nypl-icon-magnifier-thin:after {
+  content: "\E617"; }
+
+.nypl-icon-magnifier-fat:after {
+  content: "\E609"; }
+
+.nypl-icon-magnifier-circle:after {
+  content: "\E602"; }
+
+.nypl-icon-facebook-circle:after {
+  content: "\E62E"; }
+
+.nypl-icon-facebook-circle-large:after {
+  content: "\E62C"; }
+
+.nypl-icon-facebook-circle-hover:after {
+  content: "\E630"; }
+
+.nypl-icon-twitter-circle:after {
+  content: "\E62F"; }
+
+.nypl-icon-twitter-circle-large:after {
+  content: "\E62D"; }
+
+.nypl-icon-twitter-circle-hover:after {
+  content: "\E631"; }
+
+.nypl-icon-facebook:after {
+  content: "\E604"; }
+
+.nypl-icon-twitter:after {
+  content: "\E605"; }
+
+.nypl-icon-tumblr:after {
+  content: "\E606"; }
+
+.nypl-icon-instagram:after {
+  content: "\E618"; }
+
+.nypl-icon-soundcloud:after {
+  content: "\E619"; }
+
+.nypl-icon-itunes:after {
+  content: "\E61A"; }
+
+.nypl-icon-youtube:after {
+  content: "\E61B"; }
+
+.nypl-icon-bldg:after {
+  content: "\E607"; }
+
+.nypl-icon-equals-small:after {
+  content: "\E608"; }
+
+.nypl-icon-arrow-up:after {
+  content: "\E60A"; }
+
+.nypl-icon-arrow-down:after {
+  content: "\E629"; }
+
+.nypl-icon-arrow-left:after {
+  content: "\E62A"; }
+
+.nypl-icon-arrow-right:after {
+  content: "\E62B"; }
+
+.nypl-icon-circle-arrow-left:after {
+  content: "\E60B"; }
+
+.nypl-icon-circle-arrow-right:after {
+  content: "\E60C"; }
+
+.nypl-icon-circle-wedge-left:after {
+  content: "\E60D"; }
+
+.nypl-icon-circle-wedge-right:after {
+  content: "\E60E"; }
+
+.nypl-icon-circle-more:after {
+  content: "\E60F"; }
+
+.nypl-icon-more-dots:after {
+  content: "\E610"; }
+
+.nypl-icon-circle-x:after {
+  content: "\E612"; }
+
+.nypl-icon-circle-check:after {
+  content: "\E613"; }
+
+.nypl-icon-check-solo:after {
+  content: "\E628"; }
+
 html {
   background-color: #fff;
   font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
@@ -5,13 +217,26 @@ html {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased; }
 
+body {
+  font-family: "Kievit-Book", "Helvetica", "arial";
+  color: #100f0e; }
+
 a {
+  border-bottom: 1px solid #ed1c24;
   text-decoration: none; }
+  a:hover, a:visited:hover {
+    border-bottom-color: #ed1c24;
+    color: #ed1c24; }
+  a:link {
+    color: #ed1c24; }
+  a:visited {
+    border-bottom-color: #970c11;
+    color: #970c11; }
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: calc(62rem - 1rem - (7rem + 1rem));
-  padding: 2rem 1rem 0 8rem; }
+  max-width: calc(82rem - 1rem - (7rem + 1rem));
+  padding: 1rem 1rem 1rem 8rem; }
 
 ul.horizontal {
   display: flex;
@@ -26,6 +251,7 @@ ul.horizontal {
 
 .nypl-logo {
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/7rem auto white;
+  border: none;
   display: block;
   height: 4rem;
   overflow: hidden;
@@ -33,71 +259,105 @@ ul.horizontal {
   white-space: nowrap;
   width: 7rem; }
 
-#header {
+header {
   border-bottom: 1px solid #dddbd9;
   border-top: 2px solid #ed1c24; }
-  #header .content-wrapper {
+  header .content-wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: calc(62rem - 2rem);
+    max-width: calc(82rem - 2rem);
     padding: 0 1rem; }
-  #header .logo {
+  header .logo {
     margin-top: 1rem; }
-  #header .content {
+  header .content {
     display: flex;
     align-items: flex-end;
     flex-direction: column; }
-  #header .service-buttons {
+  header .service-buttons {
     font-size: 0.8rem;
     padding: 0;
     text-transform: uppercase; }
-    #header .service-buttons a {
+    header .service-buttons a {
+      border: none;
       color: #100f0e;
       display: inline-block;
       padding: 0 0.5em;
+      position: relative;
+      text-decoration: none;
       transition: all 0.2s; }
-      #header .service-buttons a:hover {
+      header .service-buttons a:hover {
+        color: #ed1c24; }
+      header .service-buttons a.donate {
         background-color: #ed1c24;
         color: white; }
-      #header .service-buttons a.donate {
-        background-color: #ed1c24;
-        color: white; }
-      #header .service-buttons a.donate:hover {
+      header .service-buttons a.donate:hover {
         background-color: #100f0e;
         color: #ed1c24; }
-  #header .nav-buttons {
-    font-size: 1.125rem;
-    font-weight: bold; }
-    #header .nav-buttons a {
+      header .service-buttons a.collapsible:after {
+        display: inline-block;
+        font-size: 0.85em;
+        margin-left: 0.5em; }
+  header .nav-buttons {
+    font-size: 1.1rem; }
+    header .nav-buttons a {
+      border: none;
       color: #100f0e;
       display: inline-block;
       padding: 0.2em 0.4em;
+      text-decoration: none;
       transition: all 0.2s; }
-      #header .nav-buttons a:hover {
-        background-color: #ed1c24;
-        color: white; }
+      header .nav-buttons a:hover {
+        color: #ed1c24; }
+
+select.styled {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: #100f0e;
+  height: 2rem;
+  padding: 0 1.5rem 0 0.5rem;
+  width: 110%; }
 
 .main-search {
-  margin: 1rem 0;
-  position: relative;
-  width: 15rem; }
-  .main-search .placeholder {
-    color: white;
-    left: 0.5rem;
-    position: absolute;
-    top: 0.2rem; }
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  position: relative; }
+  .main-search .search-query-content {
+    position: relative; }
+  .main-search label {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0 0.75rem 0 0.25rem; }
+  .main-search .search-select {
+    background: #6cc8eb;
+    font-size: 0.9rem;
+    padding-left: 0.5rem; }
   .main-search input {
     border: none;
     color: white;
     padding: 0; }
-  .main-search input[type="text"] {
+  .main-search .search-query-text {
     background-color: #1DA1D4;
     height: 2rem;
     padding: 0 0.5rem;
-    width: calc(100% - 4rem); }
+    width: 20rem; }
+    .main-search .search-query-text:focus {
+      background-color: white;
+      box-shadow: inset 0 0 0 0.1em #1980a9, 0 0 0 0.15em #1980a9;
+      color: #1980a9;
+      outline: none; }
   .main-search input[type="button"], .main-search input[type="submit"] {
     background-color: #1980a9;
     height: 2rem;
     width: 3rem; }
+
+.page-header h1 {
+  font-size: 2.6rem;
+  margin: 0; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -168,17 +168,23 @@ select.styled {
     position: relative;
   }
 
-  label {
+  .search-radio {
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
-    margin: 0 0.75rem 0 0.25rem;
+    padding: 0 0.75rem 0 0.5rem;
+
+    &.selected {
+      background: $nyplsearchcolorlight;
+    }
+  }
+
+  input[type="radio"] {
+    margin-right: 0.25rem;
   }
 
   .search-select {
-    background: $nyplsearchcolorlight;
     font-size: 0.9rem;
-    padding-left: 0.5rem;
   }
 
   input {

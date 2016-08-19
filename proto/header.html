@@ -30,8 +30,8 @@
           <input type="text" class="search-query-text" name="search-query-text" value=""><input type="button" name="Search" value="Go">
         </div>
         <div class="search-select">
-          <input type="radio" id="books-type" name="search-type" value="" checked="checked"><label for="books-type">Books/Music/DVD catalog</label>
-          <input type="radio" id="nypl-type" name="search-type" value=""><label for="nypl-type">NYPL.org website</label>
+          <label class="search-radio selected" for="books-type"><input type="radio" id="books-type" name="search-type" value="" checked="checked">Books/Music/DVD catalog</label>
+          <label class="search-radio" for="nypl-type"><input type="radio" id="nypl-type" name="search-type" value="">NYPL.org website</label>
         </div>
       </form>
 
@@ -94,6 +94,8 @@
   </div>
 
 </main>
+
+<script type="text/javascript" src="js/header.js"></script>
 
 </body>
 </html>

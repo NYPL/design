@@ -222,12 +222,12 @@ body {
   color: #100f0e; }
 
 a:focus {
-  outline-color: #ed1c24;
+  outline-color: #ffb81d;
   outline-style: solid;
   outline-width: 3px; }
 
 input:focus {
-  outline-color: #ed1c24;
+  outline-color: #ffb81d;
   outline-style: solid;
   outline-width: 3px; }
 
@@ -245,8 +245,8 @@ a {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: calc(82rem - 1rem - (7rem + 1rem));
-  padding: 1rem 1rem 1rem 8rem; }
+  max-width: calc(82rem - 1rem - (5rem + 1rem));
+  padding: 1rem 1rem 1rem 6rem; }
 
 ul.horizontal {
   display: flex;
@@ -260,14 +260,15 @@ ul.horizontal {
       margin-right: 0; }
 
 .nypl-logo {
-  background: url("../img/nypl.svg") no-repeat scroll 0px 0px/7rem auto white;
+  background: url("../img/nypl.svg") no-repeat scroll 0px 0px/5rem auto white;
   border: none;
   display: block;
-  height: 4rem;
+  height: 3rem;
+  margin-top: 0.4rem;
   overflow: hidden;
-  text-indent: 14rem;
+  text-indent: 10rem;
   white-space: nowrap;
-  width: 7rem; }
+  width: 5rem; }
 
 header {
   border-bottom: 1px solid #dddbd9; }
@@ -276,12 +277,11 @@ header {
     justify-content: space-between;
     max-width: calc(82rem - 2rem);
     padding: 0 1rem; }
-  header .logo {
-    margin-top: 1rem; }
   header .content {
     display: flex;
     align-items: flex-end;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: flex-end; }
   header .service {
     background-color: #ed1c24; }
   header .service .content-wrapper {
@@ -315,12 +315,13 @@ header {
         font-weight: bold;
         margin-left: 0.5em; }
   header .nav-buttons {
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    line-height: 1.7rem; }
     header .nav-buttons a {
       border: none;
       color: #100f0e;
       display: inline-block;
-      padding: 0.2em 0.4em;
+      padding: 0.2em 0.4em 0;
       text-decoration: none;
       transition: all 0.2s; }
       header .nav-buttons a:hover {
@@ -347,30 +348,33 @@ select.styled {
   background-color: #1DA1D4;
   display: flex;
   flex-direction: column;
-  margin: 1px 0;
-  padding: 2px;
+  margin: 0;
   position: relative; }
   .main-search.display {
     display: flex; }
   .main-search .search-query-content {
     position: relative; }
-  .main-search .search-radio {
+  .main-search .search-select {
+    background-color: #1DA1D4;
+    font-size: 0.9rem;
+    left: 0;
+    position: absolute;
+    top: 2rem; }
+  .main-search .search-radio-label {
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
     margin-right: 1px;
     margin-top: 1px;
     padding: 0 0.75rem 0 0.5rem; }
-    .main-search .search-radio.selected {
+    .main-search .search-radio-label.selected {
       background-color: #6cc8eb; }
-    .main-search .search-radio.focus {
-      box-shadow: inset 0 0 0 2px #ed1c24, 0 0 0 2px #ed1c24; }
+    .main-search .search-radio-label.focus {
+      box-shadow: inset 0 0 0 3px #ffb81d; }
   .main-search input[type=radio] {
     margin-right: 0.25rem; }
     .main-search input[type=radio]:focus {
       outline: none; }
-  .main-search .search-select {
-    font-size: 0.9rem; }
   .main-search input {
     border: none;
     color: white;
@@ -383,16 +387,20 @@ select.styled {
     position: absolute; }
   .main-search .search-query-text {
     background-color: #6cc8eb;
+    color: #1DA1D4;
     height: 2rem;
     margin-right: 1px;
     padding: 0 0.5rem;
     transition: all 0.2s ease-out;
     width: 10rem; }
     .main-search .search-query-text.active {
+      color: white;
+      width: 16rem; }
+    .main-search .search-query-text:focus {
       background-color: white;
-      box-shadow: inset 0 0 0 2px #1DA1D4, 0 0 0 2px #1DA1D4;
+      box-shadow: inset 0 0 0 4px #ffb81d;
       color: #1DA1D4;
-      width: 24rem; }
+      outline: none; }
   .main-search input[type=button], .main-search input[type=submit] {
     background-color: #1980a9;
     height: 2rem;

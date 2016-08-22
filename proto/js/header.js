@@ -13,18 +13,18 @@ function init() {
   $("input[type=radio]").blur(function() {
     blurRadio($(this).val())
   })
-  $(".search-query-text, .search-type, .search-button, .search-radio").focus(function() {
+  $(".search-query-text, .search-type, .search-button, .search-radio-label").focus(function() {
     if (hideTimeout) clearTimeout(hideTimeout)
     showSearch()
   })
-  $(".search-query-text, .search-type, .search-button, .search-radio").blur(function() {
+  $(".search-query-text, .search-type, .search-button, .search-radio-label").blur(function() {
     hideTimeout = setTimeout(hideSearch, 100)
   })
 }
 
 function updateSearchRadio(type) {
-  $(".search-radio").removeClass("selected")
-  $(".search-radio[for="+type+"]").addClass("selected")
+  $(".search-radio-label").removeClass("selected")
+  $(".search-radio-label[for="+type+"]").addClass("selected")
 }
 
 function hideSearch() {
@@ -34,11 +34,11 @@ function hideSearch() {
 
 function focusRadio(type) {
   blurRadio(type)
-  $(".search-radio[for="+type+"]").addClass("focus")
+  $(".search-radio-label[for="+type+"]").addClass("focus")
 }
 
 function blurRadio(type) {
-  $(".search-radio").removeClass("focus")
+  $(".search-radio-label").removeClass("focus")
 }
 
 function showSearch() {

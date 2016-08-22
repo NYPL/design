@@ -3,11 +3,13 @@ $maxwidthraw: 1312;
 $basefont: #{$basefontraw}px;
 $maxwidthpx: #{$maxwidthraw}px;
 $max-width: #{($maxwidthraw/$basefontraw)}rem;
-$logo-width: 7rem;
-$logo-height: 4rem;
+$logo-width: 5rem;
+$logo-height: 3rem;
 $focus-width: 3px;
 
 // colors
+$nyplyellow: #FEE24A;
+$nyplorange: #ffb81d;
 $nyplred: #ed1c24;
 $nypldarkgreen: #437529;
 $nypllightgreen: lighten($nypldarkgreen, 20%);
@@ -19,7 +21,7 @@ $nypldarkgray: darken($nyplgray, 40%);
 $nypllightgray: lighten($nyplgray, 40%);
 $linkcolor: $nyplred;
 $linkvisitedcolor: darken($nyplred, 20%);
-$focuscolor: $nyplred;
+$focuscolor: $nyplorange;
 $pagecolor: $nypldarkgray;
 $pagecolorlight: $nypllightgray;
 $pagetextcolor: $nypldarkgray;

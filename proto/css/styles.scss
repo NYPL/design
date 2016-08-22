@@ -3,7 +3,7 @@
 
 html {
   background-color: #fff;
-  font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+  font-family: -apple-system, "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
   font-size: $basefont;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -12,6 +12,15 @@ html {
 body {
   @include Kievit-Book;
   color: $pagetextcolor;
+}
+
+
+@each $tag in a, input {
+  #{$tag}:focus {
+    outline-color: $focuscolor;
+    outline-style: solid;
+    outline-width: $focus-width;
+  }
 }
 
 a {
@@ -69,7 +78,7 @@ ul.horizontal {
 
 header {
   border-bottom: 1px solid $nypllightgray;
-  border-top: 2px solid $nyplred;
+  // border-top: 2px solid $nyplred;
 
   .content-wrapper {
     display: flex;
@@ -88,6 +97,14 @@ header {
     flex-direction: column;
   }
 
+  .service {
+    background-color: $nyplred;
+  }
+
+  .service .content-wrapper {
+    justify-content: flex-end;
+  }
+
   .service-buttons {
     // background-color: $nypllightgray;
     font-size: 0.8rem;
@@ -96,30 +113,35 @@ header {
 
     a {
       border: none;
-      color: $nypldarkgray;
+      color: white;
       display: inline-block;
+      font-weight: bold;
       padding: 0 0.5em;
       position: relative;
       text-decoration: none;
       transition: all 0.2s;
 
       &:hover {
+        background-color: white;
         color: $linkcolor;
       }
 
       &.donate {
         background-color: $nyplred;
-        color: white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        color: $nypldarkgray;
       }
 
       &.donate:hover {
-        background-color: $nypldarkgray;
-        color: $linkcolor;
+        background-color: white;
+        // color: $linkcolor;
       }
 
       &.collapsible:after {
         display: inline-block;
         font-size: 0.85em;
+        font-weight: bold;
         margin-left: 0.5em;
       }
     }
@@ -127,7 +149,6 @@ header {
 
   .nav-buttons {
     font-size: 1.1rem;
-    // font-weight: bold;
 
     a {
       border: none;
@@ -141,7 +162,15 @@ header {
         color: $linkcolor;
       }
     }
+
+    .search {
+      position: relative;
+    }
   }
+}
+
+.hidden {
+  display: none !important;
 }
 
 select.styled {
@@ -158,11 +187,17 @@ select.styled {
 }
 
 .main-search {
+  background-color: $nyplsearchcolor;
   display: flex;
   flex-direction: column;
-  margin: 0.5rem 0;
+  margin: 1px 0;
+  padding: 2px;
   position: relative;
   // width: 15rem;
+
+  &.display {
+    display: flex;
+  }
 
   .search-query-content {
     position: relative;
@@ -172,18 +207,29 @@ select.styled {
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
+    margin-right: 1px;
+    margin-top: 1px;
     padding: 0 0.75rem 0 0.5rem;
 
     &.selected {
-      background: $nyplsearchcolorlight;
+      background-color: $nyplsearchcolorlight;
+    }
+
+    &.focus {
+      box-shadow: inset 0 0 0 2px $linkcolor, 0 0 0 2px $linkcolor;
     }
   }
 
-  input[type="radio"] {
+  input[type=radio] {
     margin-right: 0.25rem;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .search-select {
+    // display: none;
     font-size: 0.9rem;
   }
 
@@ -193,24 +239,40 @@ select.styled {
     padding: 0;
   }
 
-  .search-query-text {
-    background-color: $nyplsearchcolor;
+  .search-query-label {
+    color: white;
     height: 2rem;
-    padding: 0 0.5rem;
-    width: 20rem;
+    left: 0.5rem;
+    line-height: 2rem;
+    position: absolute;
+  }
 
-    &:focus {
+  .search-query-text {
+    background-color: $nyplsearchcolorlight;
+    height: 2rem;
+    margin-right: 1px;
+    padding: 0 0.5rem;
+    transition: all 0.2s ease-out;
+    width: 10rem;
+
+    &.active {
       background-color: white;
-      box-shadow: inset 0 0 0 0.1em $nyplsearchcolordark, 0 0 0 0.15em $nyplsearchcolordark;
-      color: $nyplsearchcolordark;
-      outline: none;
+      box-shadow: inset 0 0 0 2px $nyplsearchcolor, 0 0 0 2px $nyplsearchcolor;
+      color: $nyplsearchcolor;
+      // outline: none;
+      width: 24rem;
     }
   }
 
-  input[type="button"], input[type="submit"] {
+  input[type=button], input[type=submit] {
     background-color: $nyplsearchcolordark;
     height: 2rem;
-    width: 3rem;
+    width: 4rem;
+
+    &:focus {
+      // box-shadow: inset 0 0 0 2px $linkcolor, 0 0 0 2px $linkcolor;
+      // outline: none;
+    }
   }
 }
 

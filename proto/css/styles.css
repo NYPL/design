@@ -212,7 +212,7 @@
 
 html {
   background-color: #fff;
-  font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+  font-family: -apple-system, "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased; }
@@ -220,6 +220,16 @@ html {
 body {
   font-family: "Kievit-Book", "Helvetica", "arial";
   color: #100f0e; }
+
+a:focus {
+  outline-color: #ed1c24;
+  outline-style: solid;
+  outline-width: 3px; }
+
+input:focus {
+  outline-color: #ed1c24;
+  outline-style: solid;
+  outline-width: 3px; }
 
 a {
   border-bottom: 1px solid #ed1c24;
@@ -260,8 +270,7 @@ ul.horizontal {
   width: 7rem; }
 
 header {
-  border-bottom: 1px solid #dddbd9;
-  border-top: 2px solid #ed1c24; }
+  border-bottom: 1px solid #dddbd9; }
   header .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -273,29 +282,37 @@ header {
     display: flex;
     align-items: flex-end;
     flex-direction: column; }
+  header .service {
+    background-color: #ed1c24; }
+  header .service .content-wrapper {
+    justify-content: flex-end; }
   header .service-buttons {
     font-size: 0.8rem;
     padding: 0;
     text-transform: uppercase; }
     header .service-buttons a {
       border: none;
-      color: #100f0e;
+      color: white;
       display: inline-block;
+      font-weight: bold;
       padding: 0 0.5em;
       position: relative;
       text-decoration: none;
       transition: all 0.2s; }
       header .service-buttons a:hover {
+        background-color: white;
         color: #ed1c24; }
       header .service-buttons a.donate {
         background-color: #ed1c24;
-        color: white; }
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        color: #100f0e; }
       header .service-buttons a.donate:hover {
-        background-color: #100f0e;
-        color: #ed1c24; }
+        background-color: white; }
       header .service-buttons a.collapsible:after {
         display: inline-block;
         font-size: 0.85em;
+        font-weight: bold;
         margin-left: 0.5em; }
   header .nav-buttons {
     font-size: 1.1rem; }
@@ -308,6 +325,11 @@ header {
       transition: all 0.2s; }
       header .nav-buttons a:hover {
         color: #ed1c24; }
+    header .nav-buttons .search {
+      position: relative; }
+
+.hidden {
+  display: none !important; }
 
 select.styled {
   -webkit-appearance: none;
@@ -322,41 +344,59 @@ select.styled {
   width: 110%; }
 
 .main-search {
+  background-color: #1DA1D4;
   display: flex;
   flex-direction: column;
-  margin: 0.5rem 0;
+  margin: 1px 0;
+  padding: 2px;
   position: relative; }
+  .main-search.display {
+    display: flex; }
   .main-search .search-query-content {
     position: relative; }
   .main-search .search-radio {
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
+    margin-right: 1px;
+    margin-top: 1px;
     padding: 0 0.75rem 0 0.5rem; }
     .main-search .search-radio.selected {
-      background: #6cc8eb; }
-  .main-search input[type="radio"] {
+      background-color: #6cc8eb; }
+    .main-search .search-radio.focus {
+      box-shadow: inset 0 0 0 2px #ed1c24, 0 0 0 2px #ed1c24; }
+  .main-search input[type=radio] {
     margin-right: 0.25rem; }
+    .main-search input[type=radio]:focus {
+      outline: none; }
   .main-search .search-select {
     font-size: 0.9rem; }
   .main-search input {
     border: none;
     color: white;
     padding: 0; }
-  .main-search .search-query-text {
-    background-color: #1DA1D4;
+  .main-search .search-query-label {
+    color: white;
     height: 2rem;
+    left: 0.5rem;
+    line-height: 2rem;
+    position: absolute; }
+  .main-search .search-query-text {
+    background-color: #6cc8eb;
+    height: 2rem;
+    margin-right: 1px;
     padding: 0 0.5rem;
-    width: 20rem; }
-    .main-search .search-query-text:focus {
+    transition: all 0.2s ease-out;
+    width: 10rem; }
+    .main-search .search-query-text.active {
       background-color: white;
-      box-shadow: inset 0 0 0 0.1em #1980a9, 0 0 0 0.15em #1980a9;
-      color: #1980a9;
-      outline: none; }
-  .main-search input[type="button"], .main-search input[type="submit"] {
+      box-shadow: inset 0 0 0 2px #1DA1D4, 0 0 0 2px #1DA1D4;
+      color: #1DA1D4;
+      width: 24rem; }
+  .main-search input[type=button], .main-search input[type=submit] {
     background-color: #1980a9;
     height: 2rem;
-    width: 3rem; }
+    width: 4rem; }
 
 .page-header h1 {
   font-size: 2.6rem;

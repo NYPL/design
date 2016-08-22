@@ -5,6 +5,7 @@ $maxwidthpx: #{$maxwidthraw}px;
 $max-width: #{($maxwidthraw/$basefontraw)}rem;
 $logo-width: 7rem;
 $logo-height: 4rem;
+$focus-width: 3px;
 
 // colors
 $nyplred: #ed1c24;
@@ -18,7 +19,7 @@ $nypldarkgray: darken($nyplgray, 40%);
 $nypllightgray: lighten($nyplgray, 40%);
 $linkcolor: $nyplred;
 $linkvisitedcolor: darken($nyplred, 20%);
-
+$focuscolor: $nyplred;
 $pagecolor: $nypldarkgray;
 $pagecolorlight: $nypllightgray;
 $pagetextcolor: $nypldarkgray;

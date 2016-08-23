@@ -7,6 +7,7 @@ html {
   font-size: $basefont;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  // -webkit-filter: grayscale(100%);
 }
 
 body {
@@ -71,6 +72,7 @@ ul.horizontal {
   display: block;
   height: $logo-height;
   margin-top: 0.4rem;
+  margin-bottom: 0.1rem;
   overflow: hidden;
   text-indent: ($logo-width * 2);
   white-space: nowrap;
@@ -78,7 +80,7 @@ ul.horizontal {
 }
 
 header {
-  border-bottom: 1px solid $nypllightgray;
+  // border-bottom: 1px solid $nypllightgray;
   // border-top: 2px solid $nyplred;
 
   .content-wrapper {
@@ -129,10 +131,8 @@ header {
       }
 
       &.donate {
-        background-color: $nyplred;
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-        color: $nypldarkgray;
+        background-color: white;
+        color: $nyplred;
       }
 
       &.donate:hover {
@@ -281,10 +281,32 @@ select.styled {
 }
 
 .page-header {
-  // background-color: $pagecolorlight;
+  background-color: $pagecolorlight;
 
   h1 {
     font-size: 2.6rem;
     margin: 0;
   }
+}
+
+.split-page {
+  display: flex;
+}
+
+.pane {
+  flex-grow: 1;
+}
+
+.secondary-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.main-content {
+  flex-grow: 3;
 }

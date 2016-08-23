@@ -20,10 +20,27 @@
   <div class="service">
     <div class="content-wrapper">
       <ul class="service-buttons horizontal">
-        <li><a href="#" class="collapsible nypl-icon-wedge-down">Log in</a></li>
+        <li class="login-toggle"><a href="#" class="collapsible nypl-icon-wedge-down">Log in</a>
+          <div id="login-links" class="hidden">
+            <a class="inverted" href="https://browse.nypl.org/iii/encore/myaccount">Log into the <strong>catalog</strong></a>
+            <a class="inverted" href="https://browse.nypl.org/iii/encore/myaccount">Log into the <strong>research catalog</strong></a>
+          </div>
+        </li>
         <li><a href="#">Locations</a></li>
         <li><a href="#">Get a library card</a></li>
-        <li><a href="#" class="collapsible nypl-icon-wedge-down">Get email updates</a></li>
+        <li class="email-toggle"><a href="#" class="collapsible nypl-icon-wedge-down">Get email updates</a>
+          <form action="" id="email-updates" class="hidden">
+            <h4>Get the best of NYPL in your inbox</h4>
+            <fieldset>
+              <label for="email-text">Email address</label>
+              <input type="text" id="email-text" class="form-text" value=""><input type="button" class="subscribe-button" name="Sign up" value="Sign up">
+            </fieldset>
+            <div class="links">
+              <a class="inverted" href="#">Subscription center</a><br>
+              <a class="inverted" href="#">Privacy policy</a>
+            </div>
+          </form>
+        </li>
         <li><a href="#" class="donate">Donate</a></li>
         <li><a href="#">Shop</a></li>
       </ul>
@@ -44,11 +61,11 @@
         <li><a href="#">Events</a></li>
         <li><a href="#">Connect</a></li>
         <li><a href="#">Give</a></li>
-        <li><a href="#">Get Help</a></li>
+        <li class="active"><a href="#">Get Help</a></li>
         <li class="search">
-          <form action="" id="main-search" class="search main-search">
+          <form action="" id="main-search" class="">
             <div class="search-query-content">
-              <input type="text" class="search-query-text" id="search-query-text" name="search-query-text" value=""><input type="button" class="search-button" name="Search" value="Search">
+              <input type="text" class="form-text" id="search-query-text" name="search-query-text" value=""><input type="button" class="search-button" name="Search" value="Search">
             </div>
             <div class="search-select hidden">
               <label class="search-radio-label selected" for="books-type"><input type="radio" id="books-type" name="search-type" class="search-type" value="books-type" checked="checked">Books/Music/DVDs</label>
@@ -77,42 +94,42 @@
     <div class="pane">
       <h2>Manage your library card</h2>
       <ul class="secondary-navigation">
-        <li><a href="#">Apply for a New Card</a></li>
-        <li><a href="#">Forgot Your PIN?</a></li>
-        <li><a href="#">Replace a Lost or Stolen Card</a></li>
-        <li><a href="#">Renew Your Card</a></li>
-        <li><a href="#">Manage Your Account Online</a></li>
+        <li><a href="http://catalog.nypl.org/screens/selfregpick.html">Apply for a New Card</a></li>
+        <li><a href="http://catalog.nypl.org/screens/selfregpick.html">Forgot Your PIN?</a></li>
+        <li><a href="http://catalog.nypl.org/screens/selfregpick.html">Replace a Lost or Stolen Card</a></li>
+        <li><a href="http://catalog.nypl.org/screens/selfregpick.html">Renew Your Card</a></li>
+        <li><a href="http://catalog.nypl.org/screens/selfregpick.html">Manage Your Account Online</a></li>
       </ul>
     </div>
 
     <div class="main-content">
       <section class="secondary">
-        <h2>Pay a Fine</h2>
+        <h2><a href="http://catalog.nypl.org/screens/selfregpick.html">Pay a Fine</a></h2>
         <p>Didn't return an item on time? Learn about fines on overdue materials, including payment methods.</p>
       </section>
 
       <section class="secondary">
-        <h2>Forgot Your PIN?</h2>
+        <h2><a href="http://catalog.nypl.org/screens/selfregpick.html">Forgot Your PIN?</a></h2>
         <p>Reset your four-digit PIN via email or visit a location near you.</p>
       </section>
 
       <section class="secondary">
-        <h2>Renew Your Card</h2>
+        <h2><a href="http://catalog.nypl.org/screens/selfregpick.html">Renew Your Card</a></h2>
         <p>Every cardholder must renew his or her library card every three years. Find out how.</p>
       </section>
 
       <section class="secondary">
-        <h2>Replace a Lost or Stolen Card</h2>
+        <h2><a href="http://catalog.nypl.org/screens/selfregpick.html">Replace a Lost or Stolen Card</a></h2>
         <p>If your card is lost or stolen, report it immediately. You can email, call us, or visit us in person.</p>
       </section>
 
       <section class="secondary">
-        <h2>Manage Your Account Online</h2>
+        <h2><a href="http://catalog.nypl.org/screens/selfregpick.html">Manage Your Account Online</a></h2>
         <p>View and renew items out on loan and place holds from your home or cell phone.</p>
       </section>
 
       <section class="secondary">
-        <h2>About Borrowing Materials</h2>
+        <h2><a href="http://catalog.nypl.org/screens/selfregpick.html">About Borrowing Materials</a></h2>
         <p>Review item borrowing limits, loan periods, renewal and return information, and more.</p>
       </section>
     </div>

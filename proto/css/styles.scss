@@ -15,6 +15,21 @@ body {
   color: $pagetextcolor;
 }
 
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
 
 @each $tag in a, input {
   #{$tag}:focus {
@@ -25,21 +40,40 @@ body {
 }
 
 a {
-  border-bottom: 1px solid $linkcolor;
-  text-decoration: none;
-
-  &:hover, &:visited:hover {
-    border-bottom-color: $linkcolor;
-    color: $linkcolor;
-  }
+  // border-bottom: 1px solid $linkcolor;
+  // text-decoration: none;
 
   &:link {
     color: $linkcolor;
   }
 
   &:visited {
-    border-bottom-color: $linkvisitedcolor;
+    // border-bottom-color: $linkvisitedcolor;
     color: $linkvisitedcolor;
+  }
+
+  &:hover, &:visited:hover {
+    // border-bottom-color: $linkcolor;
+    color: $linkhovercolor;
+  }
+}
+
+a.inverted {
+  // border-bottom: 1px solid $invertedlinkcolor;
+  text-decoration: none;
+
+  &:link {
+    color: $invertedlinkcolor;
+  }
+
+  &:visited {
+    // border-bottom-color: $invertedlinkvisitedcolor;
+    color: $invertedlinkvisitedcolor;
+  }
+
+  &:hover, &:visited:hover {
+    // border-bottom-color: $invertedlinkcolor;
+    color: $invertedlinkcolor;
   }
 }
 
@@ -90,10 +124,6 @@ header {
     padding: 0 1rem;
   }
 
-  .logo {
-    // margin-top: 1rem;
-  }
-
   .content {
     display: flex;
     align-items: flex-end;
@@ -108,68 +138,128 @@ header {
   .service .content-wrapper {
     justify-content: flex-end;
   }
+}
 
-  .service-buttons {
-    // background-color: $nypllightgray;
-    font-size: 0.8rem;
-    padding: 0;// 0.25em;
-    text-transform: uppercase;
+.service-buttons {
+  // background-color: $nypllightgray;
+  font-size: 0.8rem;
+  padding: 0;// 0.25em;
+  text-transform: uppercase;
 
-    a {
-      border: none;
-      color: white;
+  li > a {
+    border: none;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0.5em;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover, &.active {
+      background-color: white;
+      color: $linkcolor;
+    }
+
+    &.donate {
+      background-color: white;
+      color: $nyplred;
+    }
+
+    &.donate:hover {
+      background-color: white;
+      // color: $linkcolor;
+    }
+
+    &.collapsible:after {
       display: inline-block;
+      font-size: 0.85em;
       font-weight: bold;
-      padding: 0 0.5em;
-      position: relative;
-      text-decoration: none;
-      transition: all 0.2s;
-
-      &:hover {
-        background-color: white;
-        color: $linkcolor;
-      }
-
-      &.donate {
-        background-color: white;
-        color: $nyplred;
-      }
-
-      &.donate:hover {
-        background-color: white;
-        // color: $linkcolor;
-      }
-
-      &.collapsible:after {
-        display: inline-block;
-        font-size: 0.85em;
-        font-weight: bold;
-        margin-left: 0.5em;
-      }
+      margin-left: 0.5em;
     }
   }
+}
 
-  .nav-buttons {
-    font-size: 1.1rem;
-    line-height: 1.7rem;
+.login-toggle, .email-toggle {
+  position: relative;
 
-    a {
-      border: none;
-      color: $nypldarkgray;
-      display: inline-block;
-      padding: 0.2em 0.4em 0;
-      text-decoration: none;
-      transition: all 0.2s;
-
-      &:hover {
-        color: $linkcolor;
-      }
-    }
-
-    .search {
-      position: relative;
-    }
+  a:after {
+    transition: all 0.2s;
   }
+
+  a.active:after {
+    transform: scaleY(-1);
+  }
+}
+
+//TODO: there must be a class that means “blue background”
+
+.login-toggle {
+  div {
+    background-color: $nyplsearchcolor;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    padding: 1rem;
+    padding-bottom: 0;
+    left: 0;
+    text-transform: none;
+    z-index: 1;
+  }
+
+  a.inverted {
+    display: block;
+    margin-bottom: 1em;
+    white-space: nowrap;
+  }
+}
+
+.email-toggle {
+  form {
+    background-color: $nyplsearchcolor;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    padding: 1rem;
+    right: 0;
+    text-transform: none;
+    z-index: 1;
+  }
+
+  h4 {
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  fieldset {
+    border: none;
+    margin: 1em 0;
+    padding: 0;
+  }
+}
+
+.nav-buttons {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+
+  a {
+    border: none;
+    color: $nypldarkgray;
+    display: inline-block;
+    padding: 0.2em 0.4em 0;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $linkcolor;
+    }
+
+  }
+
+  li.active {
+    box-shadow: inset 0 -4px 0 $linkcolor;
+  }
+
 }
 
 .hidden {
@@ -189,7 +279,41 @@ select.styled {
   width: 110%;
 }
 
-.main-search {
+input {
+  border: none;
+  color: white;
+  padding: 0;
+}
+
+input[type=button], input[type=submit] {
+  background-color: $nyplsearchcolordark;
+  height: 2rem;
+  padding: 0 1rem;
+}
+
+.form-text {
+  background-color: $nyplsearchcolorlight;
+  color: $nyplsearchcolor;
+  height: 2rem;
+  margin-right: 1px;
+  padding: 0 0.5rem;
+  transition: all 0.2s ease-out;
+  width: 10rem;
+
+  &.active {
+    color: white;
+    width: 16rem;
+  }
+
+  &:focus {
+    background-color: white;
+    box-shadow: inset 0 0 0 4px $focuscolor;
+    color: $nyplsearchcolor;
+    outline: none;
+  }
+}
+
+#main-search {
   background-color: $nyplsearchcolor;
   display: flex;
   flex-direction: column;
@@ -237,12 +361,6 @@ select.styled {
     }
   }
 
-  input {
-    border: none;
-    color: white;
-    padding: 0;
-  }
-
   .search-query-label {
     color: white;
     height: 2rem;
@@ -251,40 +369,12 @@ select.styled {
     position: absolute;
   }
 
-  .search-query-text {
-    background-color: $nyplsearchcolorlight;
-    color: $nyplsearchcolor;
-    height: 2rem;
-    margin-right: 1px;
-    padding: 0 0.5rem;
-    transition: all 0.2s ease-out;
-    width: 10rem;
-
-    &.active {
-      color: white;
-      width: 16rem;
-    }
-
-    &:focus {
-      background-color: white;
-      box-shadow: inset 0 0 0 4px $focuscolor;
-      color: $nyplsearchcolor;
-      outline: none;
-    }
-  }
-
-  input[type=button], input[type=submit] {
-    background-color: $nyplsearchcolordark;
-    height: 2rem;
-    width: 4rem;
-  }
 }
 
 .page-header {
   background-color: $pagecolorlight;
 
   h1 {
-    font-size: 2.6rem;
     margin: 0;
   }
 }

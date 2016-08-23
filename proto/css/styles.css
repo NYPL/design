@@ -221,6 +221,18 @@ body {
   font-family: "Kievit-Book", "Helvetica", "arial";
   color: #100f0e; }
 
+h1 {
+  font-size: 2.6rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.6rem; }
+
+h4 {
+  font-size: 1.2rem; }
+
 a:focus {
   outline-color: #ffb81d;
   outline-style: solid;
@@ -231,17 +243,21 @@ input:focus {
   outline-style: solid;
   outline-width: 3px; }
 
-a {
-  border-bottom: 1px solid #ed1c24;
+a:link {
+  color: #ed1c24; }
+a:visited {
+  color: #970c11; }
+a:hover, a:visited:hover {
+  color: #f14b52; }
+
+a.inverted {
   text-decoration: none; }
-  a:hover, a:visited:hover {
-    border-bottom-color: #ed1c24;
-    color: #ed1c24; }
-  a:link {
-    color: #ed1c24; }
-  a:visited {
-    border-bottom-color: #970c11;
-    color: #970c11; }
+  a.inverted:link {
+    color: white; }
+  a.inverted:visited {
+    color: #e6e6e6; }
+  a.inverted:hover, a.inverted:visited:hover {
+    color: white; }
 
 .content-wrapper {
   margin: 0 auto;
@@ -285,11 +301,12 @@ header .service {
   background-color: #ed1c24; }
 header .service .content-wrapper {
   justify-content: flex-end; }
-header .service-buttons {
+
+.service-buttons {
   font-size: 0.8rem;
   padding: 0;
   text-transform: uppercase; }
-  header .service-buttons a {
+  .service-buttons li > a {
     border: none;
     color: white;
     display: inline-block;
@@ -298,33 +315,73 @@ header .service-buttons {
     position: relative;
     text-decoration: none;
     transition: all 0.2s; }
-    header .service-buttons a:hover {
+    .service-buttons li > a:hover, .service-buttons li > a.active {
       background-color: white;
       color: #ed1c24; }
-    header .service-buttons a.donate {
+    .service-buttons li > a.donate {
       background-color: white;
       color: #ed1c24; }
-    header .service-buttons a.donate:hover {
+    .service-buttons li > a.donate:hover {
       background-color: white; }
-    header .service-buttons a.collapsible:after {
+    .service-buttons li > a.collapsible:after {
       display: inline-block;
       font-size: 0.85em;
       font-weight: bold;
       margin-left: 0.5em; }
-header .nav-buttons {
+
+.login-toggle, .email-toggle {
+  position: relative; }
+  .login-toggle a:after, .email-toggle a:after {
+    transition: all 0.2s; }
+  .login-toggle a.active:after, .email-toggle a.active:after {
+    transform: scaleY(-1); }
+
+.login-toggle div {
+  background-color: #1DA1D4;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  padding: 1rem;
+  padding-bottom: 0;
+  left: 0;
+  text-transform: none;
+  z-index: 1; }
+.login-toggle a.inverted {
+  display: block;
+  margin-bottom: 1em;
+  white-space: nowrap; }
+
+.email-toggle form {
+  background-color: #1DA1D4;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  padding: 1rem;
+  right: 0;
+  text-transform: none;
+  z-index: 1; }
+.email-toggle h4 {
+  line-height: 1.5;
+  margin: 0; }
+.email-toggle fieldset {
+  border: none;
+  margin: 1em 0;
+  padding: 0; }
+
+.nav-buttons {
   font-size: 1.1rem;
   line-height: 1.7rem; }
-  header .nav-buttons a {
+  .nav-buttons a {
     border: none;
     color: #100f0e;
     display: inline-block;
     padding: 0.2em 0.4em 0;
     text-decoration: none;
     transition: all 0.2s; }
-    header .nav-buttons a:hover {
+    .nav-buttons a:hover {
       color: #ed1c24; }
-  header .nav-buttons .search {
-    position: relative; }
+  .nav-buttons li.active {
+    box-shadow: inset 0 -4px 0 #ed1c24; }
 
 .hidden {
   display: none !important; }
@@ -341,72 +398,74 @@ select.styled {
   padding: 0 1.5rem 0 0.5rem;
   width: 110%; }
 
-.main-search {
+input {
+  border: none;
+  color: white;
+  padding: 0; }
+
+input[type=button], input[type=submit] {
+  background-color: #1980a9;
+  height: 2rem;
+  padding: 0 1rem; }
+
+.form-text {
+  background-color: #6cc8eb;
+  color: #1DA1D4;
+  height: 2rem;
+  margin-right: 1px;
+  padding: 0 0.5rem;
+  transition: all 0.2s ease-out;
+  width: 10rem; }
+  .form-text.active {
+    color: white;
+    width: 16rem; }
+  .form-text:focus {
+    background-color: white;
+    box-shadow: inset 0 0 0 4px #ffb81d;
+    color: #1DA1D4;
+    outline: none; }
+
+#main-search {
   background-color: #1DA1D4;
   display: flex;
   flex-direction: column;
   margin: 0;
   position: relative; }
-  .main-search.display {
+  #main-search.display {
     display: flex; }
-  .main-search .search-query-content {
+  #main-search .search-query-content {
     position: relative; }
-  .main-search .search-select {
+  #main-search .search-select {
     background-color: #1DA1D4;
     font-size: 0.9rem;
     left: 0;
     position: absolute;
     top: 2rem; }
-  .main-search .search-radio-label {
+  #main-search .search-radio-label {
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
     margin-right: 1px;
     margin-top: 1px;
     padding: 0 0.75rem 0 0.5rem; }
-    .main-search .search-radio-label.selected {
+    #main-search .search-radio-label.selected {
       background-color: #6cc8eb; }
-    .main-search .search-radio-label.focus {
+    #main-search .search-radio-label.focus {
       box-shadow: inset 0 0 0 3px #ffb81d; }
-  .main-search input[type=radio] {
+  #main-search input[type=radio] {
     margin-right: 0.25rem; }
-    .main-search input[type=radio]:focus {
+    #main-search input[type=radio]:focus {
       outline: none; }
-  .main-search input {
-    border: none;
-    color: white;
-    padding: 0; }
-  .main-search .search-query-label {
+  #main-search .search-query-label {
     color: white;
     height: 2rem;
     left: 0.5rem;
     line-height: 2rem;
     position: absolute; }
-  .main-search .search-query-text {
-    background-color: #6cc8eb;
-    color: #1DA1D4;
-    height: 2rem;
-    margin-right: 1px;
-    padding: 0 0.5rem;
-    transition: all 0.2s ease-out;
-    width: 10rem; }
-    .main-search .search-query-text.active {
-      color: white;
-      width: 16rem; }
-    .main-search .search-query-text:focus {
-      background-color: white;
-      box-shadow: inset 0 0 0 4px #ffb81d;
-      color: #1DA1D4;
-      outline: none; }
-  .main-search input[type=button], .main-search input[type=submit] {
-    background-color: #1980a9;
-    height: 2rem;
-    width: 4rem; }
 
 .page-header {
   background-color: #dddbd9; }
   .page-header h1 {
-    font-size: 2.6rem;
     margin: 0; }
 
 .split-page {

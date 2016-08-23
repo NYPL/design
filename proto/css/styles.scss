@@ -3,7 +3,7 @@
 
 html {
   background-color: #fff;
-  font-family: -apple-system, "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: $basefont;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -11,8 +11,13 @@ html {
 }
 
 body {
-  @include Kievit-Book;
+  // @include Kievit-Book;
   color: $pagetextcolor;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 h1 {
@@ -219,6 +224,7 @@ header {
     background-color: $nyplsearchcolor;
     color: white;
     font-size: 1rem;
+    min-width: 17rem;
     position: absolute;
     padding: 1rem;
     right: 0;
@@ -235,6 +241,10 @@ header {
     border: none;
     margin: 1em 0;
     padding: 0;
+  }
+
+  label {
+    display: block;
   }
 }
 
@@ -256,7 +266,7 @@ header {
 
   }
 
-  li.active {
+  li:hover, li.active {
     box-shadow: inset 0 -4px 0 $linkcolor;
   }
 
@@ -293,7 +303,7 @@ input[type=button], input[type=submit] {
 
 .form-text {
   background-color: $nyplsearchcolorlight;
-  color: $nyplsearchcolor;
+  color: white;
   height: 2rem;
   margin-right: 1px;
   padding: 0 0.5rem;
@@ -384,7 +394,11 @@ input[type=button], input[type=submit] {
 }
 
 .pane {
-  flex-grow: 1;
+  flex-basis: 25%;
+
+  h4 {
+    margin-bottom: 0;
+  }
 }
 
 .secondary-navigation {
@@ -398,5 +412,53 @@ input[type=button], input[type=submit] {
 }
 
 .main-content {
-  flex-grow: 3;
+  flex-basis: 75%;
+}
+
+.secondary {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+footer {
+  background-color: $footercolor;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  // @include Kievit-Bold;
+}
+
+footer ul {
+  list-style: none;
+  margin: 1rem 0 1rem 0;
+  padding: 0;
+}
+
+.copyright {
+  background: url("../img/nypl-rev.svg") no-repeat scroll 0px 0px/#{$logo-width} auto transparent;
+  border: none;
+  display: block;
+  height: $logo-height;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  white-space: nowrap;
+
+  p {
+    padding-top: calc(#{$logo-height} + 1em);
+  }
+}
+
+.footerLinks {
+  display: flex;
+
+  li {
+    flex-basis: 25%;
+  }
+}
+
+.linkItemList {
+  // margin-right: 10rem;
 }

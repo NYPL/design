@@ -212,14 +212,17 @@
 
 html {
   background-color: #fff;
-  font-family: -apple-system, "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: "Kievit-Book", "Helvetica", "arial";
   color: #100f0e; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 1.5rem;
+  margin-top: 0; }
 
 h1 {
   font-size: 2.6rem; }
@@ -355,6 +358,7 @@ header .service .content-wrapper {
   background-color: #1DA1D4;
   color: white;
   font-size: 1rem;
+  min-width: 17rem;
   position: absolute;
   padding: 1rem;
   right: 0;
@@ -367,6 +371,8 @@ header .service .content-wrapper {
   border: none;
   margin: 1em 0;
   padding: 0; }
+.email-toggle label {
+  display: block; }
 
 .nav-buttons {
   font-size: 1.1rem;
@@ -380,7 +386,7 @@ header .service .content-wrapper {
     transition: all 0.2s; }
     .nav-buttons a:hover {
       color: #ed1c24; }
-  .nav-buttons li.active {
+  .nav-buttons li:hover, .nav-buttons li.active {
     box-shadow: inset 0 -4px 0 #ed1c24; }
 
 .hidden {
@@ -410,7 +416,7 @@ input[type=button], input[type=submit] {
 
 .form-text {
   background-color: #6cc8eb;
-  color: #1DA1D4;
+  color: white;
   height: 2rem;
   margin-right: 1px;
   padding: 0 0.5rem;
@@ -472,7 +478,9 @@ input[type=button], input[type=submit] {
   display: flex; }
 
 .pane {
-  flex-grow: 1; }
+  flex-basis: 25%; }
+  .pane h4 {
+    margin-bottom: 0; }
 
 .secondary-navigation {
   list-style: none;
@@ -482,6 +490,38 @@ input[type=button], input[type=submit] {
     margin-bottom: 0.75rem; }
 
 .main-content {
-  flex-grow: 3; }
+  flex-basis: 75%; }
+
+.secondary {
+  margin-bottom: 1.5rem; }
+  .secondary h2 {
+    margin: 0; }
+
+footer {
+  background-color: #54514A;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold; }
+
+footer ul {
+  list-style: none;
+  margin: 1rem 0 1rem 0;
+  padding: 0; }
+
+.copyright {
+  background: url("../img/nypl-rev.svg") no-repeat scroll 0px 0px/5rem auto transparent;
+  border: none;
+  display: block;
+  height: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  white-space: nowrap; }
+  .copyright p {
+    padding-top: calc(3rem + 1em); }
+
+.footerLinks {
+  display: flex; }
+  .footerLinks li {
+    flex-basis: 25%; }
 
 /*# sourceMappingURL=styles.css.map */

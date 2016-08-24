@@ -246,6 +246,11 @@ input:focus {
   outline-style: solid;
   outline-width: 3px; }
 
+select:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 3px; }
+
 a:link {
   color: #ed1c24; }
 a:visited {
@@ -405,11 +410,11 @@ select.styled {
 input {
   background-color: #6cc8eb;
   border: none;
-  color: white;
   padding: 0; }
 
 input[type=button], input[type=submit] {
   background-color: #1980a9;
+  color: white;
   height: 2rem;
   padding: 0 1rem; }
 
@@ -425,7 +430,6 @@ input[type=radio], input[type=checkbox] {
   transition: all 0.2s ease-out;
   width: 10rem; }
   .form-text.active {
-    color: white;
     width: 16rem; }
   .form-text:focus {
     background-color: white;
@@ -494,6 +498,12 @@ input[type=radio], input[type=checkbox] {
 .pane.filters input[type=text] {
   width: 100%; }
 .pane.filters select {
+  background-color: #6cc8eb;
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  height: 2rem;
+  line-height: 1;
   width: 100%; }
 
 .secondary-navigation {
@@ -511,25 +521,63 @@ section.secondary {
   section.secondary h2 {
     margin: 0; }
 
-table.views-table thead th {
-  border-bottom: 1px solid #100f0e;
-  text-align: left; }
-table.views-table th.event-time {
-  width: 10%; }
-table.views-table th.event-title {
-  width: 50%; }
-table.views-table th.event-location {
-  width: 20%; }
-table.views-table th.event-audience {
-  width: 20%; }
-table.views-table td {
-  padding-bottom: 3rem;
-  vertical-align: top; }
-table.views-table .channel-title {
-  color: #1980a9;
-  text-transform: uppercase; }
-table.views-table .signup-method {
-  color: #1980a9; }
+.results-summary {
+  margin-bottom: 1.5rem; }
+  .results-summary .results-count {
+    font-size: 3rem;
+    font-weight: bold; }
+  .results-summary .facet-remove {
+    color: #7B756F;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: super; }
+
+.results-pagination {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem; }
+  .results-pagination .page-count, .results-pagination .previous, .results-pagination .next {
+    display: block;
+    flex-basis: 25%;
+    text-decoration: none; }
+  .results-pagination .page-count {
+    text-align: center; }
+  .results-pagination .arrow:after {
+    font-size: 3rem;
+    line-height: 0.9; }
+  .results-pagination .previous .arrow:after {
+    float: left; }
+  .results-pagination .next .arrow:after {
+    float: right; }
+  .results-pagination .next {
+    text-align: right; }
+
+table.views-table {
+  border-collapse: collapse; }
+  table.views-table thead th {
+    border-bottom: 1px solid #100f0e;
+    text-align: left; }
+  table.views-table th.event-time {
+    width: 20%; }
+  table.views-table th.event-title {
+    width: 40%; }
+  table.views-table th.event-location {
+    width: 20%; }
+  table.views-table th.event-audience {
+    width: 20%; }
+  table.views-table td {
+    border-bottom: 1px solid #dddbd9;
+    padding: 0.5rem 0.5rem 3rem 0;
+    vertical-align: top; }
+  table.views-table .channel-title {
+    color: #1980a9;
+    text-transform: uppercase; }
+  table.views-table .signup-method {
+    color: #1980a9; }
 
 footer {
   background-color: #54514A;

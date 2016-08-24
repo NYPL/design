@@ -7,7 +7,7 @@ html {
   font-size: $basefont;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  // -webkit-filter: grayscale(100%);
+  // -webkit-filter: grayscale(1);
 }
 
 body {
@@ -36,7 +36,7 @@ h4 {
   font-size: 1.2rem;
 }
 
-@each $tag in a, input {
+@each $tag in a, input, select {
   #{$tag}:focus {
     outline-color: $focuscolor;
     outline-style: solid;
@@ -292,12 +292,12 @@ select.styled {
 input {
   background-color: $nyplsearchcolorlight;
   border: none;
-  color: white;
   padding: 0;
 }
 
 input[type=button], input[type=submit] {
   background-color: $nyplsearchcolordark;
+  color: white;
   height: 2rem;
   padding: 0 1rem;
 }
@@ -317,7 +317,6 @@ input[type=radio], input[type=checkbox] {
   width: 10rem;
 
   &.active {
-    color: white;
     width: 16rem;
   }
 
@@ -428,6 +427,12 @@ input[type=radio], input[type=checkbox] {
   }
 
   select {
+    background-color: $nyplsearchcolorlight;
+    border: 0;
+    border-radius: 0;
+    font-size: 16px;
+    height: 2rem;
+    line-height: 1;
     width: 100%;
   }
 }
@@ -454,18 +459,76 @@ section.secondary {
   }
 }
 
+.results-summary {
+  margin-bottom: 1.5rem;
+
+  .results-count {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .facet {
+  }
+
+  .facet-remove {
+    color: $nyplgray;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: super;
+  }
+}
+
+.results-pagination {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+
+  .page-count, .previous, .next {
+    display: block;
+    flex-basis: 25%;
+    text-decoration: none;
+  }
+
+  .page-count {
+    text-align: center;
+  }
+
+  .arrow:after {
+    font-size: 3rem;
+    line-height: 0.9;
+  }
+
+  .previous .arrow:after {
+    float: left;
+  }
+
+  .next .arrow:after {
+    float: right;
+  }
+
+  .next {
+    text-align: right;
+  }
+}
+
 table.views-table {
+  border-collapse: collapse;
+
   thead th {
     border-bottom: 1px solid $nypldarkgray;
     text-align: left;
   }
 
   th.event-time {
-    width: 10%;
+    width: 20%;
   }
 
   th.event-title {
-    width: 50%;
+    width: 40%;
   }
 
   th.event-location {
@@ -480,7 +543,8 @@ table.views-table {
   }
 
   td {
-    padding-bottom: 3rem;
+    border-bottom: 1px solid $nypllightgray;
+    padding: 0.5rem 0.5rem 3rem 0;
     vertical-align: top;
   }
 

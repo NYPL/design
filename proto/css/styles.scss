@@ -445,7 +445,9 @@ input[type=radio], input[type=checkbox] {
     display: inline-block;
     margin-bottom: 5px;
     padding: 3px 5px;
+    text-align: center;
     text-decoration: none;
+    width: 1em;
   }
 }
 

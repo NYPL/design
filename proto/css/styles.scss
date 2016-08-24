@@ -10,7 +10,7 @@ html {
   // -webkit-filter: grayscale(1);
 
   @media screen and (max-width: $maxwidthpx) {
-    font-size: calc(#{$basefont} * 0.9);
+    font-size: calc(#{$basefont} * 0.8);
   }
 
 }
@@ -96,9 +96,13 @@ a.inverted {
   margin: 0 auto;
   max-width: calc(#{$max-width} - 1rem - (#{$logo-width} + 1rem));
   padding: 1rem 1rem 1rem ($logo-width + 1rem);
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-left: 1rem;
+  }
 }
 
-ul.horizontal {
+.horizontal {
   display: flex;
   justify-content: flex-end;
   list-style: none;
@@ -114,6 +118,26 @@ ul.horizontal {
   }
 }
 
+.menu {
+  display: none;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    background-color: $nyplred;
+    color: white !important;
+    display: block;
+    margin: 0 -1rem;
+    padding-right: 1rem;
+    text-align: right;
+    text-decoration: none;
+  }
+}
+
+.logo {
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-right: 0.5rem;
+  }
+}
+
 .nypl-logo {
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/#{$logo-width} auto white;
   border: none;
@@ -125,14 +149,30 @@ ul.horizontal {
   text-indent: ($logo-width * 2);
   white-space: nowrap;
   width: $logo-width;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    // background-image: url("../img/lion.svg");
+    // background-size: 3rem;
+    // height: 3rem;
+    margin-right: 0.5rem;
+    // width: 3rem;
+  }
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+
   .content-wrapper {
     display: flex;
     justify-content: space-between;
     max-width: calc(#{$max-width} - 2rem);
     padding: 0 1rem;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+      margin: 0;
+    }
   }
 
   .content {
@@ -140,10 +180,19 @@ header {
     align-items: flex-end;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      align-items: stretch;
+      width: 100%;
+    }
   }
 
   .service {
     background-color: $nyplred;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      order: 2;
+    }
   }
 
   .service .content-wrapper {
@@ -152,15 +201,27 @@ header {
 }
 
 .service-buttons {
-  // background-color: $nypllightgray;
   font-size: 0.8rem;
   padding: 0;// 0.25em;
   text-transform: uppercase;
 
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: none;
+    flex-wrap: wrap;
+    width: 100%;
+
+    li {
+      border-bottom: 1px solid white;
+      line-height: 2rem;
+      margin: 0 0 5px 0;
+      width: 50%;
+    }
+  }
+
   li > a {
     border: none;
     color: white;
-    display: inline-block;
+    display: block;
     font-weight: bold;
     padding: 0 0.5em;
     position: relative;
@@ -257,6 +318,25 @@ header {
 .nav-buttons {
   font-size: 1.1rem;
   line-height: 1.7rem;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: none;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    justify-content: flex-start;
+
+    li {
+      border-bottom: 1px solid $nypllightgray;
+      line-height: 2rem;
+      margin: 0 0 5px 0;
+      width: 50%;
+    }
+
+    li.search {
+      border: none;
+      width: 100%;
+    }
+  }
 
   a {
     border: none;
@@ -371,6 +451,27 @@ input[type=radio], input[type=checkbox] {
     left: 0.5rem;
     line-height: 2rem;
     position: absolute;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    .form-text, .search-button, .search-radio-label {
+      height: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    .form-text {
+      margin: 0;
+      width: 70%;
+    }
+
+    .search-button {
+      margin: 0;
+      width: 30%;
+    }
+
+    .search-select {
+      top: 2.5rem;
+    }
   }
 
 }

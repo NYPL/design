@@ -218,7 +218,7 @@ html {
   -webkit-font-smoothing: antialiased; }
   @media screen and (max-width: 1312px) {
     html {
-      font-size: calc(16px * 0.9); } }
+      font-size: calc(16px * 0.8); } }
 
 body {
   color: #100f0e; }
@@ -281,17 +281,36 @@ a.inverted:hover, a.inverted:visited:hover {
   margin: 0 auto;
   max-width: calc(82rem - 1rem - (5rem + 1rem));
   padding: 1rem 1rem 1rem 6rem; }
+  @media screen and (max-width: 960px) {
+    .content-wrapper {
+      padding-left: 1rem; } }
 
-ul.horizontal {
+.horizontal {
   display: flex;
   justify-content: flex-end;
   list-style: none;
   margin: 0;
   padding: 0; }
-  ul.horizontal li {
+  .horizontal li {
     margin-right: 0.35em; }
-    ul.horizontal li:last-child {
+    .horizontal li:last-child {
       margin-right: 0; }
+
+.menu {
+  display: none; }
+  @media screen and (max-width: 960px) {
+    .menu {
+      background-color: #ed1c24;
+      color: white !important;
+      display: block;
+      margin: 0 -1rem;
+      padding-right: 1rem;
+      text-align: right;
+      text-decoration: none; } }
+
+@media screen and (max-width: 960px) {
+  .logo {
+    margin-right: 0.5rem; } }
 
 .nypl-logo {
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/5rem auto white;
@@ -304,30 +323,57 @@ ul.horizontal {
   text-indent: 10rem;
   white-space: nowrap;
   width: 5rem; }
+  @media screen and (max-width: 960px) {
+    .nypl-logo {
+      margin-right: 0.5rem; } }
 
-header .content-wrapper {
+header {
   display: flex;
-  justify-content: space-between;
-  max-width: calc(82rem - 2rem);
-  padding: 0 1rem; }
-header .content {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  justify-content: flex-end; }
-header .service {
-  background-color: #ed1c24; }
-header .service .content-wrapper {
-  justify-content: flex-end; }
+  flex-direction: column; }
+  header .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: calc(82rem - 2rem);
+    padding: 0 1rem; }
+    @media screen and (max-width: 960px) {
+      header .content-wrapper {
+        flex-direction: column;
+        margin: 0; } }
+  header .content {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end; }
+    @media screen and (max-width: 960px) {
+      header .content {
+        align-items: stretch;
+        width: 100%; } }
+  header .service {
+    background-color: #ed1c24; }
+    @media screen and (max-width: 960px) {
+      header .service {
+        order: 2; } }
+  header .service .content-wrapper {
+    justify-content: flex-end; }
 
 .service-buttons {
   font-size: 0.8rem;
   padding: 0;
   text-transform: uppercase; }
+  @media screen and (max-width: 960px) {
+    .service-buttons {
+      display: none;
+      flex-wrap: wrap;
+      width: 100%; }
+      .service-buttons li {
+        border-bottom: 1px solid white;
+        line-height: 2rem;
+        margin: 0 0 5px 0;
+        width: 50%; } }
   .service-buttons li > a {
     border: none;
     color: white;
-    display: inline-block;
+    display: block;
     font-weight: bold;
     padding: 0 0.5em;
     position: relative;
@@ -392,6 +438,20 @@ header .service .content-wrapper {
 .nav-buttons {
   font-size: 1.1rem;
   line-height: 1.7rem; }
+  @media screen and (max-width: 960px) {
+    .nav-buttons {
+      display: none;
+      flex-wrap: wrap;
+      font-size: 1.2rem;
+      justify-content: flex-start; }
+      .nav-buttons li {
+        border-bottom: 1px solid #dddbd9;
+        line-height: 2rem;
+        margin: 0 0 5px 0;
+        width: 50%; }
+      .nav-buttons li.search {
+        border: none;
+        width: 100%; } }
   .nav-buttons a {
     border: none;
     color: #100f0e;
@@ -471,6 +531,18 @@ input[type=radio], input[type=checkbox] {
     left: 0.5rem;
     line-height: 2rem;
     position: absolute; }
+  @media screen and (max-width: 960px) {
+    #main-search .form-text, #main-search .search-button, #main-search .search-radio-label {
+      height: 2.5rem;
+      line-height: 2.5rem; }
+    #main-search .form-text {
+      margin: 0;
+      width: 70%; }
+    #main-search .search-button {
+      margin: 0;
+      width: 30%; }
+    #main-search .search-select {
+      top: 2.5rem; } }
 
 .page-header {
   background-color: #dddbd9; }

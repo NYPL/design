@@ -25,7 +25,7 @@ function init() {
       toggleEmail()
     }
   })
-  $("body").click(function(e) {
+  $("body").on("click touchstart touchend", function(e) {
     if (!$(e.target).closest('.email-toggle').length && !$(e.target).parents("#email-updates").length) {
       hideEmail()
     }
@@ -45,6 +45,11 @@ function init() {
     } else {
       $("div.location").fadeOut(200)
     }
+  })
+
+  $(".menu.main-menu-toggle").click(function() {
+    $(this).remove()
+    $(".nav-buttons, .service-buttons").css("display","flex")
   })
 }
 

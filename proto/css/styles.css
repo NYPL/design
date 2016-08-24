@@ -216,6 +216,9 @@ html {
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased; }
+  @media screen and (max-width: 1312px) {
+    html {
+      font-size: calc(16px * 0.9); } }
 
 body {
   color: #100f0e; }
@@ -594,6 +597,8 @@ table.views-table {
     text-transform: uppercase; }
   table.views-table .signup-method {
     color: #1980a9; }
+  table.views-table .resource-title {
+    font-weight: bold; }
 
 footer {
   background-color: #54514A;

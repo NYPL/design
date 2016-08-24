@@ -10,7 +10,7 @@ html {
   // -webkit-filter: grayscale(1);
 
   @media screen and (max-width: $maxwidthpx) {
-    // font-size: calc(2px + 1vw);
+    font-size: calc(#{$basefont} * 0.9);
   }
 
 }
@@ -128,9 +128,6 @@ ul.horizontal {
 }
 
 header {
-  // border-bottom: 1px solid $nypllightgray;
-  // border-top: 2px solid $nyplred;
-
   .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -577,6 +574,10 @@ table.views-table {
 
   .signup-method {
     color: $highlightcolor;
+  }
+
+  .resource-title {
+    font-weight: bold;
   }
 }
 

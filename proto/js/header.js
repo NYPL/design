@@ -1,23 +1,23 @@
 var hideTimeout
 
 function init() {
-  $("input[type=radio]").click(function() {
+  $("#main-search input[type=radio]").click(function() {
     updateSearchRadio($(this).val())
   })
   $("#search-query-text").focus(function() {
     showSearch()
   })
-  $("input[type=radio]").focus(function() {
+  $("#main-search input[type=radio]").focus(function() {
     focusRadio($(this).val())
   })
-  $("input[type=radio]").blur(function() {
+  $("#main-search input[type=radio]").blur(function() {
     blurRadio($(this).val())
   })
-  $("#search-query-text, .search-type, .search-button, .search-radio-label").focus(function() {
+  $("#search-query-text, .search-type, #main-search .search-button, .search-radio-label").focus(function() {
     if (hideTimeout) clearTimeout(hideTimeout)
     showSearch()
   })
-  $("#search-query-text, .search-type, .search-button, .search-radio-label").blur(function() {
+  $("#search-query-text, .search-type, #main-search .search-button, .search-radio-label").blur(function() {
     hideTimeout = setTimeout(hideSearch, 100)
   })
   $(".email-toggle a").click(function(e) {
@@ -36,6 +36,14 @@ function init() {
   $(".login-toggle a").click(function(e) {
     if ($(e.target).closest('.login-toggle').length && !$(e.target).parents("#login-links").length) {
       toggleLogin()
+    }
+  })
+  $("input[name=available]").change(function() {
+    var value = $("input[name=available]:checked").val()
+    if (value == "library") {
+      $("fieldset .location").fadeIn(200)
+    } else {
+      $("fieldset .location").fadeOut(200)
     }
   })
 }

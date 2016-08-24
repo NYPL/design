@@ -393,7 +393,7 @@ header .service .content-wrapper {
     box-shadow: inset 0 -4px 0 #ed1c24; }
 
 .hidden {
-  display: none !important; }
+  display: none; }
 
 select.styled {
   -webkit-appearance: none;
@@ -485,7 +485,9 @@ input[type=radio], input[type=checkbox] {
   .pane label {
     font-weight: bold; }
   .pane label.group {
-    font-weight: normal; }
+    background-color: #6cc8eb;
+    font-weight: normal;
+    padding: 3px 5px; }
 
 .pane.filters .inner-wrapper {
   padding-right: 2em; }
@@ -503,7 +505,6 @@ input[type=radio], input[type=checkbox] {
   border-radius: 0;
   font-size: 16px;
   height: 2rem;
-  line-height: 1;
   width: 100%; }
 
 .secondary-navigation {
@@ -569,6 +570,10 @@ table.views-table {
     width: 20%; }
   table.views-table th.event-audience {
     width: 20%; }
+  table.views-table th.resource-availability {
+    width: 25%; }
+  table.views-table th.resouce-description {
+    width: 65%; }
   table.views-table td {
     border-bottom: 1px solid #dddbd9;
     padding: 0.5rem 0.5rem 3rem 0;

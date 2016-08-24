@@ -273,7 +273,7 @@ header {
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 select.styled {
@@ -403,7 +403,10 @@ input[type=radio], input[type=checkbox] {
   }
 
   label.group {
+    background-color: $nyplsearchcolorlight;
     font-weight: normal;
+    padding: 3px 5px;
+    // margin-bottom: 5px;
   }
 }
 
@@ -432,7 +435,6 @@ input[type=radio], input[type=checkbox] {
     border-radius: 0;
     font-size: 16px;
     height: 2rem;
-    line-height: 1;
     width: 100%;
   }
 }
@@ -537,6 +539,14 @@ table.views-table {
 
   th.event-audience {
     width: 20%;
+  }
+
+  th.resource-availability {
+    width: 25%;
+  }
+
+  th.resouce-description {
+    width: 65%;
   }
 
   tr {

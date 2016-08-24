@@ -8,6 +8,11 @@ html {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   // -webkit-filter: grayscale(1);
+
+  @media screen and (max-width: $maxwidthpx) {
+    // font-size: calc(2px + 1vw);
+  }
+
 }
 
 body {
@@ -37,6 +42,10 @@ h4 {
 }
 
 @each $tag in a, input, select {
+  #{$tag} {
+    border-radius: 0;
+  }
+
   #{$tag}:focus {
     outline-color: $focuscolor;
     outline-style: solid;
@@ -254,7 +263,7 @@ header {
 
   a {
     border: none;
-    color: $nypldarkgray;
+    color: $pagecolor;
     display: inline-block;
     padding: 0.2em 0.4em 0;
     text-decoration: none;
@@ -274,19 +283,6 @@ header {
 
 .hidden {
   display: none;
-}
-
-select.styled {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  color: $nypldarkgray;
-  height: 2rem;
-  padding: 0 1.5rem 0 0.5rem;
-  width: 110%;
 }
 
 input {
@@ -430,12 +426,26 @@ input[type=radio], input[type=checkbox] {
   }
 
   select {
-    background-color: $nyplsearchcolorlight;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0NDQ0NDQ7fQo8L3N0eWxlPgo8dGl0bGU+YXJyb3dzPC90aXRsZT4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxLjQsNC43IDIuNSwzLjIgMy41LDQuNyAiLz4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4KPC9zdmc+Cg==) no-repeat 98% 50% $nyplsearchcolorlight;
     border: 0;
     border-radius: 0;
     font-size: 16px;
     height: 2rem;
+    padding-right: 7%;
+    text-indent: 0.5rem;
     width: 100%;
+  }
+
+  .a-z a {
+    background-color: $nyplsearchcolorlight;
+    color: $pagecolor;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 3px 5px;
+    text-decoration: none;
   }
 }
 
@@ -521,7 +531,7 @@ table.views-table {
   border-collapse: collapse;
 
   thead th {
-    border-bottom: 1px solid $nypldarkgray;
+    border-bottom: 1px solid $pagecolor;
     text-align: left;
   }
 

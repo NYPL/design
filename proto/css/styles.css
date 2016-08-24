@@ -236,15 +236,24 @@ h3 {
 h4 {
   font-size: 1.2rem; }
 
+a {
+  border-radius: 0; }
+
 a:focus {
   outline-color: #ffb81d;
   outline-style: solid;
   outline-width: 3px; }
 
+input {
+  border-radius: 0; }
+
 input:focus {
   outline-color: #ffb81d;
   outline-style: solid;
   outline-width: 3px; }
+
+select {
+  border-radius: 0; }
 
 select:focus {
   outline-color: #ffb81d;
@@ -395,18 +404,6 @@ header .service .content-wrapper {
 .hidden {
   display: none; }
 
-select.styled {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  color: #100f0e;
-  height: 2rem;
-  padding: 0 1.5rem 0 0.5rem;
-  width: 110%; }
-
 input {
   background-color: #6cc8eb;
   border: none;
@@ -500,12 +497,24 @@ input[type=radio], input[type=checkbox] {
 .pane.filters input[type=text] {
   width: 100%; }
 .pane.filters select {
-  background-color: #6cc8eb;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0NDQ0NDQ7fQo8L3N0eWxlPgo8dGl0bGU+YXJyb3dzPC90aXRsZT4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxLjQsNC43IDIuNSwzLjIgMy41LDQuNyAiLz4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4KPC9zdmc+Cg==) no-repeat 98% 50% #6cc8eb;
   border: 0;
   border-radius: 0;
   font-size: 16px;
   height: 2rem;
+  padding-right: 7%;
+  text-indent: 0.5rem;
   width: 100%; }
+.pane.filters .a-z a {
+  background-color: #6cc8eb;
+  color: #100f0e;
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 3px 5px;
+  text-decoration: none; }
 
 .secondary-navigation {
   list-style: none;

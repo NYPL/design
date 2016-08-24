@@ -41,9 +41,9 @@ function init() {
   $("input[name=available]").change(function() {
     var value = $("input[name=available]:checked").val()
     if (value == "library") {
-      $("fieldset .location").fadeIn(200)
+      $("div.location").fadeIn(200)
     } else {
-      $("fieldset .location").fadeOut(200)
+      $("div.location").fadeOut(200)
     }
   })
 }

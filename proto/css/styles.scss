@@ -151,7 +151,7 @@ a.inverted {
 .nypl-logo {
   // NOTE: has redundant rules to show different logo options
   background: url("../img/lion.svg") no-repeat scroll 0px 0px/#{$logo-height} auto white;
-  background: url("../img/nypl-symmetry.svg") no-repeat scroll 0px 0px/#{$logo-width} auto white;
+  background: url("../img/nypl-symmetry.svg") no-repeat scroll 0px 0px/5.8rem auto white;
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/#{$logo-width} auto white;
   border: none;
   display: block;
@@ -163,6 +163,7 @@ a.inverted {
   text-indent: ($logo-width * 2);
   white-space: nowrap;
   width: $logo-height;
+  width: 5.8rem;
   width: $logo-width;
 
   @media screen and (max-width: $mobile-breakpoint) {

@@ -331,7 +331,7 @@ a.inverted:hover, a.inverted:visited:hover {
 
 .nypl-logo {
   background: url("../img/lion.svg") no-repeat scroll 0px 0px/3rem auto white;
-  background: url("../img/nypl-symmetry.svg") no-repeat scroll 0px 0px/5rem auto white;
+  background: url("../img/nypl-symmetry.svg") no-repeat scroll 0px 0px/5.8rem auto white;
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/5rem auto white;
   border: none;
   display: block;
@@ -343,6 +343,7 @@ a.inverted:hover, a.inverted:visited:hover {
   text-indent: 10rem;
   white-space: nowrap;
   width: 3rem;
+  width: 5.8rem;
   width: 5rem; }
   @media screen and (max-width: 860px) {
     .nypl-logo {

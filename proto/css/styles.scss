@@ -214,6 +214,7 @@ header {
 
   @media screen and (max-width: $mobile-breakpoint) {
     display: none;
+    padding-top: 5px;
     width: 100%;
 
     li {
@@ -566,7 +567,11 @@ input[type=radio], input[type=checkbox] {
 
   .a-z span {
     background-color: $nypllightgray;
-    width: calc(2em + 14px);
+  }
+
+  .a-z span.long {
+    // because “any” has different lengths in different langs
+    min-width: calc(2em + 14px);
   }
 }
 
@@ -599,11 +604,18 @@ section.secondary {
 }
 
 .results-summary {
+  line-height: 1;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  @include clearfix;
 
   .results-count {
+    display: inline-block;
+    float: left;
     font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
   }
 
   .facet {
@@ -689,6 +701,7 @@ table.views-table {
   }
 
   tr {
+    border-bottom: 1px solid $nypllightgray;
   }
 
   td {
@@ -709,6 +722,50 @@ table.views-table {
   .resource-title {
     font-weight: bold;
   }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    thead {
+      display: none;
+    }
+
+    td {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 1rem 0 1rem 0;
+    }
+
+    tr:first-child {
+      border-top: 1px solid $nypllightgray;
+    }
+
+    .event-time, .event-audience, .event-title {
+      border: none;
+      display: block;
+    }
+
+    .event-time {
+      width: 20%;
+    }
+
+    .event-title, .event-location, .event-audience {
+      width: 30%;
+    }
+
+    .event-title {
+      margin-right: 5%;
+      width: 45%;
+    }
+
+    .resource-availability {
+      width: 25%;
+    }
+
+    .resouce-description {
+      width: 65%;
+    }
+  }
+
 }
 
 footer {

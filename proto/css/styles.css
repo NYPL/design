@@ -379,6 +379,7 @@ header .service {
   @media screen and (max-width: 960px) {
     .service-buttons {
       display: none;
+      padding-top: 5px;
       width: 100%; }
       .service-buttons li {
         border-bottom: 1px solid white;
@@ -618,8 +619,9 @@ input[type=radio], input[type=checkbox] {
 .pane.filters .a-z a {
   background-color: #6cc8eb; }
 .pane.filters .a-z span {
-  background-color: #dddbd9;
-  width: calc(2em + 14px); }
+  background-color: #dddbd9; }
+.pane.filters .a-z span.long {
+  min-width: calc(2em + 14px); }
 
 .secondary-navigation {
   list-style: none;
@@ -642,10 +644,21 @@ section.secondary {
     margin: 0; }
 
 .results-summary {
-  margin-bottom: 1.5rem; }
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem; }
+  .results-summary:before, .results-summary:after {
+    content: "";
+    display: table; }
+  .results-summary:after {
+    clear: both; }
   .results-summary .results-count {
+    display: inline-block;
+    float: left;
     font-size: 3rem;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem; }
   .results-summary .facet-remove {
     color: #7B756F;
     display: inline-block;
@@ -703,6 +716,8 @@ table.views-table {
     width: 25%; }
   table.views-table th.resouce-description {
     width: 65%; }
+  table.views-table tr {
+    border-bottom: 1px solid #dddbd9; }
   table.views-table td {
     border-bottom: 1px solid #dddbd9;
     padding: 0.5rem 0.5rem 3rem 0;
@@ -714,6 +729,30 @@ table.views-table {
     color: #1980a9; }
   table.views-table .resource-title {
     font-weight: bold; }
+  @media screen and (max-width: 960px) {
+    table.views-table thead {
+      display: none; }
+    table.views-table td {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 1rem 0 1rem 0; }
+    table.views-table tr:first-child {
+      border-top: 1px solid #dddbd9; }
+    table.views-table .event-time, table.views-table .event-audience, table.views-table .event-title {
+      border: none;
+      display: block; }
+    table.views-table .event-time {
+      width: 20%; }
+    table.views-table .event-title, table.views-table .event-location, table.views-table .event-audience {
+      width: 30%; }
+    table.views-table .event-title {
+      margin-right: 5%;
+      width: 45%; }
+    table.views-table .resource-availability {
+      width: 25%; }
+    table.views-table .resouce-description {
+      width: 65%; } }
 
 footer {
   background-color: #54514A;

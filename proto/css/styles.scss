@@ -382,6 +382,11 @@ input[type=button], input[type=submit] {
   color: white;
   height: 2rem;
   padding: 0 1rem;
+
+  &:focus {
+    box-shadow: inset 0 0 0 4px $focuscolor;
+    outline: none;
+  }
 }
 
 
@@ -644,6 +649,10 @@ section.secondary {
     text-decoration: none;
     width: 35%;
     @include clearfix;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      font-size: 1rem;
+    }
   }
 
   .page-count {
@@ -652,16 +661,20 @@ section.secondary {
   }
 
   .arrow:after {
+    display: block;
     font-size: 3rem;
     line-height: 0.9;
-  }
-
-  .previous .arrow:after {
     float: left;
   }
 
   .next .arrow:after {
     float: right;
+  }
+
+  .previous .arrow:after, .next .arrow:after {
+    @media screen and (max-width: $mobile-breakpoint) {
+      float: none;
+    }
   }
 
   .next {

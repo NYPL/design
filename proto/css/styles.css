@@ -500,6 +500,9 @@ input[type=button], input[type=submit] {
   color: white;
   height: 2rem;
   padding: 0 1rem; }
+  input[type=button]:focus, input[type=submit]:focus {
+    box-shadow: inset 0 0 0 4px #ffb81d;
+    outline: none; }
 
 input[type=radio], input[type=checkbox] {
   height: initial;
@@ -687,16 +690,22 @@ section.secondary {
       display: table; }
     .results-pagination .page-count:after, .results-pagination .previous:after, .results-pagination .next:after {
       clear: both; }
+    @media screen and (max-width: 860px) {
+      .results-pagination .page-count, .results-pagination .previous, .results-pagination .next {
+        font-size: 1rem; } }
   .results-pagination .page-count {
     text-align: center;
     width: 30%; }
   .results-pagination .arrow:after {
+    display: block;
     font-size: 3rem;
-    line-height: 0.9; }
-  .results-pagination .previous .arrow:after {
+    line-height: 0.9;
     float: left; }
   .results-pagination .next .arrow:after {
     float: right; }
+  @media screen and (max-width: 860px) {
+    .results-pagination .previous .arrow:after, .results-pagination .next .arrow:after {
+      float: none; } }
   .results-pagination .next {
     text-align: right; }
 

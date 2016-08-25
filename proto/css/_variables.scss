@@ -36,3 +36,14 @@ $linkvisitedcolor: darken($linkcolor, 20%);
 $linkhovercolor: lighten($linkcolor, 10%);
 $invertedlinkcolor: white;
 $invertedlinkvisitedcolor: darken($invertedlinkcolor, 10%);
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

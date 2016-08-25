@@ -49,7 +49,7 @@ function init() {
 
   $(".menu.main-menu-toggle").click(function() {
     $(this).remove()
-    $(".nav-buttons, .service-buttons").css("display","flex")
+    $(".nav-buttons, .service-buttons").css("display","block")
   })
 }
 

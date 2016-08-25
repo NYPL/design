@@ -780,6 +780,7 @@ footer ul {
   list-style: none;
   margin: 1rem 0 1rem 0;
   padding: 0;
+  @include clearfix;
 }
 
 .copyright {
@@ -798,7 +799,7 @@ footer ul {
 
 .footerLinks {
 
-  li {
+  > li {
     float: left;
     width: 25%;
 

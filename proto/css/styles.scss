@@ -724,48 +724,48 @@ table.views-table {
     font-weight: bold;
   }
 
-  @media screen and (max-width: $mobile-breakpoint) {
-    thead {
-      display: none;
-    }
+  // @media screen and (max-width: $mobile-breakpoint) {
+  //   thead {
+  //     display: none;
+  //   }
 
-    td {
-      display: block;
-      float: left;
-      margin: 0;
-      padding: 1rem 0 1rem 0;
-    }
+  //   td {
+  //     display: block;
+  //     float: left;
+  //     margin: 0;
+  //     padding: 1rem 0 1rem 0;
+  //   }
 
-    tr:first-child {
-      border-top: 1px solid $nypllightgray;
-    }
+  //   tr:first-child {
+  //     border-top: 1px solid $nypllightgray;
+  //   }
 
-    .event-time, .event-audience, .event-title {
-      border: none;
-      display: block;
-    }
+  //   .event-time, .event-audience, .event-title {
+  //     border: none;
+  //     display: block;
+  //   }
 
-    .event-time {
-      width: 20%;
-    }
+  //   .event-time {
+  //     width: 20%;
+  //   }
 
-    .event-title, .event-location, .event-audience {
-      width: 30%;
-    }
+  //   .event-title, .event-location, .event-audience {
+  //     width: 30%;
+  //   }
 
-    .event-title {
-      margin-right: 5%;
-      width: 45%;
-    }
+  //   .event-title {
+  //     margin-right: 5%;
+  //     width: 45%;
+  //   }
 
-    .resource-availability {
-      width: 25%;
-    }
+  //   .resource-availability {
+  //     width: 25%;
+  //   }
 
-    .resouce-description {
-      width: 65%;
-    }
-  }
+  //   .resouce-description {
+  //     width: 65%;
+  //   }
+  // }
 
 }
 

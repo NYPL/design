@@ -730,30 +730,6 @@ table.views-table {
     color: #1980a9; }
   table.views-table .resource-title {
     font-weight: bold; }
-  @media screen and (max-width: 860px) {
-    table.views-table thead {
-      display: none; }
-    table.views-table td {
-      display: block;
-      float: left;
-      margin: 0;
-      padding: 1rem 0 1rem 0; }
-    table.views-table tr:first-child {
-      border-top: 1px solid #dddbd9; }
-    table.views-table .event-time, table.views-table .event-audience, table.views-table .event-title {
-      border: none;
-      display: block; }
-    table.views-table .event-time {
-      width: 20%; }
-    table.views-table .event-title, table.views-table .event-location, table.views-table .event-audience {
-      width: 30%; }
-    table.views-table .event-title {
-      margin-right: 5%;
-      width: 45%; }
-    table.views-table .resource-availability {
-      width: 25%; }
-    table.views-table .resouce-description {
-      width: 65%; } }
 
 footer {
   background-color: #54514A;

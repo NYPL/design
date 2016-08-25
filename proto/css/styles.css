@@ -532,13 +532,13 @@ input[type=radio], input[type=checkbox] {
     background-color: #1DA1D4;
     font-size: 0.9rem;
     left: 0;
+    padding-top: 1px;
     position: absolute;
     top: 2rem; }
   #main-search .search-radio-label {
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
-    margin-top: 1px;
     padding: 0 0.75rem 0 0.5rem; }
     #main-search .search-radio-label.selected {
       background-color: #6cc8eb; }

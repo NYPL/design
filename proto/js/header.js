@@ -13,11 +13,11 @@ function init() {
   $("#main-search input[type=radio]").blur(function() {
     blurRadio($(this).val())
   })
-  $("#search-query-text, .search-type, #main-search .search-button, .search-radio-label").focus(function() {
+  $("#search-query-text, #main-search .search-type, #main-search .search-button, #main-search .search-radio-label").focus(function() {
     if (hideTimeout) clearTimeout(hideTimeout)
     showSearch()
   })
-  $("#search-query-text, .search-type, #main-search .search-button, .search-radio-label").blur(function() {
+  $("#search-query-text, #main-search .search-type, #main-search .search-button, #main-search .search-radio-label").blur(function() {
     hideTimeout = setTimeout(hideSearch, 100)
   })
   $(".email-toggle a").click(function(e) {

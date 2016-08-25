@@ -13,11 +13,13 @@ function init() {
   $("#main-search input[type=radio]").blur(function() {
     blurRadio($(this).val())
   })
-  $("#search-query-text, #main-search .search-type, #main-search .search-button, #main-search .search-radio-label").focus(function() {
+  $("#search-query-text, .search-type, .search-button, .search-radio-label").on("focus click",  function() {
+    console.log("focus!");
     if (hideTimeout) clearTimeout(hideTimeout)
     showSearch()
   })
-  $("#search-query-text, #main-search .search-type, #main-search .search-button, #main-search .search-radio-label").blur(function() {
+  $("#search-query-text, .search-type, .search-button, .search-radio-label").blur(function() {
+    console.log("blur :(");
     hideTimeout = setTimeout(hideSearch, 100)
   })
   $(".email-toggle a").click(function(e) {
@@ -31,6 +33,10 @@ function init() {
     }
     if (!$(e.target).closest('.login-toggle').length && !$(e.target).parents("#login-links").length) {
       hideLogin()
+    }
+    if (!$(e.target).parents(".search").length) {
+      hideLogin()
+      hideTimeout = setTimeout(hideSearch, 100)
     }
   })
   $(".login-toggle a").click(function(e) {

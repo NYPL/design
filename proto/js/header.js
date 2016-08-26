@@ -35,7 +35,6 @@ function init() {
       hideLogin()
     }
     if (!$(e.target).parents(".search").length) {
-      hideLogin()
       hideTimeout = setTimeout(hideSearch, 100)
     }
   })

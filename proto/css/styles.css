@@ -223,12 +223,14 @@ html {
 body {
   color: #100f0e; }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
   margin-bottom: 1.5rem;
   margin-top: 0; }
 
 h1 {
-  font-size: 2.6rem; }
+  font-size: 2.6rem;
+  line-height: 1; }
 
 h2 {
   font-size: 2rem; }
@@ -238,6 +240,10 @@ h3 {
 
 h4 {
   font-size: 1.2rem; }
+
+ul {
+  margin-bottom: 1.5rem;
+  margin-top: 0; }
 
 a {
   border-radius: 0; }
@@ -587,6 +593,14 @@ input[type=radio], input[type=checkbox] {
     font-weight: normal;
     padding: 3px 5px; }
 
+.extra-links {
+  padding-top: 1rem; }
+  .extra-links h4 {
+    margin-bottom: 0; }
+  .extra-links ul {
+    list-style: none;
+    padding: 0; }
+
 .pane.filters .inner-wrapper {
   padding-right: 2em; }
   @media screen and (max-width: 860px) {
@@ -739,6 +753,30 @@ table.views-table {
     color: #1980a9; }
   table.views-table .resource-title {
     font-weight: bold; }
+  @media screen and (max-width: 860px) {
+    table.views-table.collapses thead {
+      display: none; }
+    table.views-table.collapses td {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 1rem 0 1rem 0; }
+    table.views-table.collapses tr:first-child {
+      border-top: 1px solid #dddbd9; }
+    table.views-table.collapses .event-time, table.views-table.collapses .event-audience, table.views-table.collapses .event-title {
+      border: none;
+      display: block; }
+    table.views-table.collapses .event-time {
+      width: 20%; }
+    table.views-table.collapses .event-title, table.views-table.collapses .event-location, table.views-table.collapses .event-audience {
+      width: 30%; }
+    table.views-table.collapses .event-title {
+      margin-right: 5%;
+      width: 45%; }
+    table.views-table.collapses .resource-availability {
+      width: 25%; }
+    table.views-table.collapses .resouce-description {
+      width: 65%; } }
 
 footer {
   background-color: #54514A;

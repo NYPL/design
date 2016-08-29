@@ -20,13 +20,15 @@ body {
   color: $pagetextcolor;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
   margin-bottom: 1.5rem;
   margin-top: 0;
 }
 
 h1 {
   font-size: 2.6rem;
+  line-height: 1;
 }
 
 h2 {
@@ -39,6 +41,11 @@ h3 {
 
 h4 {
   font-size: 1.2rem;
+}
+
+ul {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 @each $tag in a, input, select {
@@ -520,6 +527,19 @@ input[type=radio], input[type=checkbox] {
   }
 }
 
+.extra-links {
+  padding-top: 1rem;
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
 .pane.filters {
   .inner-wrapper {
     padding-right: 2em;
@@ -737,48 +757,50 @@ table.views-table {
     font-weight: bold;
   }
 
-  // @media screen and (max-width: $mobile-breakpoint) {
-  //   thead {
-  //     display: none;
-  //   }
+  &.collapses {
+    @media screen and (max-width: $mobile-breakpoint) {
+      thead {
+        display: none;
+      }
 
-  //   td {
-  //     display: block;
-  //     float: left;
-  //     margin: 0;
-  //     padding: 1rem 0 1rem 0;
-  //   }
+      td {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 1rem 0 1rem 0;
+      }
 
-  //   tr:first-child {
-  //     border-top: 1px solid $nypllightgray;
-  //   }
+      tr:first-child {
+        border-top: 1px solid $nypllightgray;
+      }
 
-  //   .event-time, .event-audience, .event-title {
-  //     border: none;
-  //     display: block;
-  //   }
+      .event-time, .event-audience, .event-title {
+        border: none;
+        display: block;
+      }
 
-  //   .event-time {
-  //     width: 20%;
-  //   }
+      .event-time {
+        width: 20%;
+      }
 
-  //   .event-title, .event-location, .event-audience {
-  //     width: 30%;
-  //   }
+      .event-title, .event-location, .event-audience {
+        width: 30%;
+      }
 
-  //   .event-title {
-  //     margin-right: 5%;
-  //     width: 45%;
-  //   }
+      .event-title {
+        margin-right: 5%;
+        width: 45%;
+      }
 
-  //   .resource-availability {
-  //     width: 25%;
-  //   }
+      .resource-availability {
+        width: 25%;
+      }
 
-  //   .resouce-description {
-  //     width: 65%;
-  //   }
-  // }
+      .resouce-description {
+        width: 65%;
+      }
+    }
+  }
 
 }
 

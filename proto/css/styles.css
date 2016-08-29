@@ -274,7 +274,8 @@ a:link {
 a:visited {
   color: #970c11; }
 a:hover, a:visited:hover {
-  color: #f14b52; }
+  color: #f14b52;
+  text-decoration: none; }
 
 a.inverted:link {
   color: white; }

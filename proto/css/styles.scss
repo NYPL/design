@@ -76,6 +76,7 @@ a {
   &:hover, &:visited:hover {
     // border-bottom-color: $linkcolor;
     color: $linkhovercolor;
+    text-decoration: none;
   }
 }
 

@@ -14,12 +14,10 @@ function init() {
     blurRadio($(this).val())
   })
   $("#search-query-text, .search-type, .search-button, .search-radio-label").on("focus click",  function() {
-    console.log("focus!");
     if (hideTimeout) clearTimeout(hideTimeout)
     showSearch()
   })
   $("#search-query-text, .search-type, .search-button, .search-radio-label").blur(function() {
-    console.log("blur :(");
     hideTimeout = setTimeout(hideSearch, 100)
   })
   $(".email-toggle a").click(function(e) {

@@ -315,7 +315,9 @@ header {
     z-index: 1;
   }
 
-  h4 {
+  .email-toggle-title {
+    font-size: 1.2rem;
+    font-weight: bold;
     line-height: 1.5;
     margin: 0;
   }
@@ -510,6 +512,13 @@ input[type=radio], input[type=checkbox] {
 .pane {
   float: left;
   width: 25%;
+
+  .pane-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0;
+  }
 
   @media screen and (max-width: $mobile-breakpoint) {
     float: none;

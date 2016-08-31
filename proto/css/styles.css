@@ -450,7 +450,9 @@ header .service {
   right: 0;
   text-transform: none;
   z-index: 1; }
-.email-toggle h4 {
+.email-toggle .email-toggle-title {
+  font-size: 1.2rem;
+  font-weight: bold;
   line-height: 1.5;
   margin: 0; }
 .email-toggle fieldset {
@@ -583,6 +585,11 @@ input[type=radio], input[type=checkbox] {
 .pane {
   float: left;
   width: 25%; }
+  .pane .pane-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0; }
   @media screen and (max-width: 860px) {
     .pane {
       float: none;

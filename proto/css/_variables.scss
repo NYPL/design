@@ -1,8 +1,8 @@
 $basefontraw: 16;
 $maxwidthraw: 1312;
-$basefont: #{$basefontraw}px;
-$maxwidthpx: #{$maxwidthraw}px;
-$max-width: #{($maxwidthraw/$basefontraw)}rem;
+$basefont: $basefontraw * 1px;
+$maxwidthpx: $maxwidthraw * 1px;
+$max-width: ($maxwidthraw/$basefontraw) * 1rem;
 $logo-width: 5rem;
 $logo-height: 3rem;
 $focus-width: 3px;

@@ -33,6 +33,8 @@ wget –no-check-certificate -q -O - 'https://docs.google.com/spreadsheets/d/1gc
       let COUNT=COUNT+1
       RENAME="${Name// /_}"
       FILENAME="${Subdomain}-${Number}_${RENAME}"
+      FILENAME="${FILENAME//(/_}"
+      FILENAME="${FILENAME//)/_}"
       echo "($COUNT) Creating: ${FILENAME}"
       webkit2png --ignore-ssl-check -C --delay=5 --clipwidth=300 --clipheight=300 ${URL} -o ./images/${FILENAME}
       mv ./images/${FILENAME}-clipped.png ./images/${FILENAME}.png

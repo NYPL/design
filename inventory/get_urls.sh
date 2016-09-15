@@ -31,7 +31,10 @@ wget –no-check-certificate -q -O - 'https://docs.google.com/spreadsheets/d/1gc
     if [ -n "$Subdomain" ] && [ -n "$Number" ] && [ -n "$Name" ] && [ -n "$URL" ]
     then
       let COUNT=COUNT+1
-      RENAME="${Name//[^\x00-\x7F]/_}"
+      RENAME="${Name//[^\x00-\x7F]/_}" # for non ascii stuff
+      RENAME="${RENAME// /_}" # spaces suck
+      RENAME="${RENAME//./_}" # also periods
+      RENAME=`echo $RENAME | cut -c 1-30` # truncate the name
       FILENAME="${Subdomain}-${Number}_${RENAME}"
       echo "($COUNT) Creating: ${FILENAME}"
       webkit2png --ignore-ssl-check -C --delay=2 --clipwidth=300 --clipheight=300 ${URL} -o "./images/${FILENAME}"

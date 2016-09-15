@@ -34,6 +34,7 @@ wget –no-check-certificate -q -O - 'https://docs.google.com/spreadsheets/d/1gc
       RENAME="${Name//[^\x00-\x7F]/_}" # for non ascii stuff
       RENAME="${RENAME// /_}" # spaces suck
       RENAME="${RENAME//./_}" # also periods
+      RENAME="${RENAME//,/_}" # also commas
       RENAME=`echo $RENAME | cut -c 1-30` # truncate the name
       FILENAME="${Subdomain}-${Number}_${RENAME}"
       echo "($COUNT) Creating: ${FILENAME}"

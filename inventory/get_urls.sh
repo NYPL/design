@@ -1,26 +1,5 @@
 #!/bin/bash
 
-# IFS=','
-# wget –no-check-certificate -q -O - 'https://docs.google.com/spreadsheets/d/1gcAHUEZCFQ83t5LYpzTR6KbDhf6NYLfUZ7hyz_bhT1c/pub?gid=0&single=true&output=csv' | cut -d',' -f1-5 | read -a
-# while read -a line; do
-#     for i in "${!line[@]}"; do
-#         echo "${headers[i]}: ${line[i]}"
-#     done
-# done
-
-
-# INPUT_FILE='unix_file.csv'
-
-# IFS=','
-
-# while read OS HS
-# do
-
-# echo "Operating system - $OS"
-# echo "Hosting server type - $HS"
-
-# done < $INPUT_FILE
-
 COUNT=0
 
 # get URLs and produce thumbnails

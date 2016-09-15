@@ -31,13 +31,11 @@ wget –no-check-certificate -q -O - 'https://docs.google.com/spreadsheets/d/1gc
     if [ -n "$Subdomain" ] && [ -n "$Number" ] && [ -n "$Name" ] && [ -n "$URL" ]
     then
       let COUNT=COUNT+1
-      RENAME="${Name// /_}"
+      RENAME="${Name//[^\x00-\x7F]/_}"
       FILENAME="${Subdomain}-${Number}_${RENAME}"
-      FILENAME="${FILENAME//(/_}"
-      FILENAME="${FILENAME//)/_}"
       echo "($COUNT) Creating: ${FILENAME}"
-      webkit2png --ignore-ssl-check -C --delay=5 --clipwidth=300 --clipheight=300 ${URL} -o ./images/${FILENAME}
-      mv ./images/${FILENAME}-clipped.png ./images/${FILENAME}.png
+      webkit2png --ignore-ssl-check -C --delay=2 --clipwidth=300 --clipheight=300 ${URL} -o "./images/${FILENAME}"
+      mv "./images/${FILENAME}-clipped.png" "./images/${FILENAME}.png"
       convert ./images/${FILENAME}.png \
           -gravity South   -background White  -splice 0x40 \
           -fill Black -draw 'line 0,600 600,600' \

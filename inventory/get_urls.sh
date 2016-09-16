@@ -1,10 +1,20 @@
 #!/bin/bash
 
+if [ -z $1 ]
+then
+  echo ""
+  echo "Please provide a URL to a spreadsheet"
+  echo ""
+  exit 1
+fi
+
 COUNT=0
 
 # get URLs and produce thumbnails
 
-wget –no-check-certificate -q -O - 'https://docs.google.com/spreadsheets/d/1gcAHUEZCFQ83t5LYpzTR6KbDhf6NYLfUZ7hyz_bhT1c/pub?gid=0&single=true&output=csv' | cut -d',' -f1-5 | tail -n +2 | while IFS=, read Subdomain Number Name URL Printed Action Notes
+URL = $1
+
+wget –no-check-certificate -q -O - $URL | cut -d',' -f1-5 | tail -n +2 | while IFS=, read Subdomain Number Name URL Printed Action Notes
   do
     # read col1 col2 < <(echo $line)
     if [ -n "$Subdomain" ] && [ -n "$Number" ] && [ -n "$Name" ] && [ -n "$URL" ]

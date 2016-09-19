@@ -25,20 +25,21 @@ wget –no-check-certificate -q -O - $URL | cut -d',' -f1-5 | tail -n +2 | while
       RENAME="${RENAME//./_}" # also periods
       RENAME="${RENAME//,/_}" # also commas
       RENAME=`echo $RENAME | cut -c 1-30` # truncate the name
-      FILENAME="${Subdomain}-${Number}_${RENAME}"
+      FILENAME="_full-${Subdomain}-${Number}_${RENAME}"
       echo "($COUNT) Creating: ${FILENAME}"
-      webkit2png --ignore-ssl-check -C --delay=2 --clipwidth=300 --clipheight=300 ${URL} -o "./images/${FILENAME}"
-      mv "./images/${FILENAME}-clipped.png" "./images/${FILENAME}.png"
+      webkit2png --ignore-ssl-check -F --delay=1 --width=1024 ${URL} -o "./images/${FILENAME}"
+      mv "./images/${FILENAME}-full.png" "./images/${FILENAME}.png"
       convert ./images/${FILENAME}.png \
-          -gravity South   -background White  -splice 0x40 \
-          -fill Black -draw 'line 0,600 600,600' \
+          -gravity North -background White  -splice 0x40 \
+          -fill Black -draw 'line 0,40 1024,40' \
           -pointsize 18 -annotate +0+2 "$FILENAME" \
           -gravity Center -append ./images/${FILENAME}.png
+      convert ./images/${FILENAME}.png -resize 600x ./images/${FILENAME}.png
       echo ""
     fi
   done
 
 # assemble final PDF
 SUFFIX=$(date +%s)
-convert 'images/*.png' page_index_${SUFFIX}.pdf
+convert 'images/_full-*.png' full_page_index_${SUFFIX}.pdf
 

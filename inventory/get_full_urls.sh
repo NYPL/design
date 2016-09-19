@@ -27,14 +27,14 @@ wget –no-check-certificate -q -O - $URL | cut -d',' -f1-5 | tail -n +2 | while
       RENAME=`echo $RENAME | cut -c 1-30` # truncate the name
       FILENAME="_full-${Subdomain}-${Number}_${RENAME}"
       echo "($COUNT) Creating: ${FILENAME}"
-      webkit2png --ignore-ssl-check -F --delay=1 --width=1024 ${URL} -o "./images/${FILENAME}"
-      mv "./images/${FILENAME}-full.png" "./images/${FILENAME}.png"
-      convert ./images/${FILENAME}.png \
+      webkit2png --ignore-ssl-check -F --delay=1 --width=1024 ${URL} -o "./fullsize/${FILENAME}"
+      mv "./fullsize/${FILENAME}-full.png" "./fullsize/${FILENAME}.png"
+      convert ./fullsize/${FILENAME}.png \
           -gravity North -background White  -splice 0x40 \
           -fill Black -draw 'line 0,40 1024,40' \
           -pointsize 18 -annotate +0+2 "$FILENAME" \
-          -gravity Center -append ./images/${FILENAME}.png
-      convert ./images/${FILENAME}.png -resize 600x ./images/${FILENAME}.png
+          -gravity Center -append ./fullsize/${FILENAME}.png
+      convert ./fullsize/${FILENAME}.png -resize 600x ./fullsize/${FILENAME}.png
       echo ""
     fi
   done

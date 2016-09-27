@@ -735,59 +735,65 @@ section.secondary {
   .results-pagination .next {
     text-align: right; }
 
-table.views-table {
+.views-table {
+  display: table;
   border-collapse: collapse; }
-  table.views-table thead th {
+  .views-table .views-table-row {
+    border-bottom: 1px solid #dddbd9;
+    display: table-row; }
+  .views-table .views-table-row .views-table-header {
     border-bottom: 1px solid #100f0e;
     text-align: left; }
-  table.views-table th.event-time {
+  .views-table .views-table-header, .views-table .views-table-cell {
+    display: table-cell; }
+  .views-table .views-table-header {
+    font-weight: bold; }
+  .views-table .views-table-header.event-time {
     width: 20%; }
-  table.views-table th.event-title {
+  .views-table .views-table-header.event-title {
     width: 40%; }
-  table.views-table th.event-location {
+  .views-table .views-table-header.event-location {
     width: 20%; }
-  table.views-table th.event-audience {
+  .views-table .views-table-header.event-audience {
     width: 20%; }
-  table.views-table th.resource-availability {
+  .views-table .views-table-header.resource-availability {
     width: 25%; }
-  table.views-table th.resouce-description {
+  .views-table .views-table-header.resouce-description {
     width: 65%; }
-  table.views-table tr {
-    border-bottom: 1px solid #dddbd9; }
-  table.views-table td {
+  .views-table .views-table-cell {
     border-bottom: 1px solid #dddbd9;
     padding: 0.5rem 0.5rem 3rem 0;
     vertical-align: top; }
-  table.views-table .channel-title {
+  .views-table .channel-title {
     color: #1980a9;
     text-transform: uppercase; }
-  table.views-table .signup-method {
+  .views-table .signup-method {
     color: #1980a9; }
-  table.views-table .resource-title {
+  .views-table .resource-title {
     font-weight: bold; }
   @media screen and (max-width: 860px) {
-    table.views-table.collapses thead {
+    .views-table.collapses .views-table-header {
       display: none; }
-    table.views-table.collapses td {
+    .views-table.collapses .views-table-cell {
       display: block;
       float: left;
       margin: 0;
       padding: 1rem 0 1rem 0; }
-    table.views-table.collapses tr:first-child {
+    .views-table.collapses .views-table-row:first-child {
       border-top: 1px solid #dddbd9; }
-    table.views-table.collapses .event-time, table.views-table.collapses .event-audience, table.views-table.collapses .event-title {
+    .views-table.collapses .event-time, .views-table.collapses .event-audience, .views-table.collapses .event-title {
       border: none;
       display: block; }
-    table.views-table.collapses .event-time {
+    .views-table.collapses .event-time {
       width: 20%; }
-    table.views-table.collapses .event-title, table.views-table.collapses .event-location, table.views-table.collapses .event-audience {
+    .views-table.collapses .event-title, .views-table.collapses .event-location, .views-table.collapses .event-audience {
       width: 30%; }
-    table.views-table.collapses .event-title {
+    .views-table.collapses .event-title {
       margin-right: 5%;
       width: 45%; }
-    table.views-table.collapses .resource-availability {
+    .views-table.collapses .resource-availability {
       width: 25%; }
-    table.views-table.collapses .resouce-description {
+    .views-table.collapses .resouce-description {
       width: 65%; } }
 
 footer {

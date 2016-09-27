@@ -813,6 +813,18 @@ section.secondary {
       .event-title {
         margin-right: 5%;
         width: 45%;
+        max-height: 12rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .event-location {
+        border-bottom: none;
+        font-weight: bold;
+      }
+
+      .event-audience:before {
+        content: "For: ";
       }
 
       .resource-availability {

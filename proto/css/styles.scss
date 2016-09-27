@@ -715,25 +715,25 @@ section.secondary {
   }
 }
 
-.views-table {
+table, .views-table {
   display: table;
   border-collapse: collapse;
 
-  .views-table-row {
+  tr, .views-table-row {
     border-bottom: 1px solid $nypllightgray;
     display: table-row;
   }
 
-  .views-table-row .views-table-header {
+  .views-table-row .views-table-header, table thead {
     border-bottom: 1px solid $pagecolor;
     text-align: left;
   }
 
-  .views-table-header, .views-table-cell {
+  td, th, .views-table-header, .views-table-cell {
     display: table-cell;
   }
 
-  .views-table-header {
+  th, .views-table-header {
     font-weight: bold;
   }
 
@@ -761,7 +761,7 @@ section.secondary {
     width: 65%;
   }
 
-  .views-table-cell {
+  td, .views-table-cell {
     border-bottom: 1px solid $nypllightgray;
     padding: 0.5rem 0.5rem 3rem 0;
     vertical-align: top;
@@ -782,18 +782,18 @@ section.secondary {
 
   &.collapses {
     @media screen and (max-width: $mobile-breakpoint) {
-      .views-table-header {
+      thead, th, .views-table-header {
         display: none;
       }
 
-      .views-table-cell {
+      td, .views-table-cell {
         display: block;
         float: left;
         margin: 0;
         padding: 1rem 0 1rem 0;
       }
 
-      .views-table-row:first-child {
+      tr:first-child, .views-table-row:first-child {
         border-top: 1px solid $nypllightgray;
       }
 

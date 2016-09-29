@@ -297,11 +297,12 @@ a.inverted:hover, a.inverted:visited:hover {
     display: table; }
   .content-wrapper:after {
     clear: both; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .content-wrapper {
       padding-left: 1rem; } }
 
 .horizontal {
+  display: table-cell;
   float: right;
   list-style: none;
   margin: 0;
@@ -311,18 +312,19 @@ a.inverted:hover, a.inverted:visited:hover {
     display: table; }
   .horizontal:after {
     clear: both; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .horizontal {
       float: none; } }
   .horizontal li {
-    float: left;
-    margin-right: 0.35em; }
+    display: inline-block;
+    margin-right: 0.35em;
+    vertical-align: bottom; }
     .horizontal li:last-child {
       margin-right: 0; }
 
 .menu {
   display: none; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .menu {
       background-color: #ed1c24;
       color: white !important;
@@ -335,7 +337,7 @@ a.inverted:hover, a.inverted:visited:hover {
 .logo {
   float: left;
   width: 5rem; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .logo {
       float: none;
       margin-right: 0.5rem; } }
@@ -356,14 +358,14 @@ a.inverted:hover, a.inverted:visited:hover {
   width: 3rem;
   width: 5.8rem;
   width: 5rem; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .nypl-logo {
       margin-right: 0.5rem; } }
 
 header .content-wrapper {
   max-width: calc(82rem - 2rem);
   padding: 0 1rem; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     header .content-wrapper {
       margin: 0; } }
 header .content:before, header .content:after {
@@ -371,15 +373,15 @@ header .content:before, header .content:after {
   display: table; }
 header .content:after {
   clear: both; }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 870px) {
   header .content {
     width: 100%; } }
 header .service {
   background-color: #ed1c24; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     header .service {
       display: table-footer-group; } }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 870px) {
   header {
     display: table;
     width: 100%; } }
@@ -388,7 +390,7 @@ header .service {
   font-size: 0.8rem;
   padding: 0;
   text-transform: uppercase; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .service-buttons {
       display: none;
       padding-top: 5px;
@@ -475,7 +477,7 @@ header .service {
     display: table; }
   .nav-buttons:after {
     clear: both; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .nav-buttons {
       display: none;
       font-size: 1.2rem; }
@@ -568,7 +570,7 @@ input[type=radio], input[type=checkbox] {
     left: 0.5rem;
     line-height: 2rem;
     position: absolute; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     #main-search .form-text, #main-search .search-button, #main-search .search-radio-label {
       height: 2.5rem;
       line-height: 2.5rem; }
@@ -594,7 +596,7 @@ input[type=radio], input[type=checkbox] {
     font-weight: bold;
     line-height: 1.5;
     margin: 0; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .pane {
       float: none;
       width: auto; } }
@@ -615,7 +617,7 @@ input[type=radio], input[type=checkbox] {
 
 .pane.filters .inner-wrapper {
   padding-right: 2em; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .pane.filters .inner-wrapper {
       padding-right: 0; } }
 .pane.filters fieldset {
@@ -663,7 +665,7 @@ input[type=radio], input[type=checkbox] {
 .main-content {
   float: left;
   width: 75%; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .main-content {
       float: none;
       width: auto; } }
@@ -716,7 +718,7 @@ section.secondary {
       display: table; }
     .results-pagination .page-count:after, .results-pagination .previous:after, .results-pagination .next:after {
       clear: both; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 870px) {
       .results-pagination .page-count, .results-pagination .previous, .results-pagination .next {
         font-size: 1rem; } }
   .results-pagination .page-count {
@@ -729,7 +731,7 @@ section.secondary {
     float: left; }
   .results-pagination .next .arrow:after {
     float: right; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .results-pagination .previous .arrow:after, .results-pagination .next .arrow:after {
       float: none; } }
   .results-pagination .next {
@@ -771,7 +773,7 @@ table, .views-table {
     color: #1980a9; }
   table .resource-title, .views-table .resource-title {
     font-weight: bold; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     table.collapses thead, table.collapses th, table.collapses .views-table-header, .views-table.collapses thead, .views-table.collapses th, .views-table.collapses .views-table-header {
       display: none; }
     table.collapses td, table.collapses .views-table-cell, .views-table.collapses td, .views-table.collapses .views-table-cell {
@@ -833,7 +835,7 @@ footer ul {
 .footerLinks > li {
   float: left;
   width: 25%; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 870px) {
     .footerLinks > li {
       float: none;
       width: auto; } }

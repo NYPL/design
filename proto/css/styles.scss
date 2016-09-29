@@ -115,6 +115,7 @@ a.inverted {
 }
 
 .horizontal {
+  display: table-cell;
   float: right;
   list-style: none;
   margin: 0;
@@ -126,8 +127,9 @@ a.inverted {
   }
 
   li {
-    float: left;
+    display: inline-block;
     margin-right: 0.35em;
+    vertical-align: bottom;
 
     &:last-child {
       margin-right: 0;

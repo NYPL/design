@@ -499,6 +499,9 @@ header .service {
     transition: all 0.2s; }
     .nav-buttons a:hover {
       color: #ed1c24; }
+  .nav-buttons li {
+    box-shadow: inset 0 0 0 #ed1c24;
+    transition: box-shadow 0.2s; }
   .nav-buttons li:hover, .nav-buttons li.active {
     box-shadow: inset 0 -4px 0 #ed1c24; }
 

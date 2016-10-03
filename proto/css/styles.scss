@@ -329,12 +329,26 @@ header {
 
   fieldset {
     border: none;
-    margin: 1em 0;
+    color: $pagetextcolor;
+    margin: 1em 0 0.5em;
     padding: 0;
+    position: relative;
   }
 
   label {
     display: block;
+    font-weight: bold;
+    margin-left: 0.5em;
+    position: absolute;
+  }
+
+  input[type="text"] {
+    padding: 1.5em 0 0;
+    width: 100%;
+  }
+
+  .links {
+    margin: 1em 0 0;
   }
 }
 

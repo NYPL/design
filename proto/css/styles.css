@@ -463,10 +463,20 @@ header .service {
   margin: 0; }
 .email-toggle fieldset {
   border: none;
-  margin: 1em 0;
-  padding: 0; }
+  color: #100f0e;
+  margin: 1em 0 0.5em;
+  padding: 0;
+  position: relative; }
 .email-toggle label {
-  display: block; }
+  display: block;
+  font-weight: bold;
+  margin-left: 0.5em;
+  position: absolute; }
+.email-toggle input[type="text"] {
+  padding: 1.5em 0 0;
+  width: 100%; }
+.email-toggle .links {
+  margin: 1em 0 0; }
 
 .nav-buttons {
   font-size: 1.1rem;

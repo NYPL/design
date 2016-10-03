@@ -433,7 +433,7 @@ input[type=radio], input[type=checkbox] {
   &:focus {
     background-color: white;
     box-shadow: inset 0 0 0 4px $focuscolor;
-    color: $nyplsearchcolor;
+    color: $nyplsearchcolordark;
     outline: none;
   }
 }
@@ -538,6 +538,10 @@ input[type=radio], input[type=checkbox] {
     width: auto;
   }
 
+  form {
+    margin-top: 1rem;
+  }
+
   label {
     font-weight: bold;
   }
@@ -573,9 +577,28 @@ input[type=radio], input[type=checkbox] {
   }
 
   fieldset {
+    background-color: $nyplsearchcolorlight;
     border: none;
     margin: 0 0 1rem;
     padding: 0;
+    position: relative;
+
+    span, label {
+      margin-left: 0.5em;
+    }
+
+    span.long, label.group {
+      margin-left: 0;
+    }
+
+    label.text {
+      display: block;
+      position: absolute;
+    }
+
+    input[type="text"] {
+      padding: 1.5em 0 0;
+    }
   }
 
   label {

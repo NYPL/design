@@ -514,7 +514,7 @@ input {
   padding: 0; }
 
 input[type=text] {
-  box-shadow: inset 0 0 0 3px #1980a9; }
+  box-shadow: inset 0 0 0 2px #1980a9; }
 
 input[type=button], input[type=submit] {
   background-color: #1980a9;
@@ -555,7 +555,7 @@ input[type=radio], input[type=checkbox] {
   #main-search .search-select {
     background-color: #1DA1D4;
     font-size: 0.9rem;
-    left: 0;
+    right: 0;
     padding-top: 1px;
     position: absolute;
     top: 2rem; }

@@ -398,7 +398,7 @@ input {
 }
 
 input[type=text] {
-  box-shadow: inset 0 0 0 3px $nyplsearchcolordark;
+  box-shadow: inset 0 0 0 2px $nyplsearchcolordark;
 }
 
 input[type=button], input[type=submit] {
@@ -454,7 +454,7 @@ input[type=radio], input[type=checkbox] {
   .search-select {
     background-color: $nyplsearchcolor;
     font-size: 0.9rem;
-    left: 0;
+    right: 0;
     padding-top: 1px;
     position: absolute;
     top: 2rem;

@@ -102,6 +102,32 @@ a.inverted {
   }
 }
 
+#skip a {
+  background-color: white;
+  border: none;
+  color: $linkcolor;
+  display: block;
+  font-size: 13px;
+  height: 1px;
+  left: -10000px;
+  line-height: 2;
+  overflow: hidden;
+  padding: 5px 10px 3px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  z-index: 1000;
+
+  &:focus {
+    border: 5px solid $linkcolor;
+    height: auto;
+    left: 7px;
+    outline: 0;
+    overflow: visible;
+    width: auto;
+  }
+}
+
 .content-wrapper {
   // border: 1px solid;
   margin: 0 auto;

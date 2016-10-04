@@ -288,6 +288,29 @@ a.inverted:visited {
 a.inverted:hover, a.inverted:visited:hover {
   color: white; }
 
+#skip a {
+  background-color: white;
+  border: none;
+  color: #ed1c24;
+  display: block;
+  font-size: 13px;
+  height: 1px;
+  left: -10000px;
+  line-height: 2;
+  overflow: hidden;
+  padding: 5px 10px 3px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  z-index: 1000; }
+  #skip a:focus {
+    border: 5px solid #ed1c24;
+    height: auto;
+    left: 7px;
+    outline: 0;
+    overflow: visible;
+    width: auto; }
+
 .content-wrapper {
   margin: 0 auto;
   max-width: calc(82rem - 1rem - (5rem + 1rem));

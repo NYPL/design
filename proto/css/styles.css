@@ -495,7 +495,7 @@ header .service {
   font-weight: bold;
   margin-left: 0.5em;
   position: absolute; }
-.email-toggle input[type="text"] {
+.email-toggle input[type=text] {
   padding: 1.5em 0 0;
   width: 100%; }
 .email-toggle .links {
@@ -573,7 +573,7 @@ input[type=radio], input[type=checkbox] {
     width: 16rem; }
   .form-text:focus {
     background-color: white;
-    box-shadow: inset 0 0 0 4px #ffb81d;
+    box-shadow: inset 0 0 0 4px #ffb81d !important;
     color: #1980a9;
     outline: none; }
 
@@ -675,7 +675,8 @@ input[type=radio], input[type=checkbox] {
   .pane.filters fieldset label.text {
     display: block;
     position: absolute; }
-  .pane.filters fieldset input[type="text"] {
+  .pane.filters fieldset input[type=text] {
+    box-shadow: inset 0 0 0 2px #99d8f1;
     padding: 1.5em 0 0; }
 .pane.filters label {
   display: block; }

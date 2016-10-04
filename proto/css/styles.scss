@@ -368,7 +368,7 @@ header {
     position: absolute;
   }
 
-  input[type="text"] {
+  input[type=text] {
     padding: 1.5em 0 0;
     width: 100%;
   }
@@ -472,7 +472,7 @@ input[type=radio], input[type=checkbox] {
 
   &:focus {
     background-color: white;
-    box-shadow: inset 0 0 0 4px $focuscolor;
+    box-shadow: inset 0 0 0 4px $focuscolor !important;
     color: $nyplsearchcolordark;
     outline: none;
   }
@@ -637,7 +637,8 @@ input[type=radio], input[type=checkbox] {
       position: absolute;
     }
 
-    input[type="text"] {
+    input[type=text] {
+      box-shadow: inset 0 0 0 2px $nyplsearchcolorlight;
       padding: 1.5em 0 0;
     }
   }

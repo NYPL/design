@@ -564,9 +564,6 @@ input[type=radio], input[type=checkbox] {
 }
 
 .pane {
-  float: left;
-  width: 25%;
-
   .pane-title {
     font-size: 1.2rem;
     font-weight: bold;
@@ -618,13 +615,6 @@ input[type=radio], input[type=checkbox] {
 }
 
 .pane.filters {
-  .inner-wrapper {
-    padding-right: 2em;
-
-    @media screen and (max-width: $mobile-breakpoint) {
-      padding-right: 0;
-    }
-  }
 
   fieldset {
     background-color: $nyplsearchcolorlight;
@@ -637,7 +627,7 @@ input[type=radio], input[type=checkbox] {
       margin-left: 0.5em;
     }
 
-    span.long, label.group {
+    label.group {
       margin-left: 0;
     }
 
@@ -677,8 +667,8 @@ input[type=radio], input[type=checkbox] {
   .a-z a, .a-z span {
     color: $pagecolor;
     display: inline-block;
-    margin-bottom: 5px;
-    padding: 3px 5px;
+    margin: 0 0 0.5em 0.25em;
+    padding: 0.2rem 0.25em;
     text-align: center;
     text-decoration: none;
     width: 1em;
@@ -686,6 +676,10 @@ input[type=radio], input[type=checkbox] {
 
   .a-z a {
     background-color: $nyplsearchcolorlight;
+
+    &:hover {
+      background-color: white;
+    }
   }
 
   .a-z span {
@@ -709,13 +703,6 @@ input[type=radio], input[type=checkbox] {
 }
 
 .main-content {
-  float: left;
-  width: 75%;
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    float: none;
-    width: auto;
-  }
 }
 
 section.secondary {
@@ -798,6 +785,44 @@ section.secondary {
     text-align: right;
   }
 }
+
+// simple columns
+
+.full {
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+.quarter {
+  width: 25%;
+}
+
+.three-quarter {
+  width: 75%;
+}
+
+.full, .half, .quarter, .three-quarter {
+  float: left;
+  @include clearfix;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    float: none;
+    width: auto;
+  }
+}
+
+.inner {
+  padding: 0 1rem;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 0;
+  }
+}
+
+// end simple columns
 
 table, .views-table {
   display: table;

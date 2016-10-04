@@ -628,33 +628,30 @@ input[type=radio], input[type=checkbox] {
   .page-header h1 {
     margin: 0; }
 
-.pane {
-  float: left;
-  width: 25%; }
-  .pane .pane-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 1.5;
-    margin: 0; }
-    .pane .pane-title:before {
-      color: #7B756F;
-      content: "Quick links for";
-      display: block;
-      font-size: 0.6em;
-      font-weight: normal;
-      text-transform: uppercase; }
-  @media screen and (max-width: 870px) {
-    .pane {
-      float: none;
-      width: auto; } }
-  .pane form {
-    margin-top: 1rem; }
-  .pane label {
-    font-weight: bold; }
-  .pane label.group {
-    background-color: #99d8f1;
+.pane .pane-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0; }
+  .pane .pane-title:before {
+    color: #7B756F;
+    content: "Quick links for";
+    display: block;
+    font-size: 0.6em;
     font-weight: normal;
-    padding: 3px 5px; }
+    text-transform: uppercase; }
+@media screen and (max-width: 870px) {
+  .pane {
+    float: none;
+    width: auto; } }
+.pane form {
+  margin-top: 1rem; }
+.pane label {
+  font-weight: bold; }
+.pane label.group {
+  background-color: #99d8f1;
+  font-weight: normal;
+  padding: 3px 5px; }
 
 .extra-links {
   padding-top: 1rem; }
@@ -664,11 +661,6 @@ input[type=radio], input[type=checkbox] {
     list-style: none;
     padding: 0; }
 
-.pane.filters .inner-wrapper {
-  padding-right: 2em; }
-  @media screen and (max-width: 870px) {
-    .pane.filters .inner-wrapper {
-      padding-right: 0; } }
 .pane.filters fieldset {
   background-color: #99d8f1;
   border: none;
@@ -677,7 +669,7 @@ input[type=radio], input[type=checkbox] {
   position: relative; }
   .pane.filters fieldset span, .pane.filters fieldset label {
     margin-left: 0.5em; }
-  .pane.filters fieldset span.long, .pane.filters fieldset label.group {
+  .pane.filters fieldset label.group {
     margin-left: 0; }
   .pane.filters fieldset label.text {
     display: block;
@@ -704,13 +696,15 @@ input[type=radio], input[type=checkbox] {
 .pane.filters .a-z a, .pane.filters .a-z span {
   color: #100f0e;
   display: inline-block;
-  margin-bottom: 5px;
-  padding: 3px 5px;
+  margin: 0 0 0.5em 0.25em;
+  padding: 0.2rem 0.25em;
   text-align: center;
   text-decoration: none;
   width: 1em; }
 .pane.filters .a-z a {
   background-color: #99d8f1; }
+  .pane.filters .a-z a:hover {
+    background-color: white; }
 .pane.filters .a-z span {
   background-color: #dddbd9; }
 .pane.filters .a-z span.long {
@@ -722,14 +716,6 @@ input[type=radio], input[type=checkbox] {
   padding: 0; }
   .secondary-navigation li {
     margin-bottom: 0.75rem; }
-
-.main-content {
-  float: left;
-  width: 75%; }
-  @media screen and (max-width: 870px) {
-    .main-content {
-      float: none;
-      width: auto; } }
 
 section.secondary {
   margin-bottom: 1.5rem; }
@@ -797,6 +783,36 @@ section.secondary {
       float: none; } }
   .results-pagination .next {
     text-align: right; }
+
+.full {
+  width: 100%; }
+
+.half {
+  width: 50%; }
+
+.quarter {
+  width: 25%; }
+
+.three-quarter {
+  width: 75%; }
+
+.full, .half, .quarter, .three-quarter {
+  float: left; }
+  .full:before, .full:after, .half:before, .half:after, .quarter:before, .quarter:after, .three-quarter:before, .three-quarter:after {
+    content: "";
+    display: table; }
+  .full:after, .half:after, .quarter:after, .three-quarter:after {
+    clear: both; }
+  @media screen and (max-width: 870px) {
+    .full, .half, .quarter, .three-quarter {
+      float: none;
+      width: auto; } }
+
+.inner {
+  padding: 0 1rem; }
+  @media screen and (max-width: 870px) {
+    .inner {
+      padding: 0; } }
 
 table, .views-table {
   display: table;

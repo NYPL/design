@@ -591,7 +591,8 @@ input[type=radio], input[type=checkbox] {
     right: 0;
     padding-top: 1px;
     position: absolute;
-    top: 2rem; }
+    top: 2rem;
+    white-space: nowrap; }
   #main-search .search-radio-label {
     display: inline-block;
     height: 2rem;

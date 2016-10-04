@@ -498,6 +498,7 @@ input[type=radio], input[type=checkbox] {
     padding-top: 1px;
     position: absolute;
     top: 2rem;
+    white-space: nowrap;
   }
 
   .search-radio-label {

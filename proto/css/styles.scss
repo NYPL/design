@@ -572,6 +572,15 @@ input[type=radio], input[type=checkbox] {
     font-weight: bold;
     line-height: 1.5;
     margin: 0;
+
+    &:before {
+      color: $nyplgray;
+      content: "Quick links for";
+      display: block;
+      font-size: 0.6em;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
   }
 
   @media screen and (max-width: $mobile-breakpoint) {

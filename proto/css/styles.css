@@ -636,6 +636,13 @@ input[type=radio], input[type=checkbox] {
     font-weight: bold;
     line-height: 1.5;
     margin: 0; }
+    .pane .pane-title:before {
+      color: #7B756F;
+      content: "Quick links for";
+      display: block;
+      font-size: 0.6em;
+      font-weight: normal;
+      text-transform: uppercase; }
   @media screen and (max-width: 870px) {
     .pane {
       float: none;

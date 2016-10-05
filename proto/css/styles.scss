@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
   margin-top: 0;
 }
@@ -35,11 +35,11 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 h4 {
@@ -49,6 +49,11 @@ h4 {
 ul {
   margin-bottom: 1.5rem;
   margin-top: 0;
+  padding: 0;
+}
+
+li {
+  margin-left: 1.5rem;
 }
 
 @each $tag in a, input, select {
@@ -154,6 +159,7 @@ a.inverted {
 
   li {
     display: inline-block;
+    margin-left: 0;
     margin-right: 0.35em;
     vertical-align: bottom;
 
@@ -406,7 +412,7 @@ header {
     border: none;
     color: $pagecolor;
     display: block;
-    padding: 0.2em 0.4em 0;
+    padding: 0.2em 0.4em 0.2em;
     text-decoration: none;
     transition: all 0.2s;
 
@@ -699,6 +705,7 @@ input[type=radio], input[type=checkbox] {
 
   li {
     margin-bottom: 0.75rem;
+    margin-left: 0;
   }
 }
 
@@ -815,7 +822,7 @@ section.secondary {
 }
 
 .inner {
-  padding: 0 1rem;
+  padding: 0 1rem 0 0;
 
   @media screen and (max-width: $mobile-breakpoint) {
     padding: 0;

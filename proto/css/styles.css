@@ -915,6 +915,8 @@ footer ul {
   .copyright p {
     padding-top: calc(3rem + 1em); }
 
+.footerLinks li {
+  margin-left: 0; }
 .footerLinks > li {
   float: left;
   width: 25%; }

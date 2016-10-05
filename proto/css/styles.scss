@@ -986,6 +986,10 @@ footer ul {
 
 .footerLinks {
 
+  li {
+      margin-left: 0;
+  }
+
   > li {
     float: left;
     width: 25%;

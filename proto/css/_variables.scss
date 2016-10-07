@@ -12,14 +12,14 @@ $mobile-breakpoint: 870px;
 // colors
 $nyplyellow: #FEE24A;
 $nyplorange: #ffb81d;
-$nyplred: #ed1c24;
-$nypldarkgreen: #437529;
+$nyplred: #e32b31;
+$nypldarkgreen: #4C842E;
 $nypllightgreen: lighten($nypldarkgreen, 20%);
 $nyplblue: #1DA1D4;
 $nyplbluedark: #1980a9;
-$nyplsearchcolor: $nyplblue;
-$nyplsearchcolordark: $nyplbluedark;
-$nyplsearchcolorlight: lighten(#1DA1D4, 30%);
+$nyplsearchcolor: $nypldarkgreen;
+$nyplsearchcolordark: $nyplsearchcolor;
+$nyplsearchcolorlight: lighten($nyplsearchcolor, 30%);
 $nyplgray: #7B756F;
 $nypldarkgray: darken($nyplgray, 40%);
 $nypllightgray: lighten($nyplgray, 40%);
@@ -29,6 +29,7 @@ $pagecolorlight: $nypllightgray;
 $pagetextcolor: $nypldarkgray;
 $footercolor: #54514A;
 $highlightcolor: $nyplbluedark;
+$alertcolor: $nyplyellow;
 
 // link colors
 $linkcolor: $nyplred;

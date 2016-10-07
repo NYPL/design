@@ -133,6 +133,27 @@ a.inverted {
   }
 }
 
+@-webkit-keyframes alert {
+  0% { background-color: white; }
+  33%   { background-color: $alertcolor; }
+  66%   { background-color: white; }
+  100%   { background-color: $alertcolor; }
+}
+
+@keyframes alert {
+  0% { background-color: white; }
+  33%   { background-color: $alertcolor; }
+  66%   { background-color: white; }
+  100%   { background-color: $alertcolor; }
+}
+
+.alert {
+  background-color: $alertcolor;
+  padding: 0.8rem 0;
+  -webkit-animation: alert 2s linear;
+  animation: alert 2s linear;
+}
+
 .content-wrapper {
   // border: 1px solid;
   margin: 0 auto;

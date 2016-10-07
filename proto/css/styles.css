@@ -741,7 +741,7 @@ input[type=radio], input[type=checkbox] {
 
 .secondary-navigation {
   list-style: none;
-  margin: 0;
+  margin: 0 0 1.75em 0;
   padding: 0; }
   .secondary-navigation li {
     margin-bottom: 0.25em;

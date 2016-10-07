@@ -807,12 +807,21 @@ section.secondary {
   width: 25%;
 }
 
+.third {
+  width: 33.333%;
+}
+
+.two-third {
+  width: 66.666%;
+}
+
 .three-quarter {
   width: 75%;
 }
 
-.full, .half, .quarter, .three-quarter {
+.full, .half, .third, .two-third, .quarter, .three-quarter {
   float: left;
+  min-height: 1rem;
   @include clearfix;
 
   @media screen and (max-width: $mobile-breakpoint) {
@@ -822,6 +831,7 @@ section.secondary {
 }
 
 .inner {
+  min-height: 1rem;
   padding: 0 1rem 0 0;
 
   @media screen and (max-width: $mobile-breakpoint) {
@@ -959,6 +969,7 @@ footer {
   background-color: $footercolor;
   color: white;
   font-size: 0.9rem;
+  margin-top: 5rem;
   // font-weight: bold;
   // @include Kievit-Bold;
 }

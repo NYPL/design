@@ -799,22 +799,30 @@ section.secondary {
 .quarter {
   width: 25%; }
 
+.third {
+  width: 33.333%; }
+
+.two-third {
+  width: 66.666%; }
+
 .three-quarter {
   width: 75%; }
 
-.full, .half, .quarter, .three-quarter {
-  float: left; }
-  .full:before, .full:after, .half:before, .half:after, .quarter:before, .quarter:after, .three-quarter:before, .three-quarter:after {
+.full, .half, .third, .two-third, .quarter, .three-quarter {
+  float: left;
+  min-height: 1rem; }
+  .full:before, .full:after, .half:before, .half:after, .third:before, .third:after, .two-third:before, .two-third:after, .quarter:before, .quarter:after, .three-quarter:before, .three-quarter:after {
     content: "";
     display: table; }
-  .full:after, .half:after, .quarter:after, .three-quarter:after {
+  .full:after, .half:after, .third:after, .two-third:after, .quarter:after, .three-quarter:after {
     clear: both; }
   @media screen and (max-width: 870px) {
-    .full, .half, .quarter, .three-quarter {
+    .full, .half, .third, .two-third, .quarter, .three-quarter {
       float: none;
       width: auto; } }
 
 .inner {
+  min-height: 1rem;
   padding: 0 1rem 0 0; }
   @media screen and (max-width: 870px) {
     .inner {
@@ -892,7 +900,8 @@ table, .views-table {
 footer {
   background-color: #54514A;
   color: white;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  margin-top: 5rem; }
 
 footer ul {
   list-style: none;

@@ -522,7 +522,7 @@ input[type=radio], input[type=checkbox] {
     background-color: $nyplsearchcolor;
     font-size: 0.9rem;
     right: 0;
-    padding-top: 1px;
+    padding: 1px 3px 3px 3px;
     position: absolute;
     top: 2rem;
     white-space: nowrap;
@@ -725,7 +725,7 @@ input[type=radio], input[type=checkbox] {
   padding: 0;
 
   li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25em;
     margin-left: 0;
   }
 }

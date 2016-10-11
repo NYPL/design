@@ -5,3 +5,6 @@
 
 #InDesign Temp Files
 *.idlk
+
+#ignore the sass cache...
+.sass-cache

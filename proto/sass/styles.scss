@@ -581,8 +581,13 @@ input[type=radio], input[type=checkbox] {
 
 .page-header {
   background-color: $pagecolorlight;
+  // padding: ms(1);
+  // padding-top: ms(-1);
+  // padding-bottom: ms(-1);
+  @include ms-respond(padding, 2);
 
   h1 {
+    @include ms-respond(font-size, 3);
     margin: 0;
   }
 }

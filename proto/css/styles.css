@@ -657,9 +657,23 @@ input[type=radio], input[type=checkbox] {
       top: 2.5rem; } }
 
 .page-header {
-  background-color: #dddbd9; }
+  background-color: #dddbd9;
+  padding: 1.96em; }
+  @media (min-width: 870px) and (max-width: 82rem) {
+    .page-header {
+      padding: calc( 1.96em + -0.52 * ( ( 100vw - 870px) / -788 ) ); } }
+  @media (min-width: 82rem) {
+    .page-header {
+      padding: 1.44em; } }
   .page-header h1 {
+    font-size: 2.744em;
     margin: 0; }
+    @media (min-width: 870px) and (max-width: 82rem) {
+      .page-header h1 {
+        font-size: calc( 2.744em + -1.016 * ( ( 100vw - 870px) / -788 ) ); } }
+    @media (min-width: 82rem) {
+      .page-header h1 {
+        font-size: 1.728em; } }
 
 .pane .pane-title {
   font-size: 1.2rem;

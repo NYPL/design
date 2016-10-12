@@ -1,6 +1,7 @@
 /* -- Typographix -- */
 /* Sans Serif */
 $sansSerifStack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 /* Serif */
 /* Times New Roman-based stack */
 $serifStack: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
@@ -19,5 +20,5 @@ $ms-ratio: $phi;
 
 // This range gives your two ranges for fluid scaling:
 $ms-range:
-  1.3 20rem,
-  1.2 82rem;
+  1.4 $mobile-breakpoint,
+  1.2 $max-width;

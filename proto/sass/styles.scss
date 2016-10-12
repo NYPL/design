@@ -3,7 +3,7 @@
 
 html {
   background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $sansSerifStack;
   font-size: $basefont;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -581,8 +581,13 @@ input[type=radio], input[type=checkbox] {
 
 .page-header {
   background-color: $pagecolorlight;
+  // padding: ms(1);
+  // padding-top: ms(-1);
+  // padding-bottom: ms(-1);
+  @include ms-respond(padding, 2);
 
   h1 {
+    @include ms-respond(font-size, 3);
     margin: 0;
   }
 }

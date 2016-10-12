@@ -38,6 +38,12 @@ $linkhovercolor: lighten($linkcolor, 10%);
 $invertedlinkcolor: white;
 $invertedlinkvisitedcolor: darken($invertedlinkcolor, 10%);
 
+// import the modular type system
+// http://modularscale.com
+@import "modular-scale";
+// import a type partial
+// @import "typography";
+
 @mixin clearfix() {
     &:before,
     &:after {

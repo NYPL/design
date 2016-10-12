@@ -40,10 +40,14 @@ $invertedlinkvisitedcolor: darken($invertedlinkcolor, 10%);
 
 // import the modular type system
 // http://modularscale.com
+
 @import "modular-scale";
 
-// import a type partial
-// @import "typography";
+// import our typography partial
+
+@import "typography";
+
+// Clear Fixing
 
 @mixin clearfix() {
     &:before,

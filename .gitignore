@@ -8,3 +8,6 @@
 
 #ignore the sass cache...
 .sass-cache
+
+#ignore .map files too...
+*.map

@@ -661,7 +661,8 @@ input[type=radio], input[type=checkbox] {
     }
 
     label.group {
-      margin-left: 0;
+      //margin-left: 0;
+      @include ms-respond(margin-bottom, -1);
     }
 
     label.text {

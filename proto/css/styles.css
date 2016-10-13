@@ -714,7 +714,13 @@ input[type=radio], input[type=checkbox] {
   .pane.filters fieldset span, .pane.filters fieldset label {
     margin-left: 0.5em; }
   .pane.filters fieldset label.group {
-    margin-left: 0; }
+    margin-bottom: 12px; }
+    @media (min-width: 870px) and (max-width: 82rem) {
+      .pane.filters fieldset label.group {
+        margin-bottom: calc( 12px + 1 * ( ( 100vw - 870px) / -788 ) ); } }
+    @media (min-width: 82rem) {
+      .pane.filters fieldset label.group {
+        margin-bottom: 13px; } }
   .pane.filters fieldset label.text {
     display: block;
     position: absolute; }

@@ -13,7 +13,8 @@ html {
   filter: none;
 
   @media screen and (max-width: $maxwidthpx) {
-    font-size: calc(#{$basefont} * 0.8);
+    //font-size: calc(#{$basefont} * 0.8);
+    //@include ms-respond(font-size, 1);
   }
 
 }
@@ -666,6 +667,7 @@ input[type=radio], input[type=checkbox] {
     label.text {
       display: block;
       position: absolute;
+
     }
 
     input[type=text] {

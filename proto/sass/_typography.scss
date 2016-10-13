@@ -8,17 +8,19 @@ $serifStack: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman 
 
 // Set the base font sizes, based on font sizes found in _variables.scss
 // Define base rules:
-$baseFontSize: $basefont;
-$lineHeight:1.65;
-$baseFontColor: #111;
+//$baseFontSize: $basefont;
+//$lineHeight:1.65;
+//$baseFontColor: #111;
 
 // Modular Scaling:
 // Usage: https://github.com/modularscale/modularscale-sass#usage
+// Set the Base font size:
+$ms-base: $basefont;
+
 // Choose the scalar here:
 $ms-ratio: $phi;
 
-
 // This range gives your two ranges for fluid scaling:
 $ms-range:
-  1.4 $mobile-breakpoint,
-  1.2 $max-width;
+  1.33 $mobile-breakpoint,
+  1.25 $max-width;

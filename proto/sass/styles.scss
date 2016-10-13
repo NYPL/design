@@ -591,6 +591,10 @@ input[type=radio], input[type=checkbox] {
     @include ms-respond(font-size, 3);
     margin: 0;
   }
+
+  .breadcrumb {
+    margin-bottom: ms(-1);
+  }
 }
 
 .split-page {
@@ -662,7 +666,7 @@ input[type=radio], input[type=checkbox] {
 
     label.group {
       //margin-left: 0;
-      @include ms-respond(margin-bottom, -1);
+      margin: ms(-1);
     }
 
     label.text {
@@ -739,6 +743,12 @@ input[type=radio], input[type=checkbox] {
 }
 
 .main-content {
+
+  // sometimes we need a lede:
+  p.lede {
+      @include ms-respond(font-size, 1);
+
+  }
 }
 
 section.secondary {

@@ -655,22 +655,24 @@ input[type=radio], input[type=checkbox] {
 
 .page-header {
   background-color: #dddbd9;
-  padding: 28px; }
+  padding: 30px; }
   @media (min-width: 870px) and (max-width: 82rem) {
     .page-header {
-      padding: calc( 28px + -3 * ( ( 100vw - 870px) / -788 ) ); } }
+      padding: calc( 30px + -5 * ( ( 100vw - 870px) / -788 ) ); } }
   @media (min-width: 82rem) {
     .page-header {
       padding: 25px; } }
   .page-header h1 {
-    font-size: 38px;
+    font-size: 40px;
     margin: 0; }
     @media (min-width: 870px) and (max-width: 82rem) {
       .page-header h1 {
-        font-size: calc( 38px + -7 * ( ( 100vw - 870px) / -788 ) ); } }
+        font-size: calc( 40px + -9 * ( ( 100vw - 870px) / -788 ) ); } }
     @media (min-width: 82rem) {
       .page-header h1 {
         font-size: 31px; } }
+  .page-header .breadcrumb {
+    margin-bottom: 10px; }
 
 .pane .pane-title {
   font-size: 1.2rem;
@@ -714,13 +716,7 @@ input[type=radio], input[type=checkbox] {
   .pane.filters fieldset span, .pane.filters fieldset label {
     margin-left: 0.5em; }
   .pane.filters fieldset label.group {
-    margin-bottom: 12px; }
-    @media (min-width: 870px) and (max-width: 82rem) {
-      .pane.filters fieldset label.group {
-        margin-bottom: calc( 12px + 1 * ( ( 100vw - 870px) / -788 ) ); } }
-    @media (min-width: 82rem) {
-      .pane.filters fieldset label.group {
-        margin-bottom: 13px; } }
+    margin: 10px; }
   .pane.filters fieldset label.text {
     display: block;
     position: absolute; }
@@ -767,6 +763,15 @@ input[type=radio], input[type=checkbox] {
   .secondary-navigation li {
     margin-bottom: 0.25em;
     margin-left: 0; }
+
+.main-content p.lede {
+  font-size: 22px; }
+  @media (min-width: 870px) and (max-width: 82rem) {
+    .main-content p.lede {
+      font-size: calc( 22px + -2 * ( ( 100vw - 870px) / -788 ) ); } }
+  @media (min-width: 82rem) {
+    .main-content p.lede {
+      font-size: 20px; } }
 
 section.secondary {
   margin-bottom: 1.5rem; }

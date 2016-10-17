@@ -1,3 +1,7 @@
+/* -- Typographix -- */
+/* Sans Serif */
+/* Serif */
+/* Times New Roman-based stack */
 /* FONT FACE MIXIN
  * ---------------
  * Usage: @include font-face('Kievit-Regular', 'http://...');
@@ -220,9 +224,6 @@ html {
   filter: grayscale(1);
   -webkit-filter: none;
   filter: none; }
-  @media screen and (max-width: 1312px) {
-    html {
-      font-size: calc(16px * 0.8); } }
 
 body {
   color: #100f0e; }
@@ -653,9 +654,25 @@ input[type=radio], input[type=checkbox] {
       top: 2.5rem; } }
 
 .page-header {
-  background-color: #dddbd9; }
+  background-color: #dddbd9;
+  padding: 30px; }
+  @media (min-width: 870px) and (max-width: 82rem) {
+    .page-header {
+      padding: calc( 30px + -5 * ( ( 100vw - 870px) / -788 ) ); } }
+  @media (min-width: 82rem) {
+    .page-header {
+      padding: 25px; } }
   .page-header h1 {
+    font-size: 40px;
     margin: 0; }
+    @media (min-width: 870px) and (max-width: 82rem) {
+      .page-header h1 {
+        font-size: calc( 40px + -9 * ( ( 100vw - 870px) / -788 ) ); } }
+    @media (min-width: 82rem) {
+      .page-header h1 {
+        font-size: 31px; } }
+  .page-header .breadcrumb {
+    margin-bottom: 10px; }
 
 .pane .pane-title {
   font-size: 1.2rem;
@@ -699,7 +716,7 @@ input[type=radio], input[type=checkbox] {
   .pane.filters fieldset span, .pane.filters fieldset label {
     margin-left: 0.5em; }
   .pane.filters fieldset label.group {
-    margin-left: 0; }
+    margin: 10px; }
   .pane.filters fieldset label.text {
     display: block;
     position: absolute; }
@@ -746,6 +763,15 @@ input[type=radio], input[type=checkbox] {
   .secondary-navigation li {
     margin-bottom: 0.25em;
     margin-left: 0; }
+
+.main-content p.lede {
+  font-size: 22px; }
+  @media (min-width: 870px) and (max-width: 82rem) {
+    .main-content p.lede {
+      font-size: calc( 22px + -2 * ( ( 100vw - 870px) / -788 ) ); } }
+  @media (min-width: 82rem) {
+    .main-content p.lede {
+      font-size: 20px; } }
 
 section.secondary {
   margin-bottom: 1.5rem; }

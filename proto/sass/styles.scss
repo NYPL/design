@@ -3,7 +3,7 @@
 
 html {
   background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: $sansSerifStack;
   font-size: $basefont;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -13,7 +13,8 @@ html {
   filter: none;
 
   @media screen and (max-width: $maxwidthpx) {
-    font-size: calc(#{$basefont} * 0.8);
+    //font-size: calc(#{$basefont} * 0.8);
+    //@include ms-respond(font-size, 1);
   }
 
 }
@@ -581,9 +582,18 @@ input[type=radio], input[type=checkbox] {
 
 .page-header {
   background-color: $pagecolorlight;
+  // padding: ms(1);
+  // padding-top: ms(-1);
+  // padding-bottom: ms(-1);
+  @include ms-respond(padding, 2);
 
   h1 {
+    @include ms-respond(font-size, 3);
     margin: 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: ms(-1);
   }
 }
 
@@ -655,12 +665,14 @@ input[type=radio], input[type=checkbox] {
     }
 
     label.group {
-      margin-left: 0;
+      //margin-left: 0;
+      margin: ms(-1);
     }
 
     label.text {
       display: block;
       position: absolute;
+
     }
 
     input[type=text] {
@@ -731,6 +743,12 @@ input[type=radio], input[type=checkbox] {
 }
 
 .main-content {
+
+  // sometimes we need a lede:
+  p.lede {
+      @include ms-respond(font-size, 1);
+
+  }
 }
 
 section.secondary {

@@ -173,6 +173,7 @@ a.inverted {
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
   @include clearfix;
 
   @media screen and (max-width: $mobile-breakpoint) {
@@ -206,12 +207,13 @@ a.inverted {
 }
 
 .logo {
-  float: left;
+  position: absolute;
   width: $logo-width;
 
   @media screen and (max-width: $mobile-breakpoint) {
     float: none;
     margin-right: 0.5rem;
+    position: relative;
   }
 }
 
@@ -409,8 +411,17 @@ header {
 .nav-buttons {
   font-size: 1.1rem;
   line-height: 1.7rem;
-  margin-top: calc(#{$logo-height} - 1.5rem);
+  margin-top: calc(#{$logo-height} + 1rem);
   @include clearfix;
+
+  @media screen and (max-width: $intermediate-breakpoint) {
+    li.search {
+      float: none;
+      position: absolute;
+      right: 0;
+      top: -3rem;
+    }
+  }
 
   @media screen and (max-width: $mobile-breakpoint) {
     display: none;
@@ -426,6 +437,9 @@ header {
 
     li.search {
       border: none;
+      position: relative;
+      right: initial;
+      top: initial;
       width: 100%;
     }
   }

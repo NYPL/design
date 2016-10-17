@@ -585,7 +585,8 @@ input[type=radio], input[type=checkbox] {
   // padding: ms(1);
   // padding-top: ms(-1);
   // padding-bottom: ms(-1);
-  @include ms-respond(padding, 2);
+  @include ms-respond(padding-top, 2);
+  @include ms-respond(padding-bottom, 2);
 
   h1 {
     @include ms-respond(font-size, 3);

@@ -655,13 +655,20 @@ input[type=radio], input[type=checkbox] {
 
 .page-header {
   background-color: #dddbd9;
-  padding: 30px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
   @media (min-width: 870px) and (max-width: 82rem) {
     .page-header {
-      padding: calc( 30px + -5 * ( ( 100vw - 870px) / -788 ) ); } }
+      padding-top: calc( 30px + -5 * ( ( 100vw - 870px) / -788 ) ); } }
   @media (min-width: 82rem) {
     .page-header {
-      padding: 25px; } }
+      padding-top: 25px; } }
+  @media (min-width: 870px) and (max-width: 82rem) {
+    .page-header {
+      padding-bottom: calc( 30px + -5 * ( ( 100vw - 870px) / -788 ) ); } }
+  @media (min-width: 82rem) {
+    .page-header {
+      padding-bottom: 25px; } }
   .page-header h1 {
     font-size: 40px;
     margin: 0; }

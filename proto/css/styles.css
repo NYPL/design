@@ -782,14 +782,15 @@ input[type=radio], input[type=checkbox] {
     margin-bottom: 0.25em;
     margin-left: 0; }
   .secondary-navigation a {
-    display: inline-block;
+    display: block;
     padding: 0.25em 0; }
   .secondary-navigation ul {
     list-style: none;
     margin-left: 0.75em; }
   .secondary-navigation > li.active-trail {
-    border-bottom: 1px solid #dddbd9;
-    border-top: 1px solid #dddbd9; }
+    border-bottom: 1px solid #dddbd9; }
+    .secondary-navigation > li.active-trail > a {
+      border-bottom: 1px solid #dddbd9; }
     .secondary-navigation > li.active-trail > a.active-trail {
       font-weight: bold; }
   .secondary-navigation a.active {
@@ -803,6 +804,11 @@ input[type=radio], input[type=checkbox] {
       font-size: 0.7em;
       font-weight: normal;
       text-transform: uppercase; }
+  @media screen and (max-width: 760px) {
+    .secondary-navigation li {
+      display: none; }
+    .secondary-navigation li.active-trail, .secondary-navigation li.active {
+      display: block; } }
 
 .main-content p.lede {
   font-size: 22px; }

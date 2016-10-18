@@ -757,7 +757,7 @@ input[type=radio], input[type=checkbox] {
   }
 
   a {
-    display: inline-block;
+    display: block;
     padding: 0.25em 0;
   }
 
@@ -768,7 +768,10 @@ input[type=radio], input[type=checkbox] {
 
   > li.active-trail {
     border-bottom: 1px solid $nypllightgray;
-    border-top: 1px solid $nypllightgray;
+
+    > a {
+      border-bottom: 1px solid $nypllightgray;
+    }
 
     > a.active-trail {
       font-weight: bold;
@@ -789,6 +792,17 @@ input[type=radio], input[type=checkbox] {
       text-transform: uppercase;
     }
   }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    li {
+      display: none;
+    }
+
+    li.active-trail, li.active {
+      display: block;
+    }
+  }
+
 }
 
 .main-content {

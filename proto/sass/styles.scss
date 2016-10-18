@@ -770,7 +770,7 @@ input[type=radio], input[type=checkbox] {
     margin-left: 0.75em;
   }
 
-  > li.active-trail {
+  li.active-trail {
     border-bottom: 1px solid $nypllightgray;
 
     > a {
@@ -797,12 +797,17 @@ input[type=radio], input[type=checkbox] {
     }
   }
 
+  .active-trail.active {
+    border: none;
+  }
+
   @media screen and (max-width: $mobile-breakpoint) {
     li {
       display: none;
     }
 
     li.active-trail, li.active {
+      border: none;
       display: block;
     }
   }

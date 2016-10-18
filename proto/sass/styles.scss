@@ -825,6 +825,31 @@ section.secondary {
   }
 }
 
+// division/location pages
+
+#location-info {
+  border-left: 1rem solid $nypllightgray;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+
+  p {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .sub-location-floor-room {
+    font-weight: bold;
+  }
+
+  .wheelchair-access {
+    color: $highlightcolor;
+    font-weight: bold;
+  }
+}
+
+
+// end division/location pages
+
 // tables and search results
 
 .results-summary {

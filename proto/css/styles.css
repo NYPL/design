@@ -825,6 +825,19 @@ section.secondary {
   section.secondary h2 {
     margin: 0; }
 
+#location-info {
+  border-left: 1rem solid #dddbd9;
+  padding-left: 1rem;
+  margin-bottom: 2rem; }
+  #location-info p {
+    margin: 0;
+    margin-bottom: 0.5em; }
+  #location-info .sub-location-floor-room {
+    font-weight: bold; }
+  #location-info .wheelchair-access {
+    color: #1980a9;
+    font-weight: bold; }
+
 .results-summary {
   line-height: 1;
   margin-bottom: 1.5rem;

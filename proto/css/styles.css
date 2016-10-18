@@ -542,7 +542,7 @@ header .service {
     display: table; }
   .nav-buttons:after {
     clear: both; }
-  @media screen and (max-width: 1092px) {
+  @media screen and (max-width: 1120px) {
     .nav-buttons li.search {
       float: none;
       position: absolute;

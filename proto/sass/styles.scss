@@ -616,8 +616,7 @@ input[type=radio], input[type=checkbox] {
   }
 }
 
-.split-page {
-}
+// left nav and search pane
 
 .pane {
   h4, .pane-title {
@@ -805,6 +804,8 @@ input[type=radio], input[type=checkbox] {
 
 }
 
+// end left nav and pane
+
 .main-content {
 
   // sometimes we need a lede:
@@ -815,12 +816,16 @@ input[type=radio], input[type=checkbox] {
 }
 
 section.secondary {
+  // NOTE: probably redundant now that we have a simple grid?
+
   margin-bottom: 1.5rem;
 
   h2 {
     margin: 0;
   }
 }
+
+// tables and search results
 
 .results-summary {
   line-height: 1;
@@ -894,55 +899,6 @@ section.secondary {
     text-align: right;
   }
 }
-
-// simple columns
-
-.full {
-  width: 100%;
-}
-
-.half {
-  width: 50%;
-}
-
-.quarter {
-  width: 25%;
-}
-
-.third {
-  width: 33.334%;
-}
-
-.two-third {
-  width: 66.667%;
-}
-
-.three-quarter {
-  width: 75%;
-}
-
-.full, .half, .third, .two-third, .quarter, .three-quarter {
-  float: left;
-  min-height: 1rem;
-  @include clearfix;
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    float: none;
-    width: auto;
-  }
-}
-
-.inner {
-  margin-bottom: 2rem;
-  min-height: 1rem;
-  padding: 0 1rem 0 0;
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    padding: 0;
-  }
-}
-
-// end simple columns
 
 table, .views-table {
   display: table;
@@ -1068,6 +1024,59 @@ table, .views-table {
 
 }
 
+// end tables
+
+// simple columns
+
+.full {
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+.quarter {
+  width: 25%;
+}
+
+.third {
+  width: 33.334%;
+}
+
+.two-third {
+  width: 66.667%;
+}
+
+.three-quarter {
+  width: 75%;
+}
+
+.full, .half, .third, .two-third, .quarter, .three-quarter {
+  float: left;
+  min-height: 1rem;
+  @include clearfix;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    float: none;
+    width: auto;
+  }
+}
+
+.inner {
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 1rem 0 0;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 0;
+  }
+}
+
+// end simple columns
+
+// footer
+
 footer {
   background-color: $footercolor;
   color: white;
@@ -1114,3 +1123,5 @@ footer ul {
     }
   }
 }
+
+// end footer

@@ -887,45 +887,6 @@ section.secondary {
   .results-pagination .next {
     text-align: right; }
 
-.full {
-  width: 100%; }
-
-.half {
-  width: 50%; }
-
-.quarter {
-  width: 25%; }
-
-.third {
-  width: 33.334%; }
-
-.two-third {
-  width: 66.667%; }
-
-.three-quarter {
-  width: 75%; }
-
-.full, .half, .third, .two-third, .quarter, .three-quarter {
-  float: left;
-  min-height: 1rem; }
-  .full:before, .full:after, .half:before, .half:after, .third:before, .third:after, .two-third:before, .two-third:after, .quarter:before, .quarter:after, .three-quarter:before, .three-quarter:after {
-    content: "";
-    display: table; }
-  .full:after, .half:after, .third:after, .two-third:after, .quarter:after, .three-quarter:after {
-    clear: both; }
-  @media screen and (max-width: 760px) {
-    .full, .half, .third, .two-third, .quarter, .three-quarter {
-      float: none;
-      width: auto; } }
-
-.inner {
-  margin-bottom: 2rem;
-  min-height: 1rem;
-  padding: 0 1rem 0 0; }
-  @media screen and (max-width: 760px) {
-    .inner {
-      padding: 0; } }
-
 table, .views-table {
   display: table;
   border-collapse: collapse; }
@@ -994,6 +955,45 @@ table, .views-table {
       width: 25%; }
     table.collapses .resouce-description, .views-table.collapses .resouce-description {
       width: 65%; } }
+
+.full {
+  width: 100%; }
+
+.half {
+  width: 50%; }
+
+.quarter {
+  width: 25%; }
+
+.third {
+  width: 33.334%; }
+
+.two-third {
+  width: 66.667%; }
+
+.three-quarter {
+  width: 75%; }
+
+.full, .half, .third, .two-third, .quarter, .three-quarter {
+  float: left;
+  min-height: 1rem; }
+  .full:before, .full:after, .half:before, .half:after, .third:before, .third:after, .two-third:before, .two-third:after, .quarter:before, .quarter:after, .three-quarter:before, .three-quarter:after {
+    content: "";
+    display: table; }
+  .full:after, .half:after, .third:after, .two-third:after, .quarter:after, .three-quarter:after {
+    clear: both; }
+  @media screen and (max-width: 760px) {
+    .full, .half, .third, .two-third, .quarter, .three-quarter {
+      float: none;
+      width: auto; } }
+
+.inner {
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 1rem 0 0; }
+  @media screen and (max-width: 760px) {
+    .inner {
+      padding: 0; } }
 
 footer {
   background-color: #54514A;

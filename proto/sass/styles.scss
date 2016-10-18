@@ -755,6 +755,40 @@ input[type=radio], input[type=checkbox] {
     margin-bottom: 0.25em;
     margin-left: 0;
   }
+
+  a {
+    display: inline-block;
+    padding: 0.25em 0;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0.75em;
+  }
+
+  > li.active-trail {
+    border-bottom: 1px solid $nypllightgray;
+    border-top: 1px solid $nypllightgray;
+
+    > a.active-trail {
+      font-weight: bold;
+    }
+  }
+
+  a.active {
+    color: $highlightcolor;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:before {
+      color: $nyplgray;
+      content: "You are here";
+      display: block;
+      font-size: 0.7em;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .main-content {

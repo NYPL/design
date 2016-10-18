@@ -781,6 +781,28 @@ input[type=radio], input[type=checkbox] {
   .secondary-navigation li {
     margin-bottom: 0.25em;
     margin-left: 0; }
+  .secondary-navigation a {
+    display: inline-block;
+    padding: 0.25em 0; }
+  .secondary-navigation ul {
+    list-style: none;
+    margin-left: 0.75em; }
+  .secondary-navigation > li.active-trail {
+    border-bottom: 1px solid #dddbd9;
+    border-top: 1px solid #dddbd9; }
+    .secondary-navigation > li.active-trail > a.active-trail {
+      font-weight: bold; }
+  .secondary-navigation a.active {
+    color: #1980a9;
+    font-weight: bold;
+    text-decoration: none; }
+    .secondary-navigation a.active:before {
+      color: #7B756F;
+      content: "You are here";
+      display: block;
+      font-size: 0.7em;
+      font-weight: normal;
+      text-transform: uppercase; }
 
 .main-content p.lede {
   font-size: 22px; }

@@ -71,7 +71,7 @@ li {
 
 a {
   // border-bottom: 1px solid $linkcolor;
-  // text-decoration: none;
+  text-decoration: none;
 
   &:link {
     color: $linkcolor;
@@ -85,7 +85,7 @@ a {
   &:hover, &:visited:hover {
     // border-bottom-color: $linkcolor;
     color: $linkhovercolor;
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
@@ -294,6 +294,10 @@ header {
       margin: 0 0 5px 0;
       width: 50%;
     }
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   li > a {

@@ -278,13 +278,15 @@ select:focus {
   outline-style: solid;
   outline-width: 3px; }
 
-a:link {
-  color: #e32b31; }
-a:visited {
-  color: #941418; }
-a:hover, a:visited:hover {
-  color: #e9585d;
+a {
   text-decoration: none; }
+  a:link {
+    color: #e32b31; }
+  a:visited {
+    color: #941418; }
+  a:hover, a:visited:hover {
+    color: #e9585d;
+    text-decoration: underline; }
 
 a.inverted:link {
   color: white; }
@@ -456,6 +458,8 @@ header .service {
         line-height: 2rem;
         margin: 0 0 5px 0;
         width: 50%; } }
+  .service-buttons a {
+    text-decoration: underline; }
   .service-buttons li > a {
     border: none;
     color: white;

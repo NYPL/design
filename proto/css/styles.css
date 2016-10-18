@@ -696,38 +696,30 @@ input[type=radio], input[type=checkbox] {
   .page-header .breadcrumb {
     margin-bottom: 10px; }
 
-.pane .pane-title {
+.pane h4, .pane .pane-title {
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.5;
   margin: 0; }
-  .pane .pane-title:before {
-    color: #7B756F;
-    content: "Quick links for";
-    display: block;
-    font-size: 0.6em;
-    font-weight: normal;
-    text-transform: uppercase; }
+.pane .pane-title:before {
+  color: #7B756F;
+  content: "Quick links for";
+  display: block;
+  font-size: 0.6em;
+  font-weight: normal;
+  text-transform: uppercase; }
 @media screen and (max-width: 760px) {
   .pane {
     float: none;
     width: auto; } }
 .pane form {
-  margin-top: 1rem; }
+  margin: 1rem 0; }
 .pane label {
   font-weight: bold; }
 .pane label.group {
   background-color: #c5c2be;
   font-weight: normal;
   padding: 3px 5px; }
-
-.extra-links {
-  padding-top: 1rem; }
-  .extra-links h4 {
-    margin-bottom: 0; }
-  .extra-links ul {
-    list-style: none;
-    padding: 0; }
 
 .pane.filters fieldset {
   background-color: #c5c2be;
@@ -813,6 +805,8 @@ input[type=radio], input[type=checkbox] {
   @media screen and (max-width: 760px) {
     .secondary-navigation li {
       display: none; }
+    .secondary-navigation > li {
+      display: block; }
     .secondary-navigation li.active-trail, .secondary-navigation li.active {
       border: none;
       display: block; } }

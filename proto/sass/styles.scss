@@ -45,6 +45,9 @@ h3 {
 
 h4 {
   font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
 }
 
 ul {
@@ -619,7 +622,7 @@ input[type=radio], input[type=checkbox] {
 // left nav and search pane
 
 .pane {
-  h4, .pane-title {
+  .pane-title {
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.5;
@@ -849,6 +852,15 @@ section.secondary {
 
 
 // end division/location pages
+
+// related links
+
+.related-links {
+  border-top: 4px solid $nyplgray;
+  padding-top: 2rem;
+}
+
+// end related links
 
 // tables and search results
 

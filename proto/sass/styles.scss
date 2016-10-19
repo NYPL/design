@@ -850,6 +850,73 @@ section.secondary {
   }
 }
 
+.location-hours {
+  position: relative;
+  width: 100%;
+
+  th, td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 16.666%;
+  }
+
+  td {
+    padding-bottom: 1rem;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    .titles {
+      display: none;
+    }
+
+    tr {
+      border: none;
+    }
+
+    td {
+      display: block;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        display: block;
+        float: left;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        width: 40%;
+      }
+
+      &:nth-of-type(1)::before {
+        content: "Monday";
+      }
+
+      &:nth-of-type(2)::before {
+        content: "Tuesday";
+      }
+
+      &:nth-of-type(3)::before {
+        content: "Wednesday";
+      }
+
+      &:nth-of-type(4)::before {
+        content: "Thursday";
+      }
+
+      &:nth-of-type(5)::before {
+        content: "Friday";
+      }
+
+      &:nth-of-type(6)::before {
+        content: "Saturday";
+      }
+
+      &:nth-of-type(7)::before {
+        content: "Sunday";
+      }
+    }
+
+  }
+}
 
 // end division/location pages
 
@@ -946,7 +1013,7 @@ table, .views-table {
     display: table-row;
   }
 
-  .views-table-row .views-table-header, table thead {
+  .views-table-row .views-table-header, thead, th {
     border-bottom: 1px solid $pagecolor;
     text-align: left;
   }

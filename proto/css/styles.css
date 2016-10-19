@@ -841,6 +841,45 @@ section.secondary {
     color: #1980a9;
     font-weight: bold; }
 
+.location-hours {
+  position: relative;
+  width: 100%; }
+  .location-hours th, .location-hours td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 16.666%; }
+  .location-hours td {
+    padding-bottom: 1rem; }
+  @media screen and (max-width: 760px) {
+    .location-hours .titles {
+      display: none; }
+    .location-hours tr {
+      border: none; }
+    .location-hours td {
+      display: block;
+      position: relative;
+      width: 100%; }
+      .location-hours td::before {
+        display: block;
+        float: left;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        width: 40%; }
+      .location-hours td:nth-of-type(1)::before {
+        content: "Monday"; }
+      .location-hours td:nth-of-type(2)::before {
+        content: "Tuesday"; }
+      .location-hours td:nth-of-type(3)::before {
+        content: "Wednesday"; }
+      .location-hours td:nth-of-type(4)::before {
+        content: "Thursday"; }
+      .location-hours td:nth-of-type(5)::before {
+        content: "Friday"; }
+      .location-hours td:nth-of-type(6)::before {
+        content: "Saturday"; }
+      .location-hours td:nth-of-type(7)::before {
+        content: "Sunday"; } }
+
 .related-links {
   border-top: 4px solid #7B756F;
   padding-top: 2rem; }
@@ -913,7 +952,7 @@ table, .views-table {
   table tr, table .views-table-row, .views-table tr, .views-table .views-table-row {
     border-bottom: 1px solid #dddbd9;
     display: table-row; }
-  table .views-table-row .views-table-header, table table thead, .views-table .views-table-row .views-table-header, .views-table table thead {
+  table .views-table-row .views-table-header, table thead, table th, .views-table .views-table-row .views-table-header, .views-table thead, .views-table th {
     border-bottom: 1px solid #100f0e;
     text-align: left; }
   table td, table th, table .views-table-header, table .views-table-cell, .views-table td, .views-table th, .views-table .views-table-header, .views-table .views-table-cell {

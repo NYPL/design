@@ -433,6 +433,7 @@ header {
   @media screen and (max-width: $mobile-breakpoint) {
     display: none;
     font-size: 1.2rem;
+    margin-top: 1rem;
 
     li {
       border-bottom: 1px solid $nypllightgray;
@@ -1071,7 +1072,7 @@ table, .views-table {
 
   &.collapses {
     @media screen and (max-width: $mobile-breakpoint) {
-      thead, th, .views-table-header {
+      thead, th, .views-table-header, .views-table-row:first-child {
         display: none;
       }
 

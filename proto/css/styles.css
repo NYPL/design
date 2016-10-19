@@ -558,7 +558,8 @@ header .service {
   @media screen and (max-width: 760px) {
     .nav-buttons {
       display: none;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      margin-top: 1rem; }
       .nav-buttons li {
         border-bottom: 1px solid #dddbd9;
         float: left;
@@ -983,7 +984,7 @@ table, .views-table {
   table .resource-title, .views-table .resource-title {
     font-weight: bold; }
   @media screen and (max-width: 760px) {
-    table.collapses thead, table.collapses th, table.collapses .views-table-header, .views-table.collapses thead, .views-table.collapses th, .views-table.collapses .views-table-header {
+    table.collapses thead, table.collapses th, table.collapses .views-table-header, table.collapses .views-table-row:first-child, .views-table.collapses thead, .views-table.collapses th, .views-table.collapses .views-table-header, .views-table.collapses .views-table-row:first-child {
       display: none; }
     table.collapses td, table.collapses .views-table-cell, .views-table.collapses td, .views-table.collapses .views-table-cell {
       display: block;

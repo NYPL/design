@@ -158,6 +158,61 @@ a.inverted {
   animation: alert 2s linear;
 }
 
+// generic forms
+
+.hidden {
+  display: none;
+}
+
+input {
+  background-color: $nyplsearchcolorlight;
+  border: none;
+  padding: 0;
+}
+
+input[type=text] {
+  box-shadow: inset 0 0 0 2px $nyplsearchcolordark;
+}
+
+input[type=button], input[type=submit] {
+  background-color: $nyplsearchcolordark;
+  color: white;
+  height: 2rem;
+  padding: 0 1rem;
+
+  &:focus {
+    box-shadow: inset 0 0 0 4px $focuscolor;
+    outline: none;
+  }
+}
+
+input[type=radio], input[type=checkbox] {
+  height: initial;
+  margin-right: 0.25rem;
+}
+
+.form-text {
+  height: 2rem;
+  margin-right: 1px;
+  padding: 0;
+  text-indent: 0.5rem;
+  transition: all 0.2s ease-out;
+  width: 10rem;
+
+  &.active {
+    width: 16rem;
+  }
+
+  &:focus {
+    background-color: white;
+    box-shadow: inset 0 0 0 4px $focuscolor !important;
+    color: $nyplsearchcolordark;
+    outline: none;
+  }
+}
+
+// end generic forms
+
 .content-wrapper {
   // border: 1px solid;
   margin: 0 auto;
@@ -169,6 +224,8 @@ a.inverted {
     padding-left: 1rem;
   }
 }
+
+// main-header stuff
 
 .horizontal {
   display: table-cell;
@@ -239,11 +296,7 @@ a.inverted {
   width: $logo-width;
 
   @media screen and (max-width: $mobile-breakpoint) {
-    // background-image: url("../img/lion.svg");
-    // background-size: 3rem;
-    // height: 3rem;
     margin-right: 0.5rem;
-    // width: 3rem;
   }
 }
 
@@ -277,6 +330,54 @@ header {
   @media screen and (max-width: $mobile-breakpoint) {
     display: table;
     width: 100%;
+  }
+
+  &.collapsed {
+     // using absolute px because each site might use different font-size
+     border-bottom: 2px solid $nypllightgray;
+
+    .menu {
+      display: none;
+    }
+
+    .logo {
+      height: 30px;
+      overflow: hidden;
+    }
+
+    .nypl-logo {
+      background: url("../img/lion.svg") no-repeat scroll 0px 0px/#{$logo-height} auto white;
+      background-position-y: -4px;
+      margin: 0;
+    }
+
+    .service-buttons {
+      min-height: 10px;
+
+      li {
+        display: none;
+      }
+    }
+
+    .nav-buttons {
+      font-size: 12px;
+      font-weight: bold;
+      height: 30px;
+      margin-top: 0;
+      text-transform: uppercase;
+
+      li {
+        box-shadow: none;
+      }
+
+      a {
+        padding: 0.1em 0.4em 0.1em;
+      }
+
+      .search {
+        display: none;
+      }
+    }
   }
 }
 
@@ -347,8 +448,6 @@ header {
     transform: scaleY(-1);
   }
 }
-
-//TODO: there must be a class that means “blue background”
 
 .login-toggle {
   div {
@@ -477,57 +576,6 @@ header {
 
 }
 
-.hidden {
-  display: none;
-}
-
-input {
-  background-color: $nyplsearchcolorlight;
-  border: none;
-  padding: 0;
-}
-
-input[type=text] {
-  box-shadow: inset 0 0 0 2px $nyplsearchcolordark;
-}
-
-input[type=button], input[type=submit] {
-  background-color: $nyplsearchcolordark;
-  color: white;
-  height: 2rem;
-  padding: 0 1rem;
-
-  &:focus {
-    box-shadow: inset 0 0 0 4px $focuscolor;
-    outline: none;
-  }
-}
-
-input[type=radio], input[type=checkbox] {
-  height: initial;
-  margin-right: 0.25rem;
-}
-
-.form-text {
-  height: 2rem;
-  margin-right: 1px;
-  padding: 0;
-  text-indent: 0.5rem;
-  transition: all 0.2s ease-out;
-  width: 10rem;
-
-  &.active {
-    width: 16rem;
-  }
-
-  &:focus {
-    background-color: white;
-    box-shadow: inset 0 0 0 4px $focuscolor !important;
-    color: $nyplsearchcolordark;
-    outline: none;
-  }
-}
-
 #main-search {
   background-color: $nyplsearchcolor;
   margin: 0;
@@ -602,6 +650,10 @@ input[type=radio], input[type=checkbox] {
 
 }
 
+// end main-header stuff
+
+// page header
+
 .page-header {
   background-color: $pagecolorlight;
   // padding: ms(1);
@@ -619,6 +671,8 @@ input[type=radio], input[type=checkbox] {
     margin-bottom: ms(-1);
   }
 }
+
+// end page header
 
 // left nav and search pane
 

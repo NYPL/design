@@ -345,6 +345,45 @@ a.inverted:hover, a.inverted:visited:hover {
   -webkit-animation: alert 2s linear;
   animation: alert 2s linear; }
 
+.hidden {
+  display: none; }
+
+input {
+  background-color: #c5c2be;
+  border: none;
+  padding: 0; }
+
+input[type=text] {
+  box-shadow: inset 0 0 0 2px #605c57; }
+
+input[type=button], input[type=submit] {
+  background-color: #605c57;
+  color: white;
+  height: 2rem;
+  padding: 0 1rem; }
+  input[type=button]:focus, input[type=submit]:focus {
+    box-shadow: inset 0 0 0 4px #ffb81d;
+    outline: none; }
+
+input[type=radio], input[type=checkbox] {
+  height: initial;
+  margin-right: 0.25rem; }
+
+.form-text {
+  height: 2rem;
+  margin-right: 1px;
+  padding: 0;
+  text-indent: 0.5rem;
+  transition: all 0.2s ease-out;
+  width: 10rem; }
+  .form-text.active {
+    width: 16rem; }
+  .form-text:focus {
+    background-color: white;
+    box-shadow: inset 0 0 0 4px #ffb81d !important;
+    color: #605c57;
+    outline: none; }
+
 .content-wrapper {
   margin: 0 auto;
   max-width: calc(82rem - 1rem - (5rem + 1rem));
@@ -445,6 +484,33 @@ header .service {
   header {
     display: table;
     width: 100%; } }
+header.collapsed {
+  border-bottom: 2px solid #dddbd9; }
+  header.collapsed .menu {
+    display: none; }
+  header.collapsed .logo {
+    height: 30px;
+    overflow: hidden; }
+  header.collapsed .nypl-logo {
+    background: url("../img/lion.svg") no-repeat scroll 0px 0px/3rem auto white;
+    background-position-y: -4px;
+    margin: 0; }
+  header.collapsed .service-buttons {
+    min-height: 10px; }
+    header.collapsed .service-buttons li {
+      display: none; }
+  header.collapsed .nav-buttons {
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 0;
+    text-transform: uppercase; }
+    header.collapsed .nav-buttons li {
+      box-shadow: none; }
+    header.collapsed .nav-buttons a {
+      padding: 0.1em 0.4em 0.1em; }
+    header.collapsed .nav-buttons .search {
+      display: none; }
 
 .service-buttons {
   font-size: 0.8rem;
@@ -586,45 +652,6 @@ header .service {
     transition: box-shadow 0.2s; }
   .nav-buttons li:hover, .nav-buttons li.active {
     box-shadow: inset 0 -4px 0 #e32b31; }
-
-.hidden {
-  display: none; }
-
-input {
-  background-color: #c5c2be;
-  border: none;
-  padding: 0; }
-
-input[type=text] {
-  box-shadow: inset 0 0 0 2px #605c57; }
-
-input[type=button], input[type=submit] {
-  background-color: #605c57;
-  color: white;
-  height: 2rem;
-  padding: 0 1rem; }
-  input[type=button]:focus, input[type=submit]:focus {
-    box-shadow: inset 0 0 0 4px #ffb81d;
-    outline: none; }
-
-input[type=radio], input[type=checkbox] {
-  height: initial;
-  margin-right: 0.25rem; }
-
-.form-text {
-  height: 2rem;
-  margin-right: 1px;
-  padding: 0;
-  text-indent: 0.5rem;
-  transition: all 0.2s ease-out;
-  width: 10rem; }
-  .form-text.active {
-    width: 16rem; }
-  .form-text:focus {
-    background-color: white;
-    box-shadow: inset 0 0 0 4px #ffb81d !important;
-    color: #605c57;
-    outline: none; }
 
 #main-search {
   background-color: #7B756F;

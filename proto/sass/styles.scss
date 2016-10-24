@@ -6,7 +6,6 @@ html {
   font-family: $sansSerifStack;
   font-size: $basefont;
   line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   -webkit-filter: none;
@@ -290,6 +289,7 @@ input[type=radio], input[type=checkbox] {
   margin-bottom: 0.1rem;
   overflow: hidden;
   text-indent: ($logo-width * 2);
+  -webkit-font-smoothing: antialiased;
   white-space: nowrap;
   width: $logo-height;
   width: 5.8rem;

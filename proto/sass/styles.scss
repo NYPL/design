@@ -251,9 +251,11 @@ input[type=radio], input[type=checkbox] {
   }
 }
 
-.menu {
+.collapsed-menu-toggle, .main-menu-toggle {
   display: none;
+}
 
+.main-menu-toggle {
   @media screen and (max-width: $mobile-breakpoint) {
     background-color: $nyplred;
     color: white !important;
@@ -335,9 +337,25 @@ header {
   &.collapsed {
      // using absolute px because each site might use different font-size
      border-bottom: 2px solid $nypllightgray;
+     position: relative;
 
-    .menu {
+    .main-menu-toggle {
       display: none;
+    }
+
+    .collapsed-menu-toggle {
+      bottom: 0;
+      color: $pagetextcolor;
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      position: absolute;
+      right: 1rem;
+      text-transform: uppercase;
+    }
+
+    .service-buttons, .nav-buttons, .nav-buttons a {
+      transition: all 1s ease-out;
     }
 
     .logo {
@@ -360,7 +378,7 @@ header {
     }
 
     .nav-buttons {
-      font-size: 12px;
+      font-size: 0;
       font-weight: bold;
       height: 30px;
       margin-top: 0;

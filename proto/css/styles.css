@@ -419,17 +419,18 @@ input[type=radio], input[type=checkbox] {
     .horizontal li:last-child {
       margin-right: 0; }
 
-.menu {
+.collapsed-menu-toggle, .main-menu-toggle {
   display: none; }
-  @media screen and (max-width: 760px) {
-    .menu {
-      background-color: #e32b31;
-      color: white !important;
-      display: block;
-      margin: 0 -1rem;
-      padding-right: 1rem;
-      text-align: right;
-      text-decoration: none; } }
+
+@media screen and (max-width: 760px) {
+  .main-menu-toggle {
+    background-color: #e32b31;
+    color: white !important;
+    display: block;
+    margin: 0 -1rem;
+    padding-right: 1rem;
+    text-align: right;
+    text-decoration: none; } }
 
 .logo {
   position: absolute;
@@ -485,9 +486,21 @@ header .service {
     display: table;
     width: 100%; } }
 header.collapsed {
-  border-bottom: 2px solid #dddbd9; }
-  header.collapsed .menu {
+  border-bottom: 2px solid #dddbd9;
+  position: relative; }
+  header.collapsed .main-menu-toggle {
     display: none; }
+  header.collapsed .collapsed-menu-toggle {
+    bottom: 0;
+    color: #100f0e;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    right: 1rem;
+    text-transform: uppercase; }
+  header.collapsed .service-buttons, header.collapsed .nav-buttons, header.collapsed .nav-buttons a {
+    transition: all 1s ease-out; }
   header.collapsed .logo {
     height: 30px;
     overflow: hidden; }
@@ -500,7 +513,7 @@ header.collapsed {
     header.collapsed .service-buttons li {
       display: none; }
   header.collapsed .nav-buttons {
-    font-size: 12px;
+    font-size: 0;
     font-weight: bold;
     height: 30px;
     margin-top: 0;

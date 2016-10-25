@@ -10,6 +10,10 @@ $focus-width: 3px;
 $intermediate-breakpoint: 1120px;
 $mobile-breakpoint: 760px;
 
+// collapsed heights
+$collapsed-service-height: 10px;
+$collapsed-nav-height: 30px;
+
 // colors
 $nyplgray: #7B756F;
 $nypldarkgray: darken($nyplgray, 40%);

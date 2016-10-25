@@ -499,8 +499,6 @@ header.collapsed {
     position: absolute;
     right: 1rem;
     text-transform: uppercase; }
-  header.collapsed .service-buttons, header.collapsed .nav-buttons, header.collapsed .nav-buttons a {
-    transition: all 1s ease-out; }
   header.collapsed .logo {
     height: 30px;
     overflow: hidden; }

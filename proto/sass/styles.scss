@@ -354,12 +354,8 @@ header {
       text-transform: uppercase;
     }
 
-    .service-buttons, .nav-buttons, .nav-buttons a {
-      transition: all 1s ease-out;
-    }
-
     .logo {
-      height: 30px;
+      height: $collapsed-nav-height;
       overflow: hidden;
     }
 
@@ -370,7 +366,7 @@ header {
     }
 
     .service-buttons {
-      min-height: 10px;
+      min-height: $collapsed-service-height;
 
       li {
         display: none;
@@ -380,7 +376,7 @@ header {
     .nav-buttons {
       font-size: 0;
       font-weight: bold;
-      height: 30px;
+      height: $collapsed-nav-height;
       margin-top: 0;
       text-transform: uppercase;
 

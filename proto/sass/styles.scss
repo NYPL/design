@@ -555,6 +555,7 @@ header {
     li {
       border-bottom: 1px solid $nypllightgray;
       float: left;
+      height: auto;
       line-height: 2rem;
       margin: 0 0 5px 0;
       width: 50%;
@@ -573,9 +574,12 @@ header {
     border: none;
     color: $pagecolor;
     display: block;
+    overflow: hidden;
     padding: 0.2em 0.4em 0.2em;
     text-decoration: none;
+    text-overflow: ellipsis;
     transition: all 0.2s;
+    white-space: nowrap;
 
     &:hover {
       color: $linkcolor;

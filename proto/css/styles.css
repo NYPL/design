@@ -642,6 +642,7 @@ header.collapsed {
       .nav-buttons li {
         border-bottom: 1px solid #dddbd9;
         float: left;
+        height: auto;
         line-height: 2rem;
         margin: 0 0 5px 0;
         width: 50%; }
@@ -655,9 +656,12 @@ header.collapsed {
     border: none;
     color: #100f0e;
     display: block;
+    overflow: hidden;
     padding: 0.2em 0.4em 0.2em;
     text-decoration: none;
-    transition: all 0.2s; }
+    text-overflow: ellipsis;
+    transition: all 0.2s;
+    white-space: nowrap; }
     .nav-buttons a:hover {
       color: #e32b31; }
   .nav-buttons li {

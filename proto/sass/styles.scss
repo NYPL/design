@@ -217,6 +217,7 @@ input[type=radio], input[type=checkbox] {
   margin: 0 auto;
   max-width: calc(#{$max-width} - 1rem - (#{$logo-width} + 1rem));
   padding: 1rem 1rem 1rem ($logo-width + 1rem);
+  position: relative;
   @include clearfix;
 
   @media screen and (max-width: $mobile-breakpoint) {
@@ -285,12 +286,12 @@ input[type=radio], input[type=checkbox] {
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/#{$logo-width} auto white;
   border: none;
   display: block;
+  font-size: 0;
   height: calc(#{$logo-height} - 0.5rem);
   height: $logo-height;
   margin-top: 0.4rem;
   margin-bottom: 0.1rem;
   overflow: hidden;
-  text-indent: ($logo-width * 2);
   -webkit-font-smoothing: antialiased;
   white-space: nowrap;
   width: $logo-height;
@@ -314,6 +315,7 @@ header {
   }
 
   .content {
+    position: relative;
     @include clearfix;
 
     @media screen and (max-width: $mobile-breakpoint) {
@@ -408,7 +410,7 @@ header {
     li {
       border-bottom: 1px solid white;
       float: left;
-      line-height: 2rem;
+      line-height: 2;
       margin: 0 0 5px 0;
       width: 50%;
     }
@@ -471,7 +473,7 @@ header {
     position: absolute;
     padding: 1rem;
     padding-bottom: 0;
-    left: 0;
+    right: 0;
     text-transform: none;
     z-index: 1;
   }
@@ -482,6 +484,14 @@ header {
     white-space: nowrap;
   }
 }
+
+// override for new placement
+.login-toggle {
+  position: absolute;
+  right: 0;
+  top: 1em;
+}
+// end override
 
 .email-toggle {
   form {
@@ -530,17 +540,12 @@ header {
 
 .nav-buttons {
   font-size: 1.1rem;
-  line-height: 1.7rem;
+  line-height: 1.7;
   margin-top: calc(#{$logo-height} + 1rem);
   @include clearfix;
 
   @media screen and (max-width: $intermediate-breakpoint) {
-    li.search {
-      float: none;
-      position: absolute;
-      right: 0;
-      top: -3rem;
-    }
+    font-size: 0.9rem;
   }
 
   @media screen and (max-width: $mobile-breakpoint) {
@@ -552,7 +557,7 @@ header {
       border-bottom: 1px solid $nypllightgray;
       float: left;
       height: auto;
-      line-height: 2rem;
+      line-height: 2;
       margin: 0 0 5px 0;
       width: 50%;
     }
@@ -594,79 +599,91 @@ header {
 
 }
 
-#main-search {
-  background-color: $nyplsearchcolor;
-  margin: 0;
-  position: relative;
 
-  &.display {
-    display: block;
+li.search {
+  @media screen and (max-width: $intermediate-breakpoint) {
+    // float: none;
+    // position: absolute;
+    // right: 0;
+    // top: -3rem;
   }
 
-  .search-query-content {
-    position: relative;
-  }
-
-  .search-select {
+  #main-search {
     background-color: $nyplsearchcolor;
-    font-size: 0.9rem;
-    right: 0;
-    padding: 1px 3px 3px 3px;
-    position: absolute;
-    top: 2rem;
-    white-space: nowrap;
-  }
+    margin: 0;
+    position: relative;
 
-  .search-radio-label {
-    display: inline-block;
-    height: 2rem;
-    line-height: 2rem;
-    padding: 0 0.75rem 0 0.5rem;
-
-    &.selected {
-      background-color: $nyplsearchcolorlight;
+    &.display {
+      display: block;
     }
 
-    &.focus {
-      box-shadow: inset 0 0 0 3px $focuscolor;
-    }
-
-    input:focus {
-      outline: none;
-    }
-
-  }
-
-  .search-query-label {
-    color: white;
-    height: 2rem;
-    left: 0.5rem;
-    line-height: 2rem;
-    position: absolute;
-  }
-
-  @media screen and (max-width: $mobile-breakpoint) {
-    .form-text, .search-button, .search-radio-label {
-      height: 2.5rem;
-      line-height: 2.5rem;
-    }
-
-    .form-text {
-      margin: 0;
-      width: 70%;
-    }
-
-    .search-button {
-      margin: 0;
-      width: 30%;
+    .search-query-content {
+      position: relative;
     }
 
     .search-select {
-      top: 2.5rem;
+      background-color: $nyplsearchcolor;
+      font-size: 0.9rem;
+      right: 0;
+      padding: 1px 3px 3px 3px;
+      position: absolute;
+      top: 2rem;
+      white-space: nowrap;
     }
+
+    .search-radio-label {
+      display: inline-block;
+      height: 2rem;
+      line-height: 2;
+      padding: 0 0.75rem 0 0.5rem;
+
+      &.selected {
+        background-color: $nyplsearchcolorlight;
+      }
+
+      &.focus {
+        box-shadow: inset 0 0 0 3px $focuscolor;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+    }
+
+    .search-query-label {
+      color: white;
+      height: 2rem;
+      left: 0.5rem;
+      line-height: 2;
+      position: absolute;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      .form-text, .search-button, .search-radio-label {
+        height: 2.5rem;
+        line-height: 2.5;
+      }
+
+      .form-text {
+        margin: 0;
+        width: 70%;
+      }
+
+      .search-button {
+        margin: 0;
+        width: 30%;
+      }
+
+      .search-select {
+        top: 2.5rem;
+      }
+    }
+
   }
 
 }
+
 
 // end main-header stuff
 

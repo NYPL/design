@@ -528,6 +528,21 @@ header {
     }
   }
 }
+
+header.collapsed .login-toggle {
+  // absolute px because no control over page rem
+  right: 110px;
+  top: 9px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    font-size: 12px;
+    top: -19px;
+
+    div {
+      right: -100%;
+    }
+  }
+}
 // end override
 
 .email-toggle {

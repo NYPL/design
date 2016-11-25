@@ -617,6 +617,16 @@ header.collapsed {
       .login-toggle .welcome-message {
         display: none; } }
 
+header.collapsed .login-toggle {
+  right: 110px;
+  top: 9px; }
+  @media screen and (max-width: 965px) {
+    header.collapsed .login-toggle {
+      font-size: 12px;
+      top: -19px; }
+      header.collapsed .login-toggle div {
+        right: -100%; } }
+
 .email-toggle form {
   background-color: #7B756F;
   color: white;

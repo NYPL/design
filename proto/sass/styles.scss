@@ -487,9 +487,46 @@ header {
 
 // override for new placement
 .login-toggle {
+  font-size: 0.8rem;
   position: absolute;
   right: 0;
-  top: 1em;
+  text-transform: uppercase;
+  top: 1.5rem;
+
+  .welcome-message {
+    display: inline-block;
+    margin-right: 1em;
+    text-transform: none;
+  }
+
+  a:link {
+    text-decoration: underline;
+  }
+
+  > a {
+    background-color: $nyplgray;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0.5em;
+
+    &:link {
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: white;
+      color: $nyplgray;
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    top: -2rem;
+
+    .welcome-message {
+      display: none;
+    }
+  }
 }
 // end override
 

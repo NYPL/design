@@ -282,7 +282,6 @@ input[type=radio], input[type=checkbox] {
 .nypl-logo {
   // NOTE: has redundant rules to show different logo options
   background: url("../img/lion.svg") no-repeat scroll 0px 0px/#{$logo-height} auto white;
-  background: url("../img/nypl-symmetry.svg") no-repeat scroll 0px 0px/5.8rem auto white;
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/#{$logo-width} auto white;
   border: none;
   display: block;
@@ -295,11 +294,12 @@ input[type=radio], input[type=checkbox] {
   -webkit-font-smoothing: antialiased;
   white-space: nowrap;
   width: $logo-height;
-  width: 5.8rem;
   width: $logo-width;
 
   @media screen and (max-width: $mobile-breakpoint) {
+    background: url("../img/lion.svg") no-repeat scroll 0px 0px/#{$logo-height - 0.5} auto white;
     margin-right: 0.5rem;
+    width: $logo-height;
   }
 }
 
@@ -616,6 +616,7 @@ header.collapsed .login-toggle {
 
     li.search {
       border: none;
+      font-size: 1rem;
       position: relative;
       right: initial;
       top: initial;

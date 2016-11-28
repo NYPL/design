@@ -444,7 +444,6 @@ input[type=radio], input[type=checkbox] {
 
 .nypl-logo {
   background: url("../img/lion.svg") no-repeat scroll 0px 0px/3rem auto white;
-  background: url("../img/nypl-symmetry.svg") no-repeat scroll 0px 0px/5.8rem auto white;
   background: url("../img/nypl.svg") no-repeat scroll 0px 0px/5rem auto white;
   border: none;
   display: block;
@@ -457,11 +456,12 @@ input[type=radio], input[type=checkbox] {
   -webkit-font-smoothing: antialiased;
   white-space: nowrap;
   width: 3rem;
-  width: 5.8rem;
   width: 5rem; }
   @media screen and (max-width: 965px) {
     .nypl-logo {
-      margin-right: 0.5rem; } }
+      background: url("../img/lion.svg") no-repeat scroll 0px 0px/2.5rem auto white;
+      margin-right: 0.5rem;
+      width: 3rem; } }
 
 header .content-wrapper {
   max-width: calc(82rem - 2rem);
@@ -685,6 +685,7 @@ header.collapsed .login-toggle {
         width: 50%; }
       .nav-buttons li.search {
         border: none;
+        font-size: 1rem;
         position: relative;
         right: initial;
         top: initial;

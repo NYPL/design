@@ -44,7 +44,7 @@ function init() {
     }
   })
 
-  $(".login-toggle a").click(function(e) {
+  $(".login-toggle a.collapsible").click(function(e) {
     if ($(e.target).closest('.login-toggle').length && !$(e.target).parents("#login-links").length) {
       toggleLogin()
     }
@@ -71,12 +71,12 @@ function init() {
 }
 
 function toggleLogin() {
-  $(".login-toggle a").toggleClass("active")
+  $(".login-toggle a.collapsible").toggleClass("active")
   $(".login-toggle div").toggleClass("hidden")
 }
 
 function hideLogin() {
-  $(".login-toggle a").removeClass("active")
+  $(".login-toggle a.collapsible").removeClass("active")
   $(".login-toggle div").addClass("hidden")
 }
 

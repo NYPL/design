@@ -1,0 +1,75 @@
+@import "measurements";
+@import "mixins";
+@import "media-queries";
+
+@warn "remove magic numbers";
+
+@mixin banner-alert() {
+  background-color: $alertcolor;
+  padding: 0.8rem 0;
+  -webkit-animation: alert 2s linear;
+  animation: alert 2s linear;
+}
+
+@mixin full-width-wrapper {
+  margin: 0 auto;
+  max-width: calc(#{$max-width} - 1rem - (#{$logo-width} + 1rem));
+  padding: 1rem 1rem 1rem ($logo-width + 1rem);
+  position: relative;
+  @include clearfix;
+
+  @include media(screen, $mobile-breakpoint) {
+    padding-left: 1rem;
+  }
+}
+
+@mixin column-type {
+  float: left;
+  min-height: 1rem;
+  @include clearfix;
+
+  @include media(screen, $mobile-breakpoint) {
+    float: none;
+    width: auto;
+  }
+}
+
+@mixin column-full {
+  width: $full-width;
+  @include column-type;
+}
+
+@mixin column-half {
+  width: $half;
+  @include column-type;
+}
+
+@mixin column-one-quarter {
+  width: $one-quarter;
+  @include column-type;
+}
+
+@mixin column-one-third {
+  width: $one-third;
+  @include column-type;
+}
+
+@mixin column-two-thirds {
+  width: $two-thirds;
+  @include column-type;
+}
+
+@mixin column-three-quarters {
+  width: $three-quarters;
+  @include column-type;
+}
+
+@mixin inner-block {
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+
+  @include media(screen, $mobile-breakpoint) {
+    padding: 0;
+  }
+}

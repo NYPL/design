@@ -1,0 +1,272 @@
+@font-face {
+  font-family: nypl-moon;
+  src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85");
+  src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+[class*=" nypl-icon-"]:after, [class^=nypl-icon-]:after {
+  font-family: nypl-moon;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.nypl-icon-arrow-meganav-large:after {
+  content: "\E801"; }
+
+.nypl-icon-arrow-meganav:after {
+  content: "\E800"; }
+
+.nypl-icon-card:after {
+  content: "\E623"; }
+
+.nypl-icon-book:after {
+  content: "\E624"; }
+
+.nypl-icon-play-large:after {
+  content: "\E625"; }
+
+.nypl-icon-play-med:after {
+  content: "\E626"; }
+
+.nypl-icon-play-small:after {
+  content: "\E603"; }
+
+.nypl-icon-headphones:after {
+  content: "\E627"; }
+
+.nypl-icon-solo-x:after {
+  content: "\E611"; }
+
+.nypl-icon-mail:after {
+  content: "\E61C"; }
+
+.nypl-icon-login:after {
+  content: "\E61D"; }
+
+.nypl-icon-logo-mark:after {
+  content: "\E61E"; }
+
+.nypl-icon-logo-type:after {
+  content: "\E61F"; }
+
+.nypl-icon-locator-no-dot:after {
+  content: "\E620"; }
+
+.nypl-icon-locator-small:after {
+  content: "\E616"; }
+
+.nypl-icon-locator-large:after {
+  content: "\E615"; }
+
+.nypl-icon-burger-nav:after {
+  content: "\E614"; }
+
+.nypl-icon-wedge-right:after {
+  content: "\E621"; }
+
+.nypl-icon-wedge-left:after {
+  content: "\E622"; }
+
+.nypl-icon-wedge-down:after {
+  content: "\E600"; }
+
+.nypl-icon-wedge-up:after {
+  content: "\E601"; }
+
+.nypl-icon-magnifier-thin:after {
+  content: "\E617"; }
+
+.nypl-icon-magnifier-fat:after {
+  content: "\E609"; }
+
+.nypl-icon-magnifier-circle:after {
+  content: "\E602"; }
+
+.nypl-icon-facebook-circle:after {
+  content: "\E62E"; }
+
+.nypl-icon-facebook-circle-large:after {
+  content: "\E62C"; }
+
+.nypl-icon-facebook-circle-hover:after {
+  content: "\E630"; }
+
+.nypl-icon-twitter-circle:after {
+  content: "\E62F"; }
+
+.nypl-icon-twitter-circle-large:after {
+  content: "\E62D"; }
+
+.nypl-icon-twitter-circle-hover:after {
+  content: "\E631"; }
+
+.nypl-icon-facebook:after {
+  content: "\E604"; }
+
+.nypl-icon-twitter:after {
+  content: "\E605"; }
+
+.nypl-icon-tumblr:after {
+  content: "\E606"; }
+
+.nypl-icon-instagram:after {
+  content: "\E618"; }
+
+.nypl-icon-soundcloud:after {
+  content: "\E619"; }
+
+.nypl-icon-itunes:after {
+  content: "\E61A"; }
+
+.nypl-icon-youtube:after {
+  content: "\E61B"; }
+
+.nypl-icon-bldg:after {
+  content: "\E607"; }
+
+.nypl-icon-equals-small:after {
+  content: "\E608"; }
+
+.nypl-icon-arrow-up:after {
+  content: "\E60A"; }
+
+.nypl-icon-arrow-down:after {
+  content: "\E629"; }
+
+.nypl-icon-arrow-left:after {
+  content: "\E62A"; }
+
+.nypl-icon-arrow-right:after {
+  content: "\E62B"; }
+
+.nypl-icon-circle-arrow-left:after {
+  content: "\E60B"; }
+
+.nypl-icon-circle-arrow-right:after {
+  content: "\E60C"; }
+
+.nypl-icon-circle-wedge-left:after {
+  content: "\E60D"; }
+
+.nypl-icon-circle-wedge-right:after {
+  content: "\E60E"; }
+
+.nypl-icon-circle-more:after {
+  content: "\E60F"; }
+
+.nypl-icon-more-dots:after {
+  content: "\E610"; }
+
+.nypl-icon-circle-x:after {
+  content: "\E612"; }
+
+.nypl-icon-circle-check:after {
+  content: "\E613"; }
+
+.nypl-icon-check-solo:after {
+  content: "\E628"; }
+
+body {
+  color: #100f0e; }
+
+html {
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.65; }
+
+html {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-filter: none;
+  filter: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  margin-top: 0; }
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 1; }
+
+h2 {
+  font-size: 1.6rem; }
+
+h3 {
+  font-size: 1.4rem; }
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0; }
+
+ul {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  padding: 0; }
+
+li {
+  margin-left: 1.5rem; }
+
+a {
+  text-decoration: none; }
+  a:link {
+    color: #e32b31; }
+  a:visited {
+    color: #941418; }
+  a:hover, a:visited:hover {
+    color: #e9585d;
+    text-decoration: underline; }
+
+a.inverted:link {
+  color: white; }
+a.inverted:visited {
+  color: #e6e6e6; }
+a.inverted:hover, a.inverted:visited:hover {
+  color: white; }
+
+#skip a {
+  background-color: white;
+  border: none;
+  color: #e32b31;
+  display: block;
+  font-size: 13px;
+  height: 1px;
+  left: -10000px;
+  line-height: 2;
+  overflow: hidden;
+  padding: 5px 10px 3px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  z-index: 1000; }
+  #skip a:focus {
+    border: 5px solid #e32b31;
+    height: auto;
+    left: 7px;
+    outline: 0;
+    overflow: visible;
+    width: auto; }
+
+.hidden {
+  display: none; }
+
+.page-header {
+  background-color: #dddbd9; }
+  .page-header h1 {
+    margin: 0; }
+  .page-header .breadcrumb {
+    margin-bottom: ms(-1); }
+
+.related-links {
+  border-top: 0.25rem solid #7B756F;
+  padding-top: 2rem; }
+
+/*# sourceMappingURL=nypl-normalize.css.map */

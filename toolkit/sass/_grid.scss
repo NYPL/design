@@ -13,7 +13,7 @@
 
 @mixin full-width-wrapper {
   margin: 0 auto;
-  max-width: calc(#{$max-width} - $general-padding - (#{$logo-width} + $general-padding));
+  max-width: calc(#{$max-width - $general-padding} - (#{$logo-width + $general-padding}));
   padding: $general-padding $general-padding $general-padding ($logo-width + $general-padding);
   position: relative;
   @include clearfix;

@@ -54,3 +54,7 @@ table, .views-table {
 .location-hours {
   @include location-hours;
 }
+
+.related-links {
+  @include related-links;
+}

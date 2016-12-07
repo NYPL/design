@@ -635,10 +635,6 @@ a.inverted:hover, a.inverted:visited:hover {
   .page-header .breadcrumb {
     margin-bottom: ms(-1); }
 
-.related-links {
-  border-top: 0.25rem solid #7B756F;
-  padding-top: 2rem; }
-
 a {
   border-radius: 0; }
 
@@ -1405,5 +1401,9 @@ table, .views-table {
         content: "Saturday"; }
       .location-hours td:nth-of-type(7)::before {
         content: "Sunday"; } }
+
+.related-links {
+  border-top: 0.25rem solid #7B756F;
+  padding-top: 2rem; }
 
 /*# sourceMappingURL=styles.css.map */

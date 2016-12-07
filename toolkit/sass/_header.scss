@@ -2,6 +2,12 @@
 @import "mixins";
 @import "media-queries";
 
+$logo-width: 5rem;
+$logo-height: 3rem;
+$collapsed-service-height: 10px;
+$collapsed-nav-height: 30px;
+
+
 .alert {
   @include banner-alert;
 }

@@ -1,8 +1,6 @@
 // font base values
 $basefontraw: 16;
 $basefont: $basefontraw * 1px;
-$logo-width: 5rem;
-$logo-height: 3rem;
 
 // page measures
 $maxwidthraw: 1312;
@@ -11,10 +9,6 @@ $max-width: ($maxwidthraw/$basefontraw) * 1rem; // in rems
 // breakpoints
 $intermediate-breakpoint: 1120px;
 $mobile-breakpoint: 965px;
-
-// for collapsed header
-$collapsed-service-height: 10px;
-$collapsed-nav-height: 30px;
 
 // borders
 $focus-width: 5.3rem;

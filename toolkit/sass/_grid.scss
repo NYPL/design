@@ -13,13 +13,13 @@
 
 @mixin full-width-wrapper {
   margin: 0 auto;
-  max-width: calc(#{$max-width} - 1rem - (#{$logo-width} + 1rem));
-  padding: 1rem 1rem 1rem ($logo-width + 1rem);
+  max-width: calc(#{$max-width} - $general-padding - (#{$logo-width} + $general-padding));
+  padding: $general-padding $general-padding $general-padding ($logo-width + $general-padding);
   position: relative;
   @include clearfix;
 
   @include media(screen, $mobile-breakpoint) {
-    padding-left: 1rem;
+    padding-left: $general-padding;
   }
 }
 

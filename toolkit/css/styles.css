@@ -1090,7 +1090,7 @@ footer ul {
 
 .content-wrapper {
   margin: 0 auto;
-  max-width: calc(82rem - 1rem - (5rem + 1rem));
+  max-width: calc(82rem - $general-padding - (5rem + $general-padding));
   padding: 1rem 1rem 1rem 6rem;
   position: relative; }
   .content-wrapper:before, .content-wrapper:after {

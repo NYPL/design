@@ -23,8 +23,8 @@
   }
 }
 
-@mixin column-type {
-  float: left;
+@mixin column-type($float: left) {
+  float: $float;
   min-height: 1rem;
   @include clearfix;
 
@@ -36,7 +36,7 @@
 
 @mixin column-full {
   width: $full-width;
-  @include column-type;
+  @include column-type(none);
 }
 
 @mixin column-half {

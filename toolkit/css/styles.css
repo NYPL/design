@@ -1155,6 +1155,20 @@ footer ul {
   #filter-search .a-z span.long {
     min-width: calc(2em + 14px); }
 
+.full {
+  width: 100%;
+  float: none;
+  min-height: 1rem; }
+  .full:before, .full:after {
+    content: "";
+    display: table; }
+  .full:after {
+    clear: both; }
+  @media (max-width: 965px) {
+    .full {
+      float: none;
+      width: auto; } }
+
 .quarter {
   width: 25%;
   float: left;

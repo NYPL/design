@@ -15,6 +15,10 @@
   @include search-form;
 }
 
+.full {
+  @include column-full;
+}
+
 .quarter {
   @include column-one-quarter;
 }

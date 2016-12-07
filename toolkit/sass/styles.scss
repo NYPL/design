@@ -2,6 +2,7 @@
 @import "forms";
 @import "grid";
 @import "header";
+@import "tables-results";
 @import "footer";
 
 // using the system
@@ -32,4 +33,16 @@
 
 .inner {
   @include inner-block;
+}
+
+.results-summary {
+  @include results-summary;
+}
+
+.results-pagination {
+  @include results-pagination;
+}
+
+table, .views-table {
+  @include views-table;
 }

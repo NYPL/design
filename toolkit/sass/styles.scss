@@ -46,3 +46,11 @@
 table, .views-table {
   @include views-table;
 }
+
+#location-info {
+  @include location-info;
+}
+
+.location-hours {
+  @include location-hours;
+}

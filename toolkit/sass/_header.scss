@@ -7,7 +7,7 @@ $logo-height: 3rem;
 $collapsed-service-height: 10px;
 $collapsed-nav-height: 30px;
 
-@warn "extract buttons to its own partial";
+@warn "lots of refactoring to do here";
 
 .alert {
   @include banner-alert;

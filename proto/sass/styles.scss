@@ -190,6 +190,11 @@ input[type=radio], input[type=checkbox] {
   margin-right: 0.25rem;
 }
 
+button.collapsible {
+  border: none;
+  cursor: pointer;
+}
+
 .form-text {
   height: 2rem;
   margin-right: 1px;
@@ -400,7 +405,6 @@ header {
 .service-buttons {
   font-size: 0.8rem;
   padding: 0;
-  text-transform: uppercase;
 
   @media screen and (max-width: $mobile-breakpoint) {
     display: none;
@@ -420,14 +424,15 @@ header {
     text-decoration: underline;
   }
 
-  li > a {
-    border: none;
+  li > a, button.collapsible {
+    background-color: $nyplred;
     color: white;
     display: block;
     font-weight: bold;
     padding: 0 0.5em;
     position: relative;
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 0.2s;
 
     &:hover, &.active {
@@ -492,6 +497,10 @@ header {
   right: 0;
   text-transform: uppercase;
   top: 1.5rem;
+
+  button {
+    text-transform: uppercase;
+  }
 
   .welcome-message {
     display: inline-block;

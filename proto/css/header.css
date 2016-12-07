@@ -340,6 +340,10 @@ input[type=radio], input[type=checkbox] {
   height: initial;
   margin-right: 0.25rem; }
 
+button.collapsible {
+  border: none;
+  cursor: pointer; }
+
 .form-text {
   height: 2rem;
   margin-right: 1px;
@@ -529,7 +533,8 @@ header .service-buttons {
         width: 50%; } }
   header .service-buttons a {
     text-decoration: underline; }
-  header .service-buttons li > a {
+  header .service-buttons li > a, header .service-buttons button.collapsible {
+    background-color: #e32b31;
     border: none;
     color: white;
     display: block;
@@ -537,16 +542,17 @@ header .service-buttons {
     padding: 0 0.5em;
     position: relative;
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 0.2s; }
-    header .service-buttons li > a:hover, header .service-buttons li > a.active {
+    header .service-buttons li > a:hover, header .service-buttons li > a.active, header .service-buttons button.collapsible:hover, header .service-buttons button.collapsible.active {
       background-color: white;
       color: #e32b31; }
-    header .service-buttons li > a.donate {
+    header .service-buttons li > a.donate, header .service-buttons button.collapsible.donate {
       background-color: white;
       color: #e32b31; }
-    header .service-buttons li > a.donate:hover {
+    header .service-buttons li > a.donate:hover, header .service-buttons button.collapsible.donate:hover {
       background-color: white; }
-    header .service-buttons li > a.collapsible:after {
+    header .service-buttons li > a.collapsible:after, header .service-buttons button.collapsible.collapsible:after {
       display: inline-block;
       font-size: 0.85em;
       font-weight: bold;
@@ -563,6 +569,8 @@ header .login-toggle {
   right: 0;
   text-transform: uppercase;
   top: 1.5rem; }
+  header .login-toggle button {
+    text-transform: uppercase; }
   header .login-toggle div {
     background-color: #7B756F;
     color: white;
@@ -583,15 +591,15 @@ header .login-toggle {
     text-transform: none; }
   header .login-toggle a:link {
     text-decoration: underline; }
-  header .login-toggle > a {
+  header .login-toggle > a, header .login-toggle button.collapsible {
     background-color: #7B756F;
     color: white;
     display: inline-block;
     font-weight: bold;
     padding: 0 0.5em; }
-    header .login-toggle > a:link {
+    header .login-toggle > a:link, header .login-toggle button.collapsible:link {
       text-decoration: none; }
-    header .login-toggle > a:hover {
+    header .login-toggle > a:hover, header .login-toggle button.collapsible:hover {
       background-color: white;
       color: #7B756F; }
   @media screen and (max-width: 965px) {

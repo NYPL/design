@@ -162,6 +162,11 @@ input[type=radio], input[type=checkbox] {
   margin-right: 0.25rem;
 }
 
+button.collapsible {
+  border: none;
+  cursor: pointer;
+}
+
 .form-text {
   height: 2rem;
   margin-right: 1px;
@@ -411,7 +416,8 @@ header {
       text-decoration: underline;
     }
 
-    li > a {
+    li > a, button.collapsible {
+      background-color: $nyplred;
       border: none;
       color: white;
       display: block;
@@ -419,6 +425,7 @@ header {
       padding: 0 0.5em;
       position: relative;
       text-decoration: none;
+      text-transform: uppercase;
       transition: all 0.2s;
 
       &:hover, &.active {
@@ -463,6 +470,10 @@ header {
     text-transform: uppercase;
     top: 1.5rem;
 
+    button {
+      text-transform: uppercase;
+    }
+
     div {
       background-color: $nyplsearchcolor;
       color: white;
@@ -491,7 +502,7 @@ header {
       text-decoration: underline;
     }
 
-    > a {
+    > a, button.collapsible {
       background-color: $nyplgray;
       color: white;
       display: inline-block;

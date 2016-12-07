@@ -26,7 +26,7 @@ function init() {
     hideTimeout = setTimeout(hideSearch, 100)
   })
 
-  $(".email-toggle a").click(function(e) {
+  $(".email-toggle button").click(function(e) {
     if ($(e.target).closest('.email-toggle').length && !$(e.target).parents("#email-updates").length) {
       toggleEmail()
     }
@@ -44,7 +44,7 @@ function init() {
     }
   })
 
-  $(".login-toggle a.collapsible").click(function(e) {
+  $(".login-toggle button.collapsible").click(function(e) {
     if ($(e.target).closest('.login-toggle').length && !$(e.target).parents("#login-links").length) {
       toggleLogin()
     }
@@ -71,22 +71,22 @@ function init() {
 }
 
 function toggleLogin() {
-  $(".login-toggle a.collapsible").toggleClass("active")
+  $(".login-toggle button.collapsible").toggleClass("active")
   $(".login-toggle div").toggleClass("hidden")
 }
 
 function hideLogin() {
-  $(".login-toggle a.collapsible").removeClass("active")
+  $(".login-toggle button.collapsible").removeClass("active")
   $(".login-toggle div").addClass("hidden")
 }
 
 function toggleEmail() {
-  $(".email-toggle a").toggleClass("active")
+  $(".email-toggle button").toggleClass("active")
   $(".email-toggle form").toggleClass("hidden")
 }
 
 function hideEmail() {
-  $(".email-toggle a").removeClass("active")
+  $(".email-toggle button").removeClass("active")
   $(".email-toggle form").addClass("hidden")
 }
 

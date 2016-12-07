@@ -368,6 +368,10 @@ input[type=radio], input[type=checkbox] {
   height: initial;
   margin-right: 0.25rem; }
 
+button.collapsible {
+  border: none;
+  cursor: pointer; }
+
 .form-text {
   height: 2rem;
   margin-right: 1px;
@@ -528,8 +532,7 @@ header.collapsed {
 
 .service-buttons {
   font-size: 0.8rem;
-  padding: 0;
-  text-transform: uppercase; }
+  padding: 0; }
   @media screen and (max-width: 965px) {
     .service-buttons {
       display: none;
@@ -543,24 +546,25 @@ header.collapsed {
         width: 50%; } }
   .service-buttons a {
     text-decoration: underline; }
-  .service-buttons li > a {
-    border: none;
+  .service-buttons li > a, .service-buttons button.collapsible {
+    background-color: #e32b31;
     color: white;
     display: block;
     font-weight: bold;
     padding: 0 0.5em;
     position: relative;
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 0.2s; }
-    .service-buttons li > a:hover, .service-buttons li > a.active {
+    .service-buttons li > a:hover, .service-buttons li > a.active, .service-buttons button.collapsible:hover, .service-buttons button.collapsible.active {
       background-color: white;
       color: #e32b31; }
-    .service-buttons li > a.donate {
+    .service-buttons li > a.donate, .service-buttons button.collapsible.donate {
       background-color: white;
       color: #e32b31; }
-    .service-buttons li > a.donate:hover {
+    .service-buttons li > a.donate:hover, .service-buttons button.collapsible.donate:hover {
       background-color: white; }
-    .service-buttons li > a.collapsible:after {
+    .service-buttons li > a.collapsible:after, .service-buttons button.collapsible.collapsible:after {
       display: inline-block;
       font-size: 0.85em;
       font-weight: bold;
@@ -594,6 +598,8 @@ header.collapsed {
   right: 0;
   text-transform: uppercase;
   top: 1.5rem; }
+  .login-toggle button {
+    text-transform: uppercase; }
   .login-toggle .welcome-message {
     display: inline-block;
     margin-right: 1em;

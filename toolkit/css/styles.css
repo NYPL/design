@@ -641,7 +641,7 @@ a {
 a:focus {
   outline-color: #ffb81d;
   outline-style: solid;
-  outline-width: 5.3rem; }
+  outline-width: 0.1875rem; }
 
 input {
   border-radius: 0; }
@@ -649,7 +649,7 @@ input {
 input:focus {
   outline-color: #ffb81d;
   outline-style: solid;
-  outline-width: 5.3rem; }
+  outline-width: 0.1875rem; }
 
 select {
   border-radius: 0; }
@@ -657,7 +657,7 @@ select {
 select:focus {
   outline-color: #ffb81d;
   outline-style: solid;
-  outline-width: 5.3rem; }
+  outline-width: 0.1875rem; }
 
 input {
   background-color: #c5c2be;

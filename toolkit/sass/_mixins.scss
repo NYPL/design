@@ -8,3 +8,43 @@
         clear: both;
     }
 }
+
+@warn "remove magic numbers";
+
+@mixin secondary-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+
+  &:before {
+    color: $nyplgray;
+    content: "Quick links for";
+    display: block;
+    font-size: 0.6em;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+@mixin toolkit-example {
+  border: $simple-border solid $nypllightgray;
+  padding: ($general-padding * 3) $general-padding ($general-padding * 0.5);
+  position: relative;
+
+  &:before {
+    border: $simple-border solid $nypllightgray;
+    border-left: none;
+    border-top: none;
+    color: $nyplgray;
+    content: "EXAMPLE";
+    display: inline-block;
+    font-size: 1em;
+    font-weight: normal;
+    left: 0;
+    padding: 0.3em $general-padding;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+  }
+}

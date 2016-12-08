@@ -6,12 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css">
 
-  <script
-          src="https://code.jquery.com/jquery-3.1.0.min.js"
-          integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-          crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/header.js"></script>
-
 </head>
 <body>
 
@@ -103,16 +97,16 @@
       <div class="inner">
         <div>Use the filters to show only databases that match your interests:</div>
         <form action="" id="filter-search">
-          <fieldset>
-            <label class="text" for="keyword-text">Title or description</label>
-            <input id="keyword-text" type="text" class="form-text">
+          <fieldset class="textfield">
+            <label for="keyword-text">Title or description</label>
+            <input id="keyword-text" type="text">
           </fieldset>
 
-          <fieldset>
+          <fieldset class="radiogroup">
             <span><strong>Accessible from</strong></span>
-            <label class="group" for="available-every"><input id="available-every" type="radio" name="available" value="any" checked="checked">Anywhere</label>
-            <label class="group" for="available-home"><input id="available-home" type="radio" name="available" value="home">Home with a library card</label>
-            <label class="group" for="available-library"><input id="available-library" type="radio" name="available" value="library">A library branch</label>
+            <label for="available-every"><input id="available-every" type="radio" name="available" value="any" checked="checked">Anywhere</label>
+            <label for="available-home"><input id="available-home" type="radio" name="available" value="home">Home with a library card</label>
+            <label for="available-library"><input id="available-library" type="radio" name="available" value="library">A library branch</label>
           </fieldset>
 
           <div class="location hidden">
@@ -124,28 +118,28 @@
             </fieldset>
           </div>
 
-          <fieldset>
+          <fieldset class="select">
             <label for="subjects">Subjects</label>
             <select id="subjects" class="form-select" name="subjects">
               <option value="0" selected="selected">All</option><option value="580+582+2747+2742+7556+806+586+587">Art</option><option value="582">- Architecture</option><option value="2747">- Art History</option><option value="2742">- Auction Prices</option><option value="7556">- Crafts</option><option value="806">- Fashion</option><option value="586">- Prints</option><option value="587">- Photography</option><option value="575+794+2703+800+2704+797+801+795+799+2805+798">Business</option><option value="794">- Advertising</option><option value="2703">-- Company Directories</option><option value="800">- Finance</option><option value="2704">- Industry Surveys and Profiles</option><option value="797">- Imports and Exports</option><option value="816">- Jobs</option><option value="801">- International Business</option><option value="795">- Market Research</option><option value="799">- Real Estate</option><option value="2805">- Small Business</option><option value="798">- Stocks</option><option value="817+830+832+1120">Government and Law</option><option value="830">- Census Data</option><option value="832">- Patents and Trademarks</option><option value="1120">- Social Services</option><option value="544">- Law</option><option value="571">Health and Medicine</option><option value="600+5310+7870+602+778+606+605+604+779+608+603+775+7582+777+631+2761+1110+1111">History</option><option value="5310">- American Civil War</option><option value="7870">- American Revolutionary War</option><option value="602">- Biography</option><option value="778">- Genealogy</option><option value="606">- History of Africa</option><option value="605">- History of Asia</option><option value="604">- History of Europe</option><option value="779">- History of North America</option><option value="7869">-- Colonial period, ca. 1600-1775</option><option value="608">- History of South America</option><option value="603">- History of the Ancient World</option><option value="775">- History of the Middle East</option><option value="7582">- Middle Ages</option><option value="777">- New York City History</option><option value="631">- United States History</option><option value="2761">- World History</option><option value="1110">- World War I</option><option value="1111">- World War II</option><option value="550+1101+552+551">Language and Literature</option><option value="1101">- Criticism and Theory</option><option value="552">- English and American Literature</option><option value="551">- Linguistics</option><option value="787">- Poetry</option><option value="589+791+789+792+588+793+790">Performing Arts</option><option value="791">- Broadcasting, Radio and Television</option><option value="789">- Dance</option><option value="792">- Film</option><option value="588">- Music</option><option value="793">- Recorded Sound and Video</option><option value="790">- Theatre</option><option value="520">Philosophy</option><option value="560+569+565+805">Science</option><option value="569">- Animals</option><option value="565">- Earth Sciences</option><option value="805">- Geology</option><option value="511+512+513+7609+2707+7566+2755+514+1014+2730+515+519+517+516+1096+1097+1099">Reference</option><option value="512">- Bibliography</option><option value="513">- Books and Libraries</option><option value="7609">- Directories</option><option value="2707">- Dictionaries</option><option value="7566">- Electronic books</option><option value="2755">- Homework Help</option><option value="514">- Encyclopedias</option><option value="1014">- Image Collections</option><option value="2730">- Library Catalogs</option><option value="515">- Magazines, Journals and Serials</option><option value="519">- Manuscripts and Rare Books</option><option value="517">- News Media, Journalism and Publishing</option><option value="516">- Organizations and Museums</option><option value="1096">- Historical Newspapers</option><option value="1097">- International Newspapers</option><option value="1099">- U.S. Newspapers</option><option value="530+781">Religion</option><option value="781">- Judaism</option><option value="540+816+544+3156+818+7586+543+547+7644+7694+1011+1015+601+1119+3803+542+525+541+548">Social Sciences</option><option value="3156">- Anthropology</option><option value="818">- Area and Cultural Studies</option><option value="819">-- African American Studies</option><option value="820">-- American Studies</option><option value="821">-- Asian Studies</option><option value="823">-- Gay and Lesbian Studies</option><option value="824">-- Jewish Studies</option><option value="825">-- Latin American Studies</option><option value="826">-- Native American Studies</option><option value="827">-- Renaissance Studies</option><option value="828">-- Slavic and Baltic Studies</option><option value="829">-- Women's Studies</option><option value="7586">- Criminology</option><option value="543">- Economics</option><option value="547">- Education</option><option value="7716">-- Common Core</option><option value="7644">- Environmentalism</option><option value="7694">- Sociology</option><option value="1011">- Food</option><option value="1015">- Holidays and Customs</option><option value="601">- Geography</option><option value="1107">-- Maps, Atlases, Cartography</option><option value="1119">- Public Administration</option><option value="3803">- Popular Culture</option><option value="542">- Political Science</option><option value="525">- Psychology</option><option value="541">- Statistics</option><option value="548">- Transportation</option><option value="570+573+802">Technology</option><option value="573">- Agriculture</option><option value="802">- Automobile Maintenance and Repair</option>
             </select>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="select">
             <label for="audience">Audience</label>
             <select id="audience" name="audience">
               <option value="0" selected="selected">All</option><option value="915" selected="selected">Adults</option><option value="734+2806">Businesspeople</option><option value="2806">- Small Business Owners</option><option value="910+917">Children</option><option value="917">- School Age (5-12 years)</option><option value="737">Teachers</option><option value="914">Teens/Young Adults (13-18 years)</option>
             </select>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="select">
             <label for="language">Language</label>
             <select id="language" class="form-select" name="language">
               <option value="0" selected="selected">All</option><option value="English">English</option><option value="French">French</option><option value="Spanish">Spanish</option>
             </select>
           </fieldset>
 
-          <fieldset class="a-z">
+          <fieldset class="alphabetical">
             <label>Name starts with</label>
             <span class="long">Any</span>
             <a href="#" title="Show only resources with name starting with a number">#</a>

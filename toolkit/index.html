@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example | NYPL design toolkit</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="css/docs.css" media="screen" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="./hljs/atom-one-light.css">
+<script src="./hljs/highlight.pack.js"></script>
+
+</head>
+<body>
+
+<div id="skip" tabindex="-1"><a href="#mainContent">Skip to Main Content</a></div>
+
+<main class="main-page">
+
+
+  <div class="page-header">
+    <div class="content-wrapper">
+      <div class="inner">
+        <div class="breadcrumb"><a href="/">Home</a> > <a href="#">Research</a> > Articles &amp; databases</div>
+        <h1>NYPL Design Toolkit</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+
+    <div class="quarter">
+      <a name="mainContent"></a>
+      <div class="inner">
+        <p class="secondary-title">NYPL Design Toolkit</p>
+        <ul>
+          <li><a href="#grid">Layout</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#results">Tables and Data</a></li>
+          <li><a href="#general">General Microformats</a></li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="main-content three-quarter">
+    <div class="inner">
+      <a name="grid"></a>
+      <h2>Layout</h2>
+
+      <p>Coming soon.</p>
+
+      <a name="forms"></a>
+      <h2>Forms</h2>
+
+      <p>Forms fields should be wrapped by a <code>fieldset</code> tag.</p>
+
+      <h3>Text fields</h3>
+
+      <div class="toolkit-example">
+<fieldset class="my-text-field">
+  <label for="keyword-text">Title or description</label>
+  <input id="keyword-text" type="text">
+</fieldset>
+      </div>
+
+      <pre><code class="scss">
+.my-text-field {
+  @include textfieldset;
+}
+      </code></pre>
+      <pre><code class="html">
+&lt;fieldset class=&quot;my-text-field&quot;&gt;
+  &lt;label for=&quot;keyword-text&quot;&gt;Title or description&lt;/label&gt;
+  &lt;input id=&quot;keyword-text&quot; type=&quot;text&quot;&gt;
+&lt;/fieldset&gt;
+      </code></pre>
+
+      <h3>Select boxes</h3>
+
+      <div class="toolkit-example">
+<fieldset class="my-select-box">
+  <label for="topics">Topics</label>
+  <select id="topics" name="topics">
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="…">…</option>
+  </select>
+</fieldset>
+      </div>
+
+      <pre><code class="scss">
+.my-select-box {
+  @include selectfieldset;
+}
+      </code></pre>
+      <pre><code class="html">
+&lt;fieldset class=&quot;my-select-box&quot;&gt;
+  &lt;label for=&quot;topics&quot;&gt;Topics&lt;/label&gt;
+  &lt;select id=&quot;topics&quot; name=&quot;topics&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+    &lt;option value=&quot;…&quot;&gt;…&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/fieldset&gt;
+      </code></pre>
+
+      <h3>Alphabetical Filters</h3>
+
+      <p>Not a form element per se but still used within search forms. Selected element is replaced with <code>span</code>. The "Any" selection has a <code>long</code> class.
+      </p>
+
+      <div class="toolkit-example">
+<fieldset class="alphabetical">
+  <label>Name starts with</label>
+  <span class="long">Any</span>
+  <a href="#" title="Show only resources with name starting with a number">#</a>
+  <a href="#" title="Show only resources with name starting with A">A</a>
+  <a href="#" title="Show only resources with name starting with B">B</a>
+  <a href="#" title="Show only resources with name starting with C">C</a>
+  <a href="#" title="Show only resources with name starting with …">…</a>
+</fieldset>
+      </div>
+
+      <pre><code class="scss">
+.alphabetical {
+  @include alphabetical-filter;
+}
+      </code></pre>
+
+      <p><strong>NOTE:</strong> Maybe replace <code>a</code> tag with <code>button</code>?</p>
+
+      <pre><code class="html">
+&lt;fieldset class=&quot;alphabetical&quot;&gt;
+  &lt;label&gt;Name starts with&lt;/label&gt;
+  &lt;span class=&quot;long&quot;&gt;Any&lt;/span&gt;
+  &lt;a href=&quot;#&quot; title=&quot;Show only resources with name starting with a number&quot;&gt;#&lt;/a&gt;
+  &lt;a href=&quot;#&quot; title=&quot;Show only resources with name starting with A&quot;&gt;A&lt;/a&gt;
+  &lt;a href=&quot;#&quot; title=&quot;Show only resources with name starting with B&quot;&gt;B&lt;/a&gt;
+  &lt;a href=&quot;#&quot; title=&quot;Show only resources with name starting with C&quot;&gt;C&lt;/a&gt;
+  &lt;a href=&quot;#&quot; title=&quot;Show only resources with name starting with &hellip;&quot;&gt;&hellip;&lt;/a&gt;
+&lt;/fieldset&gt;
+      </code></pre>
+
+      <h3>Radiobutton/Checkbox  Groups</h3>
+
+      <p>For multiple browser-compatibility reasons we avoid the <code>legend</code> tag and use a <code>span</code> tag with a nested <code>strong</code> tag.</p>
+
+
+      <div class="toolkit-example">
+<fieldset class="radiogroup">
+  <span><strong>Accessible from</strong></span>
+  <label for="available-every">
+    <input id="available-every" type="radio" name="available" value="any">Anywhere
+  </label>
+  <label for="available-home">
+    <input id="available-home" type="radio" name="available" value="home">Home with a library card
+  </label>
+  <label for="available-library">
+    <input id="available-library" type="radio" name="available" value="library">A library branch
+  </label>
+</fieldset>
+      </div>
+      <pre><code class="scss">
+.radiogroup {
+  @include radiobutton-fieldset;
+}
+      </code></pre>
+
+      <p><strong>NOTE:</strong> In this case the input tags are <strong>wrapped</strong> by the <code>label</code> tag.</p>
+
+      <pre><code class="html">
+&lt;fieldset class=&quot;radiogroup&quot;&gt;
+  &lt;span&gt;&lt;strong&gt;Accessible from&lt;/strong&gt;&lt;/span&gt;
+  &lt;label for=&quot;available-every&quot;&gt;
+    &lt;input id=&quot;available-every&quot; type=&quot;radio&quot; name=&quot;available&quot; value=&quot;any&quot;&gt;Anywhere
+  &lt;/label&gt;
+  &lt;label for=&quot;available-home&quot;&gt;
+    &lt;input id=&quot;available-home&quot; type=&quot;radio&quot; name=&quot;available&quot; value=&quot;home&quot;&gt;Home with a library card
+  &lt;/label&gt;
+  &lt;label for=&quot;available-library&quot;&gt;
+    &lt;input id=&quot;available-library&quot; type=&quot;radio&quot; name=&quot;available&quot; value=&quot;library&quot;&gt;A library branch
+  &lt;/label&gt;
+&lt;/fieldset&gt;
+      </code></pre>
+
+
+      <div class="toolkit-example">
+
+      </div>
+      <pre><code class="scss">
+
+      </code></pre>
+      <pre><code class="html">
+
+      </code></pre>
+
+      <a name="results"></a>
+      <h2>Tables and Data</h2>
+
+      <p>Coming soon.</p>
+
+      <a name="general"></a>
+      <h2>General Microformats</h2>
+
+      <h3>Alert Banner</h3>
+
+      <p>Requires a <code>content-wrapper</code> for proper margin and padding.</p>
+
+      <div class="toolkit-example">
+<div class="alert"><div class="content-wrapper">The New York Public Library will be closed on Monday, October 10 in observance of Columbus Day.</div></div>
+      </div>
+
+      <pre><code class="html">
+&lt;div class=&quot;alert&quot;&gt;
+  &lt;div class=&quot;content-wrapper&quot;&gt;
+    The New York Public Library will be closed on Monday, October 10
+    in observance of Columbus Day.
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+
+
+    </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="content-wrapper footer-content">
+    <ul class="footerLinks">
+      <li>
+        <ul class="linkItemList">
+          <li><a class="inverted" href="/help/about-nypl">About NYPL</a></li>
+          <li><a class="inverted" href="/help/about-nypl/media-center">Press</a></li>
+          <li><a class="inverted" href="/careers">Careers</a></li>
+          <li><a class="inverted" href="/spacerental">Space rental</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul class="linkItemList">
+          <li><a class="inverted" href="/help/about-nypl/legal-notices/privacy-policy">Privacy policy</a></li>
+          <li><a class="inverted" href="/policies">Other policies</a></li>
+          <li><a class="inverted" href="/terms-conditions">Terms &amp; conditions</a>
+          </li><li><a class="inverted" href="/help/about-nypl/leadership/board-trustees">Governance</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul class="linkItemList">
+          <li><a class="inverted" href="/help/about-nypl/legal-notices/rules-and-regulations">Rules &amp; regulations</a></li>
+          <li><a class="inverted" href="/accessibility">Accessibility</a></li>
+          <li><a class="inverted" href="/language">Language</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul class="linkItemList">
+          <li><a class="inverted" href="https://www.facebook.com/nypl">NYPL on Facebook</a></li>
+          <li><a class="inverted" href="https://twitter.com/nypl">NYPL on Twitter</a></li>
+          <li><a class="inverted" href="https://instagram.com/nypl">NYPL on Instagram</a></li>
+          <li><a class="inverted" href="https://nypl.tumblr.com">NYPL on Tumblr</a></li>
+          <li><a class="inverted" href="https://www.youtube.com/user/NewYorkPublicLibrary">NYPL on YouTube</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <div class="copyright">
+      <p>© The New York Public Library, 2016</p>
+    </div>
+
+  </div>
+</footer>
+<script>
+hljs.configure({languages:['html', 'scss']})
+hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

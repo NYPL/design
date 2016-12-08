@@ -86,6 +86,9 @@ $collapsed-nav-height: 30px;
 }
 
 header {
+  button.collapsible:after {
+    @extend %nypl-icon-wedge-down;
+  }
 
   .content-wrapper {
     max-width: calc(#{$max-width} - 2rem);

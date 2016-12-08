@@ -1,4 +1,5 @@
 @import "measurements";
+@import "icons";
 @import "mixins";
 @import "media-queries";
 
@@ -35,7 +36,7 @@
   margin-bottom: 3rem;
   @include clearfix;
 
-  .page-count, .previous, .next {
+  .page-count, a {
     display: block;
     float: left;
     text-decoration: none;
@@ -52,25 +53,31 @@
     width: 30%;
   }
 
-  .arrow:after {
+  a:after {
     display: block;
     font-size: 3rem;
     line-height: 0.9;
-    float: left;
-  }
 
-  .next .arrow:after {
-    float: right;
-  }
-
-  .previous .arrow:after, .next .arrow:after {
     @include media(screen, $mobile-breakpoint) {
       float: none;
     }
   }
 
-  .next {
+  a:first-child:after {
+    @extend %nypl-icon-arrow-left;
+    float: left;
+  }
+
+  a:last-child {
     text-align: right;
+
+    &:after {
+      @extend %nypl-icon-arrow-right;
+      float: right;
+    }
+  }
+
+  .next {
   }
 }
 

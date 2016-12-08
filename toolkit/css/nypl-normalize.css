@@ -472,11 +472,4 @@ a.inverted:hover, a.inverted:visited:hover {
 .hidden {
   display: none; }
 
-.page-header {
-  background-color: #dddbd9; }
-  .page-header h1 {
-    margin: 0; }
-  .page-header .breadcrumb {
-    margin-bottom: ms(-1); }
-
 /*# sourceMappingURL=nypl-normalize.css.map */

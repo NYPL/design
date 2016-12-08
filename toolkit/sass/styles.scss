@@ -11,6 +11,10 @@
   @include full-width-wrapper;
 }
 
+.page-header {
+  @include page-header;
+}
+
 #filter-search {
   @include search-form;
 }

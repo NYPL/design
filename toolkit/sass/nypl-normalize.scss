@@ -135,19 +135,3 @@ a.inverted {
 .hidden {
   display: none;
 }
-
-// page header
-
-.page-header {
-  background-color: $pagecolorlight;
-
-  h1 {
-    margin: 0;
-  }
-
-  .breadcrumb {
-    margin-bottom: ms(-1);
-  }
-}
-
-// end page header

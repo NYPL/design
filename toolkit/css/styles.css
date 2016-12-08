@@ -492,13 +492,6 @@ a.inverted:hover, a.inverted:visited:hover {
 .hidden {
   display: none; }
 
-.page-header {
-  background-color: #dddbd9; }
-  .page-header h1 {
-    margin: 0; }
-  .page-header .breadcrumb {
-    margin-bottom: ms(-1); }
-
 a {
   border-radius: 0; }
 
@@ -969,6 +962,11 @@ footer ul {
     .content-wrapper {
       padding-left: 1rem; } }
 
+.page-header {
+  background-color: #dddbd9; }
+  .page-header h1 {
+    margin: 0; }
+
 #filter-search {
   margin: 1rem 0; }
 
@@ -1189,9 +1187,9 @@ table, .views-table {
   #location-info p {
     margin: 0;
     margin-bottom: 0.5em; }
-  #location-info .sub-location-floor-room {
+  #location-info .room {
     font-weight: bold; }
-  #location-info .wheelchair-access {
+  #location-info .access {
     color: #1980a9;
     font-weight: bold; }
 
@@ -1201,11 +1199,11 @@ table, .views-table {
   .location-hours th, .location-hours td {
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 16.666%; }
+    width: 14.28571%; }
   .location-hours td {
     padding-bottom: 1rem; }
   @media (max-width: 965px) {
-    .location-hours .titles {
+    .location-hours tr:first-child {
       display: none; }
     .location-hours tr {
       border: none; }

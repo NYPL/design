@@ -7,6 +7,30 @@ $logo-height: 3rem;
 $collapsed-service-height: 10px;
 $collapsed-nav-height: 30px;
 
+@mixin collapsible {
+  &:after {
+    @extend %nypl-icon-wedge-down;
+  }
+}
+
+@mixin nypl-button {
+  background-color: $nyplsearchcolorlight;
+  border: none;
+  padding: 0;
+
+  &[type=button], &[type=submit] {
+    background-color: $nyplsearchcolordark;
+    color: white;
+    height: 2rem;
+    padding: 0 1rem;
+
+    &:focus {
+      box-shadow: inset 0 0 0 4px $focuscolor;
+      outline: none;
+    }
+  }
+}
+
 @warn "lots of refactoring to do here";
 
 .alert {
@@ -86,8 +110,8 @@ $collapsed-nav-height: 30px;
 }
 
 header {
-  button.collapsible:after {
-    @extend %nypl-icon-wedge-down;
+  button.collapsible {
+    @include collapsible;
   }
 
   .content-wrapper {
@@ -452,6 +476,10 @@ header {
       margin: 0;
       position: relative;
 
+      .search-button {
+        @include nypl-button;
+      }
+
       &.display {
         display: block;
       }
@@ -496,6 +524,28 @@ header {
         left: 0.5rem;
         line-height: 2;
         position: absolute;
+      }
+
+      .form-text {
+        @include input;
+        box-shadow: inset 0 0 0 2px $nyplsearchcolordark;
+        height: 2rem;
+        margin-right: 1px;
+        padding: 0;
+        text-indent: 0.5rem;
+        transition: all 0.2s ease-out;
+        width: 10rem;
+
+        &.active {
+          width: 16rem;
+        }
+
+        &:focus {
+          background-color: white;
+          box-shadow: inset 0 0 0 4px $focuscolor !important;
+          color: $nyplsearchcolordark;
+          outline: none;
+        }
       }
 
       @media screen and (max-width: $mobile-breakpoint) {

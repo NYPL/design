@@ -27,11 +27,3 @@ pre {
 .my-select-box {
   @include select-fieldset;
 }
-
-.alphabetical {
-  @include alphabetical-filter;
-}
-
-.radiogroup {
-  @include radiobutton-fieldset;
-}

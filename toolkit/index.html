@@ -83,6 +83,7 @@
   <select id="topics" name="topics">
     <option value="1">One</option>
     <option value="2">Two</option>
+    <option value="3">Three</option>
     <option value="…">…</option>
   </select>
 </fieldset>
@@ -99,6 +100,7 @@
   &lt;select id=&quot;topics&quot; name=&quot;topics&quot;&gt;
     &lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
     &lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
     &lt;option value=&quot;…&quot;&gt;…&lt;/option&gt;
   &lt;/select&gt;
 &lt;/fieldset&gt;
@@ -201,16 +203,33 @@
 
       <h3>Search results summary</h3>
 
-      <p>Coming soon.</p>
+      <p>Presents a comma-separated list of search terms or filters along with the number of results. The result count has a special <code>span</code> tag (should be number-formatted e.g.: 1,232). Each applied facet or term has an anchor element to remove the facet and refresh the search results.</p>
 
       <div class="toolkit-example">
-
+<div class="results-summary">
+  <span class="results-count">1,807</span> resources found <span class="facet">for
+  <strong>Young Adult</strong>
+  <a href="#" title="Remove Young Adult filter">×</a></span>,
+  <strong>Fiction</strong>
+  <a href="#" title="Remove Fiction filter">×</a></span>.
+</div>
       </div>
       <pre><code class="scss">
-
+.results-summary {
+  @include results-summary;
+}
       </code></pre>
-      <pre><code class="html">
 
+      <p><strong>NOTE:</strong> Maybe replace <code>a</code> tag with <code>button</code>?</p>
+
+      <pre><code class="html">
+&lt;div class=&quot;results-summary&quot;&gt;
+  &lt;span class=&quot;results-count&quot;&gt;1,807&lt;/span&gt; resources found &lt;span class=&quot;facet&quot;&gt;for
+  &lt;strong&gt;Young Adult&lt;/strong&gt;
+  &lt;a href=&quot;#&quot; title=&quot;Remove Young Adult filter&quot;&gt;&times;&lt;/a&gt;&lt;/span&gt;,
+  &lt;strong&gt;Fiction&lt;/strong&gt;
+  &lt;a href=&quot;#&quot; title=&quot;Remove Fiction filter&quot;&gt;&times;&lt;/a&gt;&lt;/span&gt;.
+&lt;/div&gt;
       </code></pre>
 
       <h3>Search results (table)</h3>
@@ -324,50 +343,6 @@
 
 </main>
 
-<footer role="contentinfo">
-  <div class="content-wrapper footer-content">
-    <ul class="footerLinks">
-      <li>
-        <ul class="linkItemList">
-          <li><a class="inverted" href="/help/about-nypl">About NYPL</a></li>
-          <li><a class="inverted" href="/help/about-nypl/media-center">Press</a></li>
-          <li><a class="inverted" href="/careers">Careers</a></li>
-          <li><a class="inverted" href="/spacerental">Space rental</a></li>
-        </ul>
-      </li>
-      <li>
-        <ul class="linkItemList">
-          <li><a class="inverted" href="/help/about-nypl/legal-notices/privacy-policy">Privacy policy</a></li>
-          <li><a class="inverted" href="/policies">Other policies</a></li>
-          <li><a class="inverted" href="/terms-conditions">Terms &amp; conditions</a>
-          </li><li><a class="inverted" href="/help/about-nypl/leadership/board-trustees">Governance</a></li>
-        </ul>
-      </li>
-      <li>
-        <ul class="linkItemList">
-          <li><a class="inverted" href="/help/about-nypl/legal-notices/rules-and-regulations">Rules &amp; regulations</a></li>
-          <li><a class="inverted" href="/accessibility">Accessibility</a></li>
-          <li><a class="inverted" href="/language">Language</a></li>
-        </ul>
-      </li>
-      <li>
-        <ul class="linkItemList">
-          <li><a class="inverted" href="https://www.facebook.com/nypl">NYPL on Facebook</a></li>
-          <li><a class="inverted" href="https://twitter.com/nypl">NYPL on Twitter</a></li>
-          <li><a class="inverted" href="https://instagram.com/nypl">NYPL on Instagram</a></li>
-          <li><a class="inverted" href="https://nypl.tumblr.com">NYPL on Tumblr</a></li>
-          <li><a class="inverted" href="https://www.youtube.com/user/NewYorkPublicLibrary">NYPL on YouTube</a></li>
-        </ul>
-      </li>
-    </ul>
-
-
-    <div class="copyright">
-      <p>© The New York Public Library, 2016</p>
-    </div>
-
-  </div>
-</footer>
 <script>
 hljs.configure({languages:['html', 'scss']})
 hljs.initHighlightingOnLoad();

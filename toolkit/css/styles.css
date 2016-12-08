@@ -1187,7 +1187,7 @@ footer ul {
     font-weight: bold;
     margin-bottom: 1rem;
     margin-right: 0.5rem; }
-  .results-summary .facet-remove {
+  .results-summary a {
     color: #7B756F;
     display: inline-block;
     margin: 0;

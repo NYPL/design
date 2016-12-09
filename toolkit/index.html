@@ -47,7 +47,50 @@
       <a name="grid"></a>
       <h2>Layout</h2>
 
+      <h3>General page layout</h3>
+
       <p>Coming soon.</p>
+
+      <div class="toolkit-example">
+
+      </div>
+      <pre><code class="scss">
+
+      </code></pre>
+      <pre><code class="html">
+
+      </code></pre>
+
+
+      <h3>Page header (breadcrumbs)</h3>
+
+      <p>Should be nested inside <code>content-wrapper</code> and <code>inner</code> elements (see <a href="#grid">Layout</a>). Breadcrumbs appear in their own <code>div</code> tag.</p>
+
+      <div class="toolkit-example">
+<div class="page-header">
+  <div class="content-wrapper">
+    <div class="inner">
+      <div><a href="#">Home</a> > <a href="#">Research</a> > Articles &amp; databases</div>
+      <h1>Articles &amp; databases</h1>
+    </div>
+  </div>
+</div>
+      </div>
+      <pre><code class="scss">
+.page-header {
+  @include page-header;
+}
+      </code></pre>
+      <pre><code class="html">
+&lt;div class=&quot;page-header&quot;&gt;
+  &lt;div class=&quot;content-wrapper&quot;&gt;
+    &lt;div class=&quot;inner&quot;&gt;
+      &lt;div&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt; &gt; &lt;a href=&quot;#&quot;&gt;Research&lt;/a&gt; &gt; Articles &amp;amp; databases&lt;/div&gt;
+      &lt;h1&gt;Articles &amp;amp; databases&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
 
       <a name="forms"></a>
       <h2>Forms</h2>
@@ -303,37 +346,6 @@
   &lt;/div&gt;
 &lt;/div&gt;
       </code></pre>
-
-      <h3>Page header (breadcrumbs)</h3>
-
-      <p>Should be nested inside <code>content-wrapper</code> and <code>inner</code> elements (see <a href="#grid">Layout</a>). Breadcrumbs appear in their own <code>div</code> tag.</p>
-
-      <div class="toolkit-example">
-<div class="page-header">
-  <div class="content-wrapper">
-    <div class="inner">
-      <div><a href="#">Home</a> > <a href="#">Research</a> > Articles &amp; databases</div>
-      <h1>Articles &amp; databases</h1>
-    </div>
-  </div>
-</div>
-      </div>
-      <pre><code class="scss">
-.page-header {
-  @include page-header;
-}
-      </code></pre>
-      <pre><code class="html">
-&lt;div class=&quot;page-header&quot;&gt;
-  &lt;div class=&quot;content-wrapper&quot;&gt;
-    &lt;div class=&quot;inner&quot;&gt;
-      &lt;div&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt; &gt; &lt;a href=&quot;#&quot;&gt;Research&lt;/a&gt; &gt; Articles &amp;amp; databases&lt;/div&gt;
-      &lt;h1&gt;Articles &amp;amp; databases&lt;/h1&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-
 
       <h3>Location card</h3>
 

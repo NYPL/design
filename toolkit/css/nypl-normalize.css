@@ -378,6 +378,34 @@ textarea {
   background-color: inherit;
   fill: white; }
 
+a {
+  border-radius: 0; }
+
+a:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 0.1875rem; }
+
+input {
+  border-radius: 0; }
+
+input:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 0.1875rem; }
+
+select {
+  border-radius: 0; }
+
+select:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 0.1875rem; }
+
+button.collapsible {
+  border: none;
+  cursor: pointer; }
+
 body {
   color: #100f0e; }
 
@@ -432,6 +460,18 @@ code {
 
 legend {
   display: table; }
+
+input[type=button], input[type=submit] {
+  background-color: #c5c2be;
+  border: none;
+  padding: 0;
+  background-color: #605c57;
+  color: white;
+  height: 2rem;
+  padding: 0 1rem; }
+  input[type=button]:focus, input[type=submit]:focus {
+    box-shadow: inset 0 0 0 4px #ffb81d;
+    outline: none; }
 
 a {
   text-decoration: none; }

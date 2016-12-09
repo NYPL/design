@@ -200,11 +200,15 @@ header .service-buttons {
     color: white;
     display: block;
     font-weight: bold;
+    overflow: hidden;
     padding: 0 0.5em;
+    padding-right: 1em;
     position: relative;
     text-decoration: none;
+    text-overflow: ellipsis;
     text-transform: uppercase;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    white-space: nowrap; }
     header .service-buttons li > a:hover, header .service-buttons li > a.active, header .service-buttons button.collapsible:hover, header .service-buttons button.collapsible.active {
       background-color: white;
       color: #e32b31; }
@@ -287,6 +291,10 @@ header .email-toggle form {
   right: 0;
   text-transform: none;
   z-index: 1; }
+  @media (max-width: 965px) {
+    header .email-toggle form {
+      left: 0;
+      right: auto; } }
 header .email-toggle .email-toggle-title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -378,15 +386,14 @@ header li.search #main-search {
   header li.search #main-search .search-button {
     background-color: #c5c2be;
     border: none;
-    padding: 0; }
-    header li.search #main-search .search-button[type=button], header li.search #main-search .search-button[type=submit] {
-      background-color: #605c57;
-      color: white;
-      height: 2rem;
-      padding: 0 1rem; }
-      header li.search #main-search .search-button[type=button]:focus, header li.search #main-search .search-button[type=submit]:focus {
-        box-shadow: inset 0 0 0 4px #ffb81d;
-        outline: none; }
+    padding: 0;
+    background-color: #605c57;
+    color: white;
+    height: 2rem;
+    padding: 0 1rem; }
+    header li.search #main-search .search-button:focus {
+      box-shadow: inset 0 0 0 4px #ffb81d;
+      outline: none; }
   header li.search #main-search.display {
     display: block; }
   header li.search #main-search .search-query-content {
@@ -404,6 +411,13 @@ header li.search #main-search {
     height: 2rem;
     line-height: 2;
     padding: 0 0.75rem 0 0.5rem; }
+    header li.search #main-search .search-radio-label label {
+      background-color: #c5c2be;
+      font-weight: normal !important;
+      padding: 3px 5px; }
+    header li.search #main-search .search-radio-label input[type=radio], header li.search #main-search .search-radio-label input[type=checkbox] {
+      height: initial;
+      margin-right: 0.25rem; }
     header li.search #main-search .search-radio-label.selected {
       background-color: #c5c2be; }
     header li.search #main-search .search-radio-label.focus {
@@ -438,7 +452,7 @@ header li.search #main-search {
     header li.search #main-search .form-text, header li.search #main-search .search-button, header li.search #main-search .search-radio-label {
       height: 2.5rem;
       line-height: 2.5; }
-    header li.search #main-search .form-text {
+    header li.search #main-search .form-text, header li.search #main-search .form-text.active {
       margin: 0;
       width: 70%; }
     header li.search #main-search .search-button {

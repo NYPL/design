@@ -463,7 +463,7 @@ input[type=button], input[type=submit] {
   padding: 0;
   background-color: #605c57;
   color: white;
-  height: 2em;
+  height: 2rem;
   padding: 0 1rem; }
   input[type=button]:focus, input[type=submit]:focus {
     box-shadow: inset 0 0 0 4px #ffb81d;

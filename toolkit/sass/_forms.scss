@@ -42,7 +42,7 @@
   @include input;
   background-color: $main-color;
   color: white;
-  height: 2em;
+  height: 2rem;
   padding: 0 1rem;
 
   &:focus {
@@ -109,9 +109,7 @@
   }
 }
 
-@mixin radiobutton-fieldset {
-  @include fieldset;
-
+@mixin simple-radiobutton {
   label {
     @warn "fix !important";
     background-color: $nyplsearchcolorlight;
@@ -123,6 +121,11 @@
     height: initial;
     margin-right: 0.25rem;
   }
+}
+
+@mixin radiobutton-fieldset {
+  @include fieldset;
+  @include simple-radiobutton;
 }
 
 @mixin checkbox-fieldset {

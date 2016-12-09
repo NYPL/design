@@ -375,15 +375,19 @@ textarea {
   font-weight: 400;
   font-style: normal; }
 header button.collapsible:after, .results-pagination a:first-child:after, .results-pagination a:last-child:after {
+  fill: #100f0e;
   font-family: nypl-moon;
-  speak: none;
+  line-height: 1;
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
+  speak: none;
   text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.reversed {
+  fill: white; }
 
 header button.collapsible:after {
   content: " \E600"; }
@@ -922,15 +926,19 @@ header li.search #main-search {
   font-weight: 400;
   font-style: normal; }
 header button.collapsible:after, .results-pagination a:first-child:after, .results-pagination a:last-child:after {
+  fill: #100f0e;
   font-family: nypl-moon;
-  speak: none;
+  line-height: 1;
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
+  speak: none;
   text-transform: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.reversed {
+  fill: white; }
 
 header button.collapsible:after {
   content: " \E600"; }

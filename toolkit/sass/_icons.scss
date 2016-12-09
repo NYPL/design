@@ -7,16 +7,23 @@
 }
 
 %nypl-icon {
+  fill: $pagetextcolor;
   font-family:nypl-moon;
-  speak:none;
+  line-height:1;
   font-style:normal;
   font-weight:400;
   font-variant:normal;
+  speak:none;
   text-transform:none;
-  line-height:1;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale
 }
+
+.reversed {
+  fill: $invertedlinkcolor;
+  }
+
+
 %nypl-icon-arrow-meganav-large:after {
   @extend %nypl-icon;
   content:" \E801";

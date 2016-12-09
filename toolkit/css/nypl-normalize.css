@@ -374,6 +374,9 @@ textarea {
   src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
   font-weight: 400;
   font-style: normal; }
+.reversed {
+  fill: white; }
+
 body {
   color: #100f0e; }
 

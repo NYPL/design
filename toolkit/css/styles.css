@@ -547,7 +547,7 @@ button.collapsible {
     display: table; }
   .horizontal:after {
     clear: both; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     .horizontal {
       float: none; } }
   .horizontal li {
@@ -561,7 +561,7 @@ button.collapsible {
 .collapsed-menu-toggle, .main-menu-toggle {
   display: none; }
 
-@media screen and (max-width: 965px) {
+@media (max-width: 965px) {
   .main-menu-toggle {
     background-color: #e32b31;
     color: white !important;
@@ -574,7 +574,7 @@ button.collapsible {
 .logo {
   position: absolute;
   width: 5rem; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     .logo {
       float: none;
       margin-right: 0.5rem;
@@ -592,7 +592,7 @@ button.collapsible {
   -webkit-font-smoothing: antialiased;
   white-space: nowrap;
   width: 5rem; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     .nypl-logo {
       background: url("../img/lion.svg") no-repeat scroll 0px 0px/2.5rem auto white;
       margin-right: 0.5rem;
@@ -601,7 +601,7 @@ button.collapsible {
 header .content-wrapper {
   max-width: calc(82rem - 2rem);
   padding: 0 1rem; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header .content-wrapper {
       margin: 0; } }
 header .content {
@@ -611,15 +611,15 @@ header .content {
     display: table; }
   header .content:after {
     clear: both; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header .content {
       width: 100%; } }
 header .service {
   background-color: #e32b31; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header .service {
       display: table-footer-group; } }
-@media screen and (max-width: 965px) {
+@media (max-width: 965px) {
   header {
     display: table;
     width: 100%; } }
@@ -664,7 +664,7 @@ header .service-buttons {
   font-size: 0.8rem;
   padding: 0;
   text-transform: uppercase; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header .service-buttons {
       display: none;
       padding-top: 5px;
@@ -746,7 +746,7 @@ header .login-toggle {
     header .login-toggle > a:hover, header .login-toggle button.collapsible:hover {
       background-color: white;
       color: #7B756F; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header .login-toggle {
       top: -2rem; }
       header .login-toggle .welcome-message {
@@ -754,7 +754,7 @@ header .login-toggle {
 header.collapsed .login-toggle {
   right: 110px;
   top: 9px; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header.collapsed .login-toggle {
       font-size: 12px;
       top: -19px; }
@@ -800,10 +800,10 @@ header .nav-buttons {
     display: table; }
   header .nav-buttons:after {
     clear: both; }
-  @media screen and (max-width: 1120px) {
+  @media (max-width: 1120px) {
     header .nav-buttons {
       font-size: 0.9rem; } }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header .nav-buttons {
       display: none;
       font-size: 1.2rem;
@@ -902,7 +902,7 @@ header li.search #main-search {
       box-shadow: inset 0 0 0 4px #ffb81d !important;
       color: #605c57;
       outline: none; }
-  @media screen and (max-width: 965px) {
+  @media (max-width: 965px) {
     header li.search #main-search .form-text, header li.search #main-search .search-button, header li.search #main-search .search-radio-label {
       height: 2.5rem;
       line-height: 2.5; }

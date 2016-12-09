@@ -46,7 +46,7 @@ $collapsed-nav-height: 30px;
   position: relative;
   @include clearfix;
 
-  @media screen and (max-width: $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     float: none;
   }
 
@@ -67,7 +67,7 @@ $collapsed-nav-height: 30px;
 }
 
 .main-menu-toggle {
-  @media screen and (max-width: $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     background-color: $nyplred;
     color: white !important;
     display: block;
@@ -82,7 +82,7 @@ $collapsed-nav-height: 30px;
   position: absolute;
   width: $logo-width;
 
-  @media screen and (max-width: $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     float: none;
     margin-right: 0.5rem;
     position: relative;
@@ -102,7 +102,7 @@ $collapsed-nav-height: 30px;
   white-space: nowrap;
   width: $logo-width;
 
-  @media screen and (max-width: $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     background: url("../img/lion.svg") no-repeat scroll 0px 0px/#{$logo-height - 0.5} auto white; // should be a smart hiding of the original svg
     margin-right: 0.5rem;
     width: $logo-height;
@@ -118,7 +118,7 @@ header {
     max-width: calc(#{$max-width} - 2rem);
     padding: 0 1rem;
 
-    @media screen and (max-width: $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       margin: 0;
     }
   }
@@ -127,7 +127,7 @@ header {
     position: relative;
     @include clearfix;
 
-    @media screen and (max-width: $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       width: 100%;
     }
   }
@@ -135,12 +135,12 @@ header {
   .service {
     background-color: $nyplred;
 
-    @media screen and (max-width: $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       display: table-footer-group;
     }
   }
 
-  @media screen and (max-width: $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     display: table;
     width: 100%;
   }
@@ -210,7 +210,7 @@ header {
     padding: 0;
     text-transform: uppercase;
 
-    @media screen and (max-width: $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       display: none;
       padding-top: 5px;
       width: 100%;
@@ -331,7 +331,7 @@ header {
       }
     }
 
-    @media screen and (max-width: $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       top: -2rem;
 
       .welcome-message {
@@ -345,7 +345,7 @@ header {
     right: 110px;
     top: 9px;
 
-    @media screen and (max-width: $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       font-size: 12px;
       top: -19px;
 
@@ -406,11 +406,11 @@ header {
     margin-top: calc(#{$logo-height} + 1rem);
     @include clearfix;
 
-    @media screen and (max-width: $intermediate-breakpoint) {
+    @include media($intermediate-breakpoint) {
       font-size: 0.9rem;
     }
 
-    @media screen and (max-width: $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       display: none;
       font-size: 1.2rem;
       margin-top: 1rem;
@@ -464,7 +464,7 @@ header {
 
 
   li.search {
-    @media screen and (max-width: $intermediate-breakpoint) {
+    @include media($intermediate-breakpoint) {
       // float: none;
       // position: absolute;
       // right: 0;
@@ -548,7 +548,7 @@ header {
         }
       }
 
-      @media screen and (max-width: $mobile-breakpoint) {
+      @include media($mobile-breakpoint) {
         .form-text, .search-button, .search-radio-label {
           height: 2.5rem;
           line-height: 2.5;

@@ -43,7 +43,7 @@
     width: 35%;
     @include clearfix;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       font-size: 1rem;
     }
   }
@@ -58,7 +58,7 @@
     font-size: 3rem;
     line-height: 0.9;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       float: none;
     }
   }
@@ -147,7 +147,7 @@
   }
 
   &.collapses {
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       thead, th, .views-table-header, .views-table-row:first-child {
         display: none;
       }

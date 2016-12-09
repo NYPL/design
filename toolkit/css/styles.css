@@ -387,6 +387,7 @@ header button.collapsible:after, .results-pagination a:first-child:after, .resul
   -moz-osx-font-smoothing: grayscale; }
 
 .reversed {
+  background-color: inherit;
   fill: white; }
 
 header button.collapsible:after {
@@ -938,6 +939,7 @@ header button.collapsible:after, .results-pagination a:first-child:after, .resul
   -moz-osx-font-smoothing: grayscale; }
 
 .reversed {
+  background-color: inherit;
   fill: white; }
 
 header button.collapsible:after {

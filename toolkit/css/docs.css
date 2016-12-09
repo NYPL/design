@@ -17,6 +17,7 @@ header button.collapsible:after {
   -moz-osx-font-smoothing: grayscale; }
 
 .reversed {
+  background-color: inherit;
   fill: white; }
 
 header button.collapsible:after {
@@ -464,6 +465,7 @@ header button.collapsible:after {
   -moz-osx-font-smoothing: grayscale; }
 
 .reversed {
+  background-color: inherit;
   fill: white; }
 
 header button.collapsible:after {
@@ -512,11 +514,11 @@ code {
 pre {
   border: 0.0625rem solid #dddbd9; }
 
-.toolkit-example {
+.toolkit-example, .toolkit-example-dark {
   border: 0.0625rem solid #dddbd9;
   padding: 3rem 1rem 0.5rem;
   position: relative; }
-  .toolkit-example:before {
+  .toolkit-example:before, .toolkit-example-dark:before {
     border: 0.0625rem solid #dddbd9;
     border-left: none;
     border-top: none;
@@ -589,5 +591,14 @@ pre {
     padding-right: 7%;
     text-indent: 0.5rem;
     width: 100%; }
+
+.toolkit-example-dark {
+  background: #54514A; }
+  .toolkit-example-dark:before {
+    background-color: white; }
+
+.toolkit-svg-icon {
+  border: 1px dotted #dddbd9;
+  margin-right: 1rem; }
 
 /*# sourceMappingURL=docs.css.map */

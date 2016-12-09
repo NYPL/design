@@ -375,6 +375,7 @@ textarea {
   font-weight: 400;
   font-style: normal; }
 .reversed {
+  background-color: inherit;
   fill: white; }
 
 body {

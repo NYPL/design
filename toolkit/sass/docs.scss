@@ -28,3 +28,12 @@ pre {
   @include select-fieldset;
 }
 
+.toolkit-example-dark {
+  @extend .toolkit-example;
+  @include toolkit-example-dark;
+}
+
+.toolkit-svg-icon {
+  border: 1px dotted $nypllightgray;
+  margin-right: 1rem;
+}

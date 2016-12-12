@@ -38,3 +38,8 @@ pre {
   border: 1px dotted $nypllightgray;
   margin-right: 1rem;
 }
+
+.nypl-icon {
+  @include nypl-icon;
+  width: 10em;
+}

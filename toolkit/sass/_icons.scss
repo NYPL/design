@@ -6,16 +6,29 @@
   font-style:normal
 }
 
-@mixin nypl-icon($fill: $pagetextcolor, $background-color: white, $inverted-color: $invertedlinkcolor) {
-  background-color: $background-color;
-  display: inline-block;
-  fill: $fill;
-  width: 1em;
-  speak:none;
+@mixin nypl-icon($fill: $pagetextcolor, $background-color: white, $inverted-color: $invertedlinkcolor, $as-font: false, $font-content: "") {
+  @if ($as-font == false) {
+    background-color: $background-color;
+    display: inline-block;
+    fill: $fill;
+    width: 1em;
+    speak:none;
 
-  &.reversed {
-    background-color: inherit;
-    fill: $inverted-color;
+    &.reversed {
+      background-color: inherit;
+      fill: $inverted-color;
+    }
+  } @else {
+    content: $font-content;
+    font-family: nypl-moon;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 

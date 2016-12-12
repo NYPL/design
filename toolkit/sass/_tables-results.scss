@@ -64,7 +64,7 @@
   }
 
   a:first-child:after {
-    @extend %nypl-icon-arrow-left;
+    @include nypl-icon($as-font: true, $font-content: " \E62A");
     float: left;
   }
 
@@ -72,7 +72,7 @@
     text-align: right;
 
     &:after {
-      @extend %nypl-icon-arrow-right;
+      @include nypl-icon($as-font: true, $font-content: " \E62B");
       float: right;
     }
   }

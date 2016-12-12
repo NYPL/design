@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -374,28 +375,6 @@ textarea {
   src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
   font-weight: 400;
   font-style: normal; }
-.results-pagination a:first-child:after {
-  background-color: white;
-  display: inline-block;
-  fill: #100f0e;
-  width: 1em;
-  speak: none;
-  content: " \E62A"; }
-  .results-pagination a:after.reversed:first-child {
-    background-color: inherit;
-    fill: white; }
-
-.results-pagination a:last-child:after {
-  background-color: white;
-  display: inline-block;
-  fill: #100f0e;
-  width: 1em;
-  speak: none;
-  content: " \E62B"; }
-  .results-pagination a:after.reversed:last-child {
-    background-color: inherit;
-    fill: white; }
-
 a {
   border-radius: 0; }
 
@@ -990,28 +969,6 @@ header li.search #main-search {
   src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
   font-weight: 400;
   font-style: normal; }
-.results-pagination a:first-child:after {
-  background-color: white;
-  display: inline-block;
-  fill: #100f0e;
-  width: 1em;
-  speak: none;
-  content: " \E62A"; }
-  .results-pagination a:after.reversed:first-child {
-    background-color: inherit;
-    fill: white; }
-
-.results-pagination a:last-child:after {
-  background-color: white;
-  display: inline-block;
-  fill: #100f0e;
-  width: 1em;
-  speak: none;
-  content: " \E62B"; }
-  .results-pagination a:after.reversed:last-child {
-    background-color: inherit;
-    fill: white; }
-
 footer {
   background-color: #54514A;
   color: white;
@@ -1206,10 +1163,30 @@ footer ul {
       .results-pagination a:after {
         float: none; } }
   .results-pagination a:first-child:after {
+    content: " ";
+    font-family: nypl-moon;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     float: left; }
   .results-pagination a:last-child {
     text-align: right; }
     .results-pagination a:last-child:after {
+      content: " ";
+      font-family: nypl-moon;
+      line-height: 1;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      speak: none;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       float: right; }
 
 table, .views-table {

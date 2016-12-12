@@ -7,12 +7,6 @@ $logo-height: 3rem;
 $collapsed-service-height: 10px;
 $collapsed-nav-height: 30px;
 
-@mixin collapsible {
-  &:after {
-    @extend %nypl-icon-wedge-down;
-  }
-}
-
 @warn "lots of refactoring to do here";
 
 .alert {
@@ -57,6 +51,10 @@ $collapsed-nav-height: 30px;
     padding-right: 1rem;
     text-align: right;
     text-decoration: none;
+
+    .nypl-icon {
+      @include nypl-icon(white, $nyplred)
+    }
   }
 }
 
@@ -92,10 +90,6 @@ $collapsed-nav-height: 30px;
 }
 
 header {
-  button.collapsible {
-    @include collapsible;
-  }
-
   .content-wrapper {
     max-width: calc(#{$max-width} - 2rem);
     padding: 0 1rem;
@@ -226,9 +220,25 @@ header {
       transition: all 0.2s;
       white-space: nowrap;
 
+      .nypl-icon {
+        @include nypl-icon(white, $nyplred);
+        transition: all 0.2s;
+      }
+
       &:hover, &.active {
         background-color: white;
         color: $linkcolor;
+
+        .nypl-icon {
+          background-color: white;
+          fill: $nyplred;
+        }
+      }
+
+      &.active {
+        .nypl-icon {
+          transform: scaleY(-1);
+        }
       }
 
       &.donate {
@@ -240,12 +250,6 @@ header {
         background-color: white;
       }
 
-      &.collapsible:after {
-        display: inline-block;
-        font-size: 0.85em;
-        font-weight: bold;
-        margin-left: 0.5em;
-      }
     }
   }
 
@@ -306,6 +310,12 @@ header {
       display: inline-block;
       font-weight: bold;
       padding: 0 0.5em;
+      transition: all 0.2s;
+
+      .nypl-icon {
+        @include nypl-icon(white, $nyplgray);
+        transition: all 0.2s;
+      }
 
       &:link {
         text-decoration: none;
@@ -314,6 +324,17 @@ header {
       &:hover {
         background-color: white;
         color: $nyplgray;
+
+        .nypl-icon {
+          background-color: white;
+          fill: $nyplgray;
+        }
+      }
+
+      &.active {
+        .nypl-icon {
+          transform: scaleY(-1);
+        }
       }
     }
 

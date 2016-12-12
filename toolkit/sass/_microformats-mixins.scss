@@ -122,7 +122,7 @@
 
   }
 }
-
+@warn "Move these mixins out of the microformats partial since they effect the entire style guide...";
 @mixin related-links {
   border-top: $related-links-border-width solid $nyplgray;
   padding-top: 2rem;
@@ -147,5 +147,13 @@
     position: absolute;
     text-transform: uppercase;
     top: 0;
+  }
+}
+
+@mixin toolkit-example-dark {
+  background: $footercolor;
+
+  &:before {
+    background-color: $invertedlinkcolor;
   }
 }

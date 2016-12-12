@@ -14,6 +14,7 @@ code {
 
 pre {
   border: $simple-border solid $nypllightgray;
+
 }
 
 .toolkit-example {
@@ -28,3 +29,17 @@ pre {
   @include select-fieldset;
 }
 
+.toolkit-example-dark {
+  @extend .toolkit-example;
+  @include toolkit-example-dark;
+}
+
+.toolkit-svg-icon {
+  border: 1px dotted $nypllightgray;
+  margin-right: 1rem;
+}
+
+.nypl-icon {
+  @include nypl-icon;
+  width: 10em;
+}

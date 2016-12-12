@@ -6,222 +6,220 @@
   font-style:normal
 }
 
-%nypl-icon {
-  font-family:nypl-moon;
+@mixin nypl-icon($fill: $pagetextcolor, $background-color: white, $inverted-color: $invertedlinkcolor) {
+  background-color: $background-color;
+  display: inline-block;
+  fill: $fill;
+  width: 1em;
   speak:none;
-  font-style:normal;
-  font-weight:400;
-  font-variant:normal;
-  text-transform:none;
-  line-height:1;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale
+
+  &.reversed {
+    background-color: inherit;
+    fill: $inverted-color;
+  }
 }
+
 %nypl-icon-arrow-meganav-large:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E801";
 }
 %nypl-icon-arrow-meganav:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E800";
 }
 %nypl-icon-card:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E623";
 }
 %nypl-icon-book:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E624";
 }
 %nypl-icon-play-large:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E625";
 }
 %nypl-icon-play-med:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E626";
 }
 %nypl-icon-play-small:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E603";
 }
 %nypl-icon-headphones:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E627";
 }
 %nypl-icon-solo-x:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E611";
 }
 %nypl-icon-mail:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E61C";
 }
 %nypl-icon-login:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E61D";
 }
 %nypl-icon-logo-mark:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E61E";
 }
 %nypl-icon-logo-type:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E61F";
 }
 %nypl-icon-locator-no-dot:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E620";
 }
 %nypl-icon-locator-small:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E616";
 }
 %nypl-icon-locator-large:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E615";
 }
 %nypl-icon-burger-nav:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E614";
 }
 %nypl-icon-wedge-right:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E621";
 }
 %nypl-icon-wedge-left:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E622";
 }
-%nypl-icon-wedge-down:after {
-  @extend %nypl-icon;
-  content:" \E600";
-}
 %nypl-icon-wedge-up:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E601";
 }
 %nypl-icon-magnifier-thin:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E617";
 }
 %nypl-icon-magnifier-fat:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E609";
 }
 %nypl-icon-magnifier-circle:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E602";
 }
 %nypl-icon-facebook-circle:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E62E";
 }
 %nypl-icon-facebook-circle-large:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E62C";
 }
 %nypl-icon-facebook-circle-hover:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E630";
 }
 %nypl-icon-twitter-circle:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E62F";
 }
 %nypl-icon-twitter-circle-large:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E62D";
 }
 %nypl-icon-twitter-circle-hover:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E631";
 }
 %nypl-icon-facebook:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E604";
 }
 %nypl-icon-twitter:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E605";
 }
 %nypl-icon-tumblr:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E606";
 }
 %nypl-icon-instagram:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E618";
 }
 %nypl-icon-soundcloud:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E619";
 }
 %nypl-icon-itunes:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E61A";
 }
 %nypl-icon-youtube:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E61B";
 }
 %nypl-icon-bldg:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E607";
 }
 %nypl-icon-equals-small:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E608";
 }
 %nypl-icon-arrow-up:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E60A";
 }
 %nypl-icon-arrow-down:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E629";
 }
 %nypl-icon-arrow-left:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E62A";
 }
 %nypl-icon-arrow-right:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E62B";
 }
 %nypl-icon-circle-arrow-left:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E60B";
 }
 %nypl-icon-circle-arrow-right:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E60C";
 }
 %nypl-icon-circle-wedge-left:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E60D";
 }
 %nypl-icon-circle-wedge-right:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E60E";
 }
 %nypl-icon-circle-more:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E60F";
 }
 %nypl-icon-more-dots:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E610";
 }
 %nypl-icon-circle-x:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E612";
 }
 %nypl-icon-circle-check:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E613";
 }
 %nypl-icon-check-solo:after {
-  @extend %nypl-icon;
+  @include nypl-icon;
   content:" \E628";
 }

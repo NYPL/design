@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -374,31 +375,6 @@ textarea {
   src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
   font-weight: 400;
   font-style: normal; }
-header button.collapsible:after, .results-pagination a:first-child:after, .results-pagination a:last-child:after {
-  fill: #100f0e;
-  font-family: nypl-moon;
-  line-height: 1;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  speak: none;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.reversed {
-  background-color: inherit;
-  fill: white; }
-
-header button.collapsible:after {
-  content: " \E600"; }
-
-.results-pagination a:first-child:after {
-  content: " \E62A"; }
-
-.results-pagination a:last-child:after {
-  content: " \E62B"; }
-
 a {
   border-radius: 0; }
 
@@ -577,7 +553,16 @@ a.inverted:hover, a.inverted:visited:hover {
     margin: 0 -1rem;
     padding-right: 1rem;
     text-align: right;
-    text-decoration: none; } }
+    text-decoration: none; }
+    .main-menu-toggle .nypl-icon {
+      background-color: #e32b31;
+      display: inline-block;
+      fill: white;
+      width: 1em;
+      speak: none; }
+      .main-menu-toggle .nypl-icon.reversed {
+        background-color: inherit;
+        fill: white; } }
 
 .logo {
   position: absolute;
@@ -700,19 +685,29 @@ header .service-buttons {
     text-transform: uppercase;
     transition: all 0.2s;
     white-space: nowrap; }
+    header .service-buttons li > a .nypl-icon, header .service-buttons button.collapsible .nypl-icon {
+      background-color: #e32b31;
+      display: inline-block;
+      fill: white;
+      width: 1em;
+      speak: none;
+      transition: all 0.2s; }
+      header .service-buttons li > a .nypl-icon.reversed, header .service-buttons button.collapsible .nypl-icon.reversed {
+        background-color: inherit;
+        fill: white; }
     header .service-buttons li > a:hover, header .service-buttons li > a.active, header .service-buttons button.collapsible:hover, header .service-buttons button.collapsible.active {
       background-color: white;
       color: #e32b31; }
+      header .service-buttons li > a:hover .nypl-icon, header .service-buttons li > a.active .nypl-icon, header .service-buttons button.collapsible:hover .nypl-icon, header .service-buttons button.collapsible.active .nypl-icon {
+        background-color: white;
+        fill: #e32b31; }
+    header .service-buttons li > a.active .nypl-icon, header .service-buttons button.collapsible.active .nypl-icon {
+      transform: scaleY(-1); }
     header .service-buttons li > a.donate, header .service-buttons button.collapsible.donate {
       background-color: white;
       color: #e32b31; }
     header .service-buttons li > a.donate:hover, header .service-buttons button.collapsible.donate:hover {
       background-color: white; }
-    header .service-buttons li > a.collapsible:after, header .service-buttons button.collapsible.collapsible:after {
-      display: inline-block;
-      font-size: 0.85em;
-      font-weight: bold;
-      margin-left: 0.5em; }
 header .email-toggle {
   position: relative; }
   header .email-toggle a:after {
@@ -752,12 +747,28 @@ header .login-toggle {
     color: white;
     display: inline-block;
     font-weight: bold;
-    padding: 0 0.5em; }
+    padding: 0 0.5em;
+    transition: all 0.2s; }
+    header .login-toggle > a .nypl-icon, header .login-toggle button.collapsible .nypl-icon {
+      background-color: #7B756F;
+      display: inline-block;
+      fill: white;
+      width: 1em;
+      speak: none;
+      transition: all 0.2s; }
+      header .login-toggle > a .nypl-icon.reversed, header .login-toggle button.collapsible .nypl-icon.reversed {
+        background-color: inherit;
+        fill: white; }
     header .login-toggle > a:link, header .login-toggle button.collapsible:link {
       text-decoration: none; }
     header .login-toggle > a:hover, header .login-toggle button.collapsible:hover {
       background-color: white;
       color: #7B756F; }
+      header .login-toggle > a:hover .nypl-icon, header .login-toggle button.collapsible:hover .nypl-icon {
+        background-color: white;
+        fill: #7B756F; }
+    header .login-toggle > a.active .nypl-icon, header .login-toggle button.collapsible.active .nypl-icon {
+      transform: scaleY(-1); }
   @media (max-width: 965px) {
     header .login-toggle {
       top: -2rem; }
@@ -958,31 +969,6 @@ header li.search #main-search {
   src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
   font-weight: 400;
   font-style: normal; }
-header button.collapsible:after, .results-pagination a:first-child:after, .results-pagination a:last-child:after {
-  fill: #100f0e;
-  font-family: nypl-moon;
-  line-height: 1;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  speak: none;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.reversed {
-  background-color: inherit;
-  fill: white; }
-
-header button.collapsible:after {
-  content: " \E600"; }
-
-.results-pagination a:first-child:after {
-  content: " \E62A"; }
-
-.results-pagination a:last-child:after {
-  content: " \E62B"; }
-
 footer {
   background-color: #54514A;
   color: white;
@@ -1177,10 +1163,30 @@ footer ul {
       .results-pagination a:after {
         float: none; } }
   .results-pagination a:first-child:after {
+    content: " ";
+    font-family: nypl-moon;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     float: left; }
   .results-pagination a:last-child {
     text-align: right; }
     .results-pagination a:last-child:after {
+      content: " ";
+      font-family: nypl-moon;
+      line-height: 1;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      speak: none;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       float: right; }
 
 table, .views-table {

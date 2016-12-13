@@ -1,5 +1,5 @@
 @import "measurements";
-@import "mixins";
+@import "microformats-mixins";
 @import "media-queries";
 
 @warn "remove magic numbers";
@@ -18,7 +18,7 @@
   position: relative;
   @include clearfix;
 
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     padding-left: $general-padding;
   }
 }
@@ -28,7 +28,7 @@
   min-height: 1rem;
   @include clearfix;
 
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     float: none;
     width: auto;
   }
@@ -69,7 +69,7 @@
   min-height: 1rem;
   padding: 0 0.5rem 0 0.5rem;
 
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     padding: 0;
   }
 }

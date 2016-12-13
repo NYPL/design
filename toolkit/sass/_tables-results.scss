@@ -1,5 +1,6 @@
 @import "measurements";
-@import "mixins";
+@import "icons";
+@import "microformats-mixins";
 @import "media-queries";
 
 @warn "refactor mixins and remove magic numbers";
@@ -19,10 +20,7 @@
     margin-right: 0.5rem;
   }
 
-  .facet {
-  }
-
-  .facet-remove {
+  a {
     color: $nyplgray;
     display: inline-block;
     margin: 0;
@@ -38,14 +36,14 @@
   margin-bottom: 3rem;
   @include clearfix;
 
-  .page-count, .previous, .next {
+  .page-count, a {
     display: block;
     float: left;
     text-decoration: none;
     width: 35%;
     @include clearfix;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       font-size: 1rem;
     }
   }
@@ -55,25 +53,31 @@
     width: 30%;
   }
 
-  .arrow:after {
+  a:after {
     display: block;
     font-size: 3rem;
     line-height: 0.9;
-    float: left;
-  }
 
-  .next .arrow:after {
-    float: right;
-  }
-
-  .previous .arrow:after, .next .arrow:after {
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       float: none;
     }
   }
 
-  .next {
+  a:first-child:after {
+    @include nypl-icon($as-font: true, $font-content: " \E62A");
+    float: left;
+  }
+
+  a:last-child {
     text-align: right;
+
+    &:after {
+      @include nypl-icon($as-font: true, $font-content: " \E62B");
+      float: right;
+    }
+  }
+
+  .next {
   }
 }
 
@@ -143,7 +147,7 @@
   }
 
   &.collapses {
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       thead, th, .views-table-header, .views-table-row:first-child {
         display: none;
       }
@@ -199,97 +203,4 @@
     }
   }
 
-}
-
-@mixin location-info {
-  border-left: 1rem solid $nypllightgray;
-  padding-left: 1rem;
-  margin-bottom: 2rem;
-
-  p {
-    margin: 0;
-    margin-bottom: 0.5em;
-  }
-
-  .sub-location-floor-room {
-    font-weight: bold;
-  }
-
-  .wheelchair-access {
-    color: $highlightcolor;
-    font-weight: bold;
-  }
-}
-
-@mixin location-hours {
-  position: relative;
-  width: 100%;
-
-  th, td {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 16.666%;
-  }
-
-  td {
-    padding-bottom: 1rem;
-  }
-
-  @include media(screen, $mobile-breakpoint) {
-    .titles {
-      display: none;
-    }
-
-    tr {
-      border: none;
-    }
-
-    td {
-      display: block;
-      position: relative;
-      width: 100%;
-
-      &::before {
-        display: block;
-        float: left;
-        font-weight: bold;
-        margin-bottom: 2rem;
-        width: 40%;
-      }
-
-      &:nth-of-type(1)::before {
-        content: "Monday";
-      }
-
-      &:nth-of-type(2)::before {
-        content: "Tuesday";
-      }
-
-      &:nth-of-type(3)::before {
-        content: "Wednesday";
-      }
-
-      &:nth-of-type(4)::before {
-        content: "Thursday";
-      }
-
-      &:nth-of-type(5)::before {
-        content: "Friday";
-      }
-
-      &:nth-of-type(6)::before {
-        content: "Saturday";
-      }
-
-      &:nth-of-type(7)::before {
-        content: "Sunday";
-      }
-    }
-
-  }
-}
-
-@mixin related-links {
-  border-top: $related-links-border-width solid $nyplgray;
-  padding-top: 2rem;
 }

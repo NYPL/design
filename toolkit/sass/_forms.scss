@@ -14,20 +14,33 @@
   }
 }
 
-@warn "make these as mixins?";
+@mixin label {
+  display: block;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
 
-input {
+@mixin fieldset {
+  background-color: $nyplsearchcolorlight;
+  border: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  position: relative;
+
+  label, span {
+    @include label;
+  }
+}
+
+@mixin input {
   background-color: $nyplsearchcolorlight;
   border: none;
   padding: 0;
 }
 
-input[type=text] {
-  box-shadow: inset 0 0 0 2px $nyplsearchcolordark;
-}
-
-input[type=button], input[type=submit] {
-  background-color: $nyplsearchcolordark;
+@mixin simple-button($main-color: $nyplsearchcolordark, $focus-color: $focuscolor) {
+  @include input;
+  background-color: $main-color;
   color: white;
   height: 2rem;
   padding: 0 1rem;
@@ -38,18 +51,16 @@ input[type=button], input[type=submit] {
   }
 }
 
-input[type=radio], input[type=checkbox] {
-  height: initial;
-  margin-right: 0.25rem;
-}
+@mixin textfield {
+  @include input;
 
-.form-text {
+  box-shadow: inset 0 0 0 2px $nyplsearchcolorlight;
   height: 2rem;
   margin-right: 1px;
-  padding: 0;
+  padding: 1.5em 0 0;
   text-indent: 0.5rem;
   transition: all 0.2s ease-out;
-  width: 10rem;
+  width: 100%;
 
   &.active {
     width: 16rem;
@@ -63,55 +74,24 @@ input[type=radio], input[type=checkbox] {
   }
 }
 
-@mixin search-form() {
-  // used for left-column searches
-
-  margin: 1rem 0;
-
-  label {
-    font-weight: bold;
-  }
-
-  label.group {
-    background-color: $nyplsearchcolorlight;
-    font-weight: normal;
-    padding: 3px 5px;
-  }
-
-  fieldset {
-    background-color: $nyplsearchcolorlight;
-    border: none;
-    margin: 0 0 1rem;
-    padding: 0;
-    position: relative;
-
-    span, label {
-      margin-left: 0.5em;
-    }
-
-    label.group {
-      //margin-left: 0;
-      margin: ms(-1);
-    }
-
-    label.text {
-      display: block;
-      position: absolute;
-
-    }
-
-    input[type=text] {
-      box-shadow: inset 0 0 0 2px $nyplsearchcolorlight;
-      padding: 1.5em 0 0;
-    }
-  }
+@mixin text-fieldset {
+  @include fieldset;
 
   label {
     display: block;
+    position: absolute;
   }
 
   input[type=text] {
-    width: 100%;
+    @include textfield;
+  }
+}
+
+@mixin select-fieldset {
+  @include fieldset;
+
+  label {
+    @include label;
   }
 
   select {
@@ -127,18 +107,47 @@ input[type=radio], input[type=checkbox] {
     text-indent: 0.5rem;
     width: 100%;
   }
+}
 
-  .a-z a, .a-z span {
+@mixin simple-radiobutton {
+  label {
+    @warn "fix !important";
+    background-color: $nyplsearchcolorlight;
+    font-weight: normal !important;
+    padding: 3px 5px;
+  }
+
+  input[type=radio], input[type=checkbox] {
+    height: initial;
+    margin-right: 0.25rem;
+  }
+}
+
+@mixin radiobutton-fieldset {
+  @include fieldset;
+  @include simple-radiobutton;
+}
+
+@mixin checkbox-fieldset {
+  @include radiobutton-fieldset;
+}
+
+@mixin alphabetical-filter {
+  @include fieldset;
+
+  a, span {
+    @warn "fix those !importants";
     color: $pagecolor;
-    display: inline-block;
-    margin: 0 0 0.5em 0.25em;
+    display: inline-block !important;
+    font-weight: normal !important;
+    margin: 0 0 0.5em 0.5em;
     padding: 0.2rem 0.25em;
     text-align: center;
     text-decoration: none;
     width: 1em;
   }
 
-  .a-z a {
+  a {
     background-color: $nyplsearchcolorlight;
 
     &:hover {
@@ -146,13 +155,28 @@ input[type=radio], input[type=checkbox] {
     }
   }
 
-  .a-z span {
+  span {
     background-color: $nypllightgray;
   }
 
-  .a-z span.long {
+  span.long {
     // because “any” has different lengths in different langs
     min-width: calc(2em + 14px);
   }
+}
+
+@warn "make these as mixins";
+
+button.collapsible {
+  border: none;
+  cursor: pointer;
+}
+
+
+@mixin search-form() {
+  @warn "refactor this";
+  // used for left-column searches
+
+  margin: 1rem 0;
 
 }

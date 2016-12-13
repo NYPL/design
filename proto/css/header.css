@@ -1,0 +1,744 @@
+/***
+
+  This is generic (non-header-specific) but required for the header to work
+
+ ***/
+/* -- Typographix -- */
+/* Sans Serif */
+/* Serif */
+/* Times New Roman-based stack */
+/* FONT FACE MIXIN
+ * ---------------
+ * Usage: @include font-face('Kievit-Regular', 'http://...');
+ * Desc: Do not include the font file extension, this mixin
+ * will generate the proper extensions.
+*/
+/* KIEVIT */
+/* Kievit Light */
+@font-face {
+  font-family: Kievit-Light;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Light.ttf") format("truetype"); }
+/* Kievit Book */
+@font-face {
+  font-family: Kievit-Book;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Book.ttf") format("truetype"); }
+/* Kievit Book Italic */
+@font-face {
+  font-family: Kievit-Book-Italic;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-BookIta.ttf") format("truetype"); }
+/* Kievit Medium */
+@font-face {
+  font-family: Kievit-Medium;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Medi.ttf") format("truetype"); }
+/* Kievit Meduim Italic */
+@font-face {
+  font-family: Kievit-Medium-Italic;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-MediIta.ttf") format("truetype"); }
+/* Kievit Bold */
+@font-face {
+  font-family: Kievit-Bold;
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.eot");
+  src: url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.eot?#iefix") format("embedded-opentype"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.woff") format("woff"), url("//ux-static.nypl.org/ff_kievit_web/KievitWeb-Bold.ttf") format("truetype"); }
+/* KIEVIT Small Caps */
+/* KIEVIT INCLUDES */
+@font-face {
+  font-family: nypl-moon;
+  src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85");
+  src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+[class*=" nypl-icon-"]:after, [class^=nypl-icon-]:after {
+  font-family: nypl-moon;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.nypl-icon-arrow-meganav-large:after {
+  content: "\E801"; }
+
+.nypl-icon-arrow-meganav:after {
+  content: "\E800"; }
+
+.nypl-icon-card:after {
+  content: "\E623"; }
+
+.nypl-icon-book:after {
+  content: "\E624"; }
+
+.nypl-icon-play-large:after {
+  content: "\E625"; }
+
+.nypl-icon-play-med:after {
+  content: "\E626"; }
+
+.nypl-icon-play-small:after {
+  content: "\E603"; }
+
+.nypl-icon-headphones:after {
+  content: "\E627"; }
+
+.nypl-icon-solo-x:after {
+  content: "\E611"; }
+
+.nypl-icon-mail:after {
+  content: "\E61C"; }
+
+.nypl-icon-login:after {
+  content: "\E61D"; }
+
+.nypl-icon-logo-mark:after {
+  content: "\E61E"; }
+
+.nypl-icon-logo-type:after {
+  content: "\E61F"; }
+
+.nypl-icon-locator-no-dot:after {
+  content: "\E620"; }
+
+.nypl-icon-locator-small:after {
+  content: "\E616"; }
+
+.nypl-icon-locator-large:after {
+  content: "\E615"; }
+
+.nypl-icon-burger-nav:after {
+  content: "\E614"; }
+
+.nypl-icon-wedge-right:after {
+  content: "\E621"; }
+
+.nypl-icon-wedge-left:after {
+  content: "\E622"; }
+
+.nypl-icon-wedge-down:after {
+  content: "\E600"; }
+
+.nypl-icon-wedge-up:after {
+  content: "\E601"; }
+
+.nypl-icon-magnifier-thin:after {
+  content: "\E617"; }
+
+.nypl-icon-magnifier-fat:after {
+  content: "\E609"; }
+
+.nypl-icon-magnifier-circle:after {
+  content: "\E602"; }
+
+.nypl-icon-facebook-circle:after {
+  content: "\E62E"; }
+
+.nypl-icon-facebook-circle-large:after {
+  content: "\E62C"; }
+
+.nypl-icon-facebook-circle-hover:after {
+  content: "\E630"; }
+
+.nypl-icon-twitter-circle:after {
+  content: "\E62F"; }
+
+.nypl-icon-twitter-circle-large:after {
+  content: "\E62D"; }
+
+.nypl-icon-twitter-circle-hover:after {
+  content: "\E631"; }
+
+.nypl-icon-facebook:after {
+  content: "\E604"; }
+
+.nypl-icon-twitter:after {
+  content: "\E605"; }
+
+.nypl-icon-tumblr:after {
+  content: "\E606"; }
+
+.nypl-icon-instagram:after {
+  content: "\E618"; }
+
+.nypl-icon-soundcloud:after {
+  content: "\E619"; }
+
+.nypl-icon-itunes:after {
+  content: "\E61A"; }
+
+.nypl-icon-youtube:after {
+  content: "\E61B"; }
+
+.nypl-icon-bldg:after {
+  content: "\E607"; }
+
+.nypl-icon-equals-small:after {
+  content: "\E608"; }
+
+.nypl-icon-arrow-up:after {
+  content: "\E60A"; }
+
+.nypl-icon-arrow-down:after {
+  content: "\E629"; }
+
+.nypl-icon-arrow-left:after {
+  content: "\E62A"; }
+
+.nypl-icon-arrow-right:after {
+  content: "\E62B"; }
+
+.nypl-icon-circle-arrow-left:after {
+  content: "\E60B"; }
+
+.nypl-icon-circle-arrow-right:after {
+  content: "\E60C"; }
+
+.nypl-icon-circle-wedge-left:after {
+  content: "\E60D"; }
+
+.nypl-icon-circle-wedge-right:after {
+  content: "\E60E"; }
+
+.nypl-icon-circle-more:after {
+  content: "\E60F"; }
+
+.nypl-icon-more-dots:after {
+  content: "\E610"; }
+
+.nypl-icon-circle-x:after {
+  content: "\E612"; }
+
+.nypl-icon-circle-check:after {
+  content: "\E613"; }
+
+.nypl-icon-check-solo:after {
+  content: "\E628"; }
+
+html {
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-filter: none;
+  filter: none; }
+
+body {
+  color: #100f0e; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  margin-top: 0; }
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 1; }
+
+h2 {
+  font-size: 1.6rem; }
+
+h3 {
+  font-size: 1.4rem; }
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0; }
+
+ul {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  padding: 0; }
+
+li {
+  margin-left: 1.5rem; }
+
+a {
+  border-radius: 0; }
+
+a:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 3px; }
+
+input {
+  border-radius: 0; }
+
+input:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 3px; }
+
+select {
+  border-radius: 0; }
+
+select:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 3px; }
+
+a {
+  text-decoration: none; }
+  a:link {
+    color: #e32b31; }
+  a:visited {
+    color: #941418; }
+  a:hover, a:visited:hover {
+    color: #e9585d;
+    text-decoration: underline; }
+
+a.inverted:link {
+  color: white; }
+a.inverted:visited {
+  color: #e6e6e6; }
+a.inverted:hover, a.inverted:visited:hover {
+  color: white; }
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: calc(82rem - 1rem - (5rem + 1rem));
+  padding: 1rem 1rem 1rem 6rem;
+  position: relative; }
+  .content-wrapper:before, .content-wrapper:after {
+    content: "";
+    display: table; }
+  .content-wrapper:after {
+    clear: both; }
+  @media screen and (max-width: 965px) {
+    .content-wrapper {
+      padding-left: 1rem; } }
+
+.hidden {
+  display: none; }
+
+input {
+  background-color: #c5c2be;
+  border: none;
+  padding: 0; }
+
+input[type=text] {
+  box-shadow: inset 0 0 0 2px #605c57; }
+
+input[type=button], input[type=submit] {
+  background-color: #605c57;
+  color: white;
+  height: 2rem;
+  padding: 0 1rem; }
+  input[type=button]:focus, input[type=submit]:focus {
+    box-shadow: inset 0 0 0 4px #ffb81d;
+    outline: none; }
+
+input[type=radio], input[type=checkbox] {
+  height: initial;
+  margin-right: 0.25rem; }
+
+button.collapsible {
+  border: none;
+  cursor: pointer; }
+
+.form-text {
+  height: 2rem;
+  margin-right: 1px;
+  padding: 0;
+  text-indent: 0.5rem;
+  transition: all 0.2s ease-out;
+  width: 10rem; }
+  .form-text.active {
+    width: 16rem; }
+  .form-text:focus {
+    background-color: white;
+    box-shadow: inset 0 0 0 4px #ffb81d !important;
+    color: #605c57;
+    outline: none; }
+
+/***
+
+  end of generics
+
+ ***/
+#skip a {
+  background-color: white;
+  border: none;
+  color: #e32b31;
+  display: block;
+  font-size: 13px;
+  height: 1px;
+  left: -10000px;
+  line-height: 2;
+  overflow: hidden;
+  padding: 5px 10px 3px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+  z-index: 1000; }
+  #skip a:focus {
+    border: 5px solid #e32b31;
+    height: auto;
+    left: 7px;
+    outline: 0;
+    overflow: visible;
+    width: auto; }
+
+.alert {
+  background-color: #FEE24A;
+  padding: 0.8rem 0; }
+
+.horizontal {
+  display: table-cell;
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+  .horizontal:before, .horizontal:after {
+    content: "";
+    display: table; }
+  .horizontal:after {
+    clear: both; }
+  @media screen and (max-width: 965px) {
+    .horizontal {
+      float: none; } }
+  .horizontal li {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0.35em;
+    vertical-align: bottom; }
+    .horizontal li:last-child {
+      margin-right: 0; }
+
+.collapsed-menu-toggle, .main-menu-toggle {
+  display: none; }
+
+@media screen and (max-width: 965px) {
+  .main-menu-toggle {
+    background-color: #e32b31;
+    color: white !important;
+    display: block;
+    margin: 0 -1rem;
+    padding-right: 1rem;
+    text-align: right;
+    text-decoration: none; } }
+
+.logo {
+  position: absolute;
+  width: 5rem; }
+  @media screen and (max-width: 965px) {
+    .logo {
+      float: none;
+      margin-right: 0.5rem;
+      position: relative; } }
+
+.nypl-logo {
+  background: url("../img/nypl.svg") no-repeat scroll 0px 0px/5rem auto white;
+  border: none;
+  display: block;
+  font-size: 0;
+  height: 3rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.1rem;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  width: 5rem; }
+  @media screen and (max-width: 965px) {
+    .nypl-logo {
+      background: url("../img/lion.svg") no-repeat scroll 0px 0px/2.5rem auto white;
+      margin-right: 0.5rem;
+      width: 3rem; } }
+
+header .content-wrapper {
+  max-width: calc(82rem - 2rem);
+  padding: 0 1rem; }
+  @media screen and (max-width: 965px) {
+    header .content-wrapper {
+      margin: 0; } }
+header .content {
+  position: relative; }
+  header .content:before, header .content:after {
+    content: "";
+    display: table; }
+  header .content:after {
+    clear: both; }
+  @media screen and (max-width: 965px) {
+    header .content {
+      width: 100%; } }
+header .service {
+  background-color: #e32b31; }
+  @media screen and (max-width: 965px) {
+    header .service {
+      display: table-footer-group; } }
+@media screen and (max-width: 965px) {
+  header {
+    display: table;
+    width: 100%; } }
+header.collapsed {
+  border-bottom: 2px solid #dddbd9;
+  position: relative; }
+  header.collapsed .main-menu-toggle {
+    display: none; }
+  header.collapsed .collapsed-menu-toggle {
+    bottom: 0;
+    color: #100f0e;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    right: 1rem;
+    text-transform: uppercase; }
+  header.collapsed .logo {
+    height: 30px;
+    overflow: hidden; }
+  header.collapsed .nypl-logo {
+    background: url("../img/lion.svg") no-repeat scroll 0px 0px/3rem auto white;
+    background-position-y: -4px;
+    margin: 0; }
+  header.collapsed .service-buttons {
+    min-height: 10px; }
+    header.collapsed .service-buttons li {
+      display: none; }
+  header.collapsed .nav-buttons {
+    font-size: 0;
+    font-weight: bold;
+    height: 30px;
+    margin-top: 0;
+    text-transform: uppercase; }
+    header.collapsed .nav-buttons li {
+      box-shadow: none; }
+    header.collapsed .nav-buttons a {
+      padding: 0.1em 0.4em 0.1em; }
+    header.collapsed .nav-buttons .search {
+      display: none; }
+header .service-buttons {
+  font-size: 0.8rem;
+  padding: 0;
+  text-transform: uppercase; }
+  @media screen and (max-width: 965px) {
+    header .service-buttons {
+      display: none;
+      padding-top: 5px;
+      width: 100%; }
+      header .service-buttons li {
+        border-bottom: 1px solid white;
+        float: left;
+        line-height: 2;
+        margin: 0 0 5px 0;
+        width: 50%; } }
+  header .service-buttons a {
+    text-decoration: underline; }
+  header .service-buttons li > a, header .service-buttons button.collapsible {
+    background-color: #e32b31;
+    border: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 0 0.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s; }
+    header .service-buttons li > a:hover, header .service-buttons li > a.active, header .service-buttons button.collapsible:hover, header .service-buttons button.collapsible.active {
+      background-color: white;
+      color: #e32b31; }
+    header .service-buttons li > a.donate, header .service-buttons button.collapsible.donate {
+      background-color: white;
+      color: #e32b31; }
+    header .service-buttons li > a.donate:hover, header .service-buttons button.collapsible.donate:hover {
+      background-color: white; }
+    header .service-buttons li > a.collapsible:after, header .service-buttons button.collapsible.collapsible:after {
+      display: inline-block;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin-left: 0.5em; }
+header .email-toggle {
+  position: relative; }
+  header .email-toggle a:after {
+    transition: all 0.2s; }
+  header .email-toggle a.active:after {
+    transform: scaleY(-1); }
+header .login-toggle {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 1.5rem; }
+  header .login-toggle button {
+    text-transform: uppercase; }
+  header .login-toggle div {
+    background-color: #7B756F;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    position: absolute;
+    right: 0;
+    text-transform: none;
+    z-index: 1; }
+  header .login-toggle a.inverted {
+    display: block;
+    margin-bottom: 1em;
+    white-space: nowrap; }
+  header .login-toggle .welcome-message {
+    display: inline-block;
+    margin-right: 1em;
+    text-transform: none; }
+  header .login-toggle a:link {
+    text-decoration: underline; }
+  header .login-toggle > a, header .login-toggle button.collapsible {
+    background-color: #7B756F;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 0.5em; }
+    header .login-toggle > a:link, header .login-toggle button.collapsible:link {
+      text-decoration: none; }
+    header .login-toggle > a:hover, header .login-toggle button.collapsible:hover {
+      background-color: white;
+      color: #7B756F; }
+  @media screen and (max-width: 965px) {
+    header .login-toggle {
+      top: -2rem; }
+      header .login-toggle .welcome-message {
+        display: none; } }
+header.collapsed .login-toggle {
+  right: 110px;
+  top: 9px; }
+  @media screen and (max-width: 965px) {
+    header.collapsed .login-toggle {
+      font-size: 12px;
+      top: -19px; }
+      header.collapsed .login-toggle div {
+        right: -100%; } }
+header .email-toggle form {
+  background-color: #7B756F;
+  color: white;
+  font-size: 1rem;
+  min-width: 17rem;
+  position: absolute;
+  padding: 1rem;
+  right: 0;
+  text-transform: none;
+  z-index: 1; }
+header .email-toggle .email-toggle-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0; }
+header .email-toggle fieldset {
+  border: none;
+  color: #100f0e;
+  margin: 1em 0 0.5em;
+  padding: 0;
+  position: relative; }
+header .email-toggle label {
+  display: block;
+  font-weight: bold;
+  margin-left: 0.5em;
+  position: absolute; }
+header .email-toggle input[type=text] {
+  padding: 1.5em 0 0;
+  width: 100%; }
+header .email-toggle .links {
+  margin: 1em 0 0; }
+header .nav-buttons {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: calc(3rem + 1rem); }
+  header .nav-buttons:before, header .nav-buttons:after {
+    content: "";
+    display: table; }
+  header .nav-buttons:after {
+    clear: both; }
+  @media screen and (max-width: 1120px) {
+    header .nav-buttons {
+      font-size: 0.9rem; } }
+  @media screen and (max-width: 965px) {
+    header .nav-buttons {
+      display: none;
+      font-size: 1.2rem;
+      margin-top: 1rem; }
+      header .nav-buttons li {
+        border-bottom: 1px solid #dddbd9;
+        float: left;
+        height: auto;
+        line-height: 2;
+        margin: 0 0 5px 0;
+        width: 50%; }
+      header .nav-buttons li.search {
+        border: none;
+        font-size: 1rem;
+        position: relative;
+        right: initial;
+        top: initial;
+        width: 100%; } }
+  header .nav-buttons a {
+    border: none;
+    color: #100f0e;
+    display: block;
+    overflow: hidden;
+    padding: 0.2em 0.4em 0.2em;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 0.2s;
+    white-space: nowrap; }
+    header .nav-buttons a:hover {
+      color: #e32b31; }
+  header .nav-buttons li {
+    box-shadow: inset 0 0 0 #e32b31;
+    transition: box-shadow 0.2s; }
+  header .nav-buttons li:hover, header .nav-buttons li.active {
+    box-shadow: inset 0 -4px 0 #e32b31; }
+header li.search #main-search {
+  background-color: #7B756F;
+  margin: 0;
+  position: relative; }
+  header li.search #main-search.display {
+    display: block; }
+  header li.search #main-search .search-query-content {
+    position: relative; }
+  header li.search #main-search .search-select {
+    background-color: #7B756F;
+    font-size: 0.9rem;
+    right: 0;
+    padding: 1px 3px 3px 3px;
+    position: absolute;
+    top: 2rem;
+    white-space: nowrap; }
+  header li.search #main-search .search-radio-label {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2;
+    padding: 0 0.75rem 0 0.5rem; }
+    header li.search #main-search .search-radio-label.selected {
+      background-color: #c5c2be; }
+    header li.search #main-search .search-radio-label.focus {
+      box-shadow: inset 0 0 0 3px #ffb81d; }
+    header li.search #main-search .search-radio-label input:focus {
+      outline: none; }
+  header li.search #main-search .search-query-label {
+    color: white;
+    height: 2rem;
+    left: 0.5rem;
+    line-height: 2;
+    position: absolute; }
+  @media screen and (max-width: 965px) {
+    header li.search #main-search .form-text, header li.search #main-search .search-button, header li.search #main-search .search-radio-label {
+      height: 2.5rem;
+      line-height: 2.5; }
+    header li.search #main-search .form-text {
+      margin: 0;
+      width: 70%; }
+    header li.search #main-search .search-button {
+      margin: 0;
+      width: 30%; }
+    header li.search #main-search .search-select {
+      top: 2.5rem; } }
+
+/*# sourceMappingURL=header.css.map */

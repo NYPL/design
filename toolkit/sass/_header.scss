@@ -1,11 +1,13 @@
 @import "measurements";
-@import "mixins";
+@import "microformats-mixins";
 @import "media-queries";
 
 $logo-width: 5rem;
 $logo-height: 3rem;
 $collapsed-service-height: 10px;
 $collapsed-nav-height: 30px;
+
+@warn "lots of refactoring to do here";
 
 .alert {
   @include banner-alert;
@@ -20,7 +22,7 @@ $collapsed-nav-height: 30px;
   position: relative;
   @include clearfix;
 
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     float: none;
   }
 
@@ -41,7 +43,7 @@ $collapsed-nav-height: 30px;
 }
 
 .main-menu-toggle {
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     background-color: $nyplred;
     color: white !important;
     display: block;
@@ -49,6 +51,10 @@ $collapsed-nav-height: 30px;
     padding-right: 1rem;
     text-align: right;
     text-decoration: none;
+
+    .nypl-icon {
+      @include nypl-icon(white, $nyplred)
+    }
   }
 }
 
@@ -56,7 +62,7 @@ $collapsed-nav-height: 30px;
   position: absolute;
   width: $logo-width;
 
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     float: none;
     margin-right: 0.5rem;
     position: relative;
@@ -76,7 +82,7 @@ $collapsed-nav-height: 30px;
   white-space: nowrap;
   width: $logo-width;
 
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     background: url("../img/lion.svg") no-repeat scroll 0px 0px/#{$logo-height - 0.5} auto white; // should be a smart hiding of the original svg
     margin-right: 0.5rem;
     width: $logo-height;
@@ -84,12 +90,11 @@ $collapsed-nav-height: 30px;
 }
 
 header {
-
   .content-wrapper {
     max-width: calc(#{$max-width} - 2rem);
     padding: 0 1rem;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       margin: 0;
     }
   }
@@ -98,7 +103,7 @@ header {
     position: relative;
     @include clearfix;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       width: 100%;
     }
   }
@@ -106,12 +111,12 @@ header {
   .service {
     background-color: $nyplred;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       display: table-footer-group;
     }
   }
 
-  @include media(screen, $mobile-breakpoint) {
+  @include media($mobile-breakpoint) {
     display: table;
     width: 100%;
   }
@@ -181,7 +186,7 @@ header {
     padding: 0;
     text-transform: uppercase;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       display: none;
       padding-top: 5px;
       width: 100%;
@@ -199,19 +204,41 @@ header {
       text-decoration: underline;
     }
 
-    li > a {
+    li > a, button.collapsible {
+      background-color: $nyplred;
       border: none;
       color: white;
       display: block;
       font-weight: bold;
+      overflow: hidden;
       padding: 0 0.5em;
+      padding-right: 1em;
       position: relative;
       text-decoration: none;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
       transition: all 0.2s;
+      white-space: nowrap;
+
+      .nypl-icon {
+        @include nypl-icon(white, $nyplred);
+        transition: all 0.2s;
+      }
 
       &:hover, &.active {
         background-color: white;
         color: $linkcolor;
+
+        .nypl-icon {
+          background-color: white;
+          fill: $nyplred;
+        }
+      }
+
+      &.active {
+        .nypl-icon {
+          transform: scaleY(-1);
+        }
       }
 
       &.donate {
@@ -223,12 +250,6 @@ header {
         background-color: white;
       }
 
-      &.collapsible:after {
-        display: inline-block;
-        font-size: 0.85em;
-        font-weight: bold;
-        margin-left: 0.5em;
-      }
     }
   }
 
@@ -250,6 +271,10 @@ header {
     right: 0;
     text-transform: uppercase;
     top: 1.5rem;
+
+    button {
+      text-transform: uppercase;
+    }
 
     div {
       background-color: $nyplsearchcolor;
@@ -279,12 +304,18 @@ header {
       text-decoration: underline;
     }
 
-    > a {
+    > a, button.collapsible {
       background-color: $nyplgray;
       color: white;
       display: inline-block;
       font-weight: bold;
       padding: 0 0.5em;
+      transition: all 0.2s;
+
+      .nypl-icon {
+        @include nypl-icon(white, $nyplgray);
+        transition: all 0.2s;
+      }
 
       &:link {
         text-decoration: none;
@@ -293,10 +324,21 @@ header {
       &:hover {
         background-color: white;
         color: $nyplgray;
+
+        .nypl-icon {
+          background-color: white;
+          fill: $nyplgray;
+        }
+      }
+
+      &.active {
+        .nypl-icon {
+          transform: scaleY(-1);
+        }
       }
     }
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       top: -2rem;
 
       .welcome-message {
@@ -310,7 +352,7 @@ header {
     right: 110px;
     top: 9px;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       font-size: 12px;
       top: -19px;
 
@@ -331,6 +373,11 @@ header {
       right: 0;
       text-transform: none;
       z-index: 1;
+
+      @include media($mobile-breakpoint) {
+        left: 0;
+        right: auto;
+      }
     }
 
     .email-toggle-title {
@@ -356,8 +403,7 @@ header {
     }
 
     input[type=text] {
-      padding: 1.5em 0 0;
-      width: 100%;
+      @include textfield;
     }
 
     .links {
@@ -371,11 +417,11 @@ header {
     margin-top: calc(#{$logo-height} + 1rem);
     @include clearfix;
 
-    @include media(screen, $intermediate-breakpoint) {
+    @include media($intermediate-breakpoint) {
       font-size: 0.9rem;
     }
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       display: none;
       font-size: 1.2rem;
       margin-top: 1rem;
@@ -429,7 +475,7 @@ header {
 
 
   li.search {
-    @include media(screen, $intermediate-breakpoint) {
+    @include media($intermediate-breakpoint) {
       // float: none;
       // position: absolute;
       // right: 0;
@@ -440,6 +486,10 @@ header {
       background-color: $nyplsearchcolor;
       margin: 0;
       position: relative;
+
+      .search-button {
+        @include simple-button;
+      }
 
       &.display {
         display: block;
@@ -460,6 +510,7 @@ header {
       }
 
       .search-radio-label {
+        @include simple-radiobutton;
         display: inline-block;
         height: 2rem;
         line-height: 2;
@@ -487,13 +538,35 @@ header {
         position: absolute;
       }
 
-      @include media(screen, $mobile-breakpoint) {
+      .form-text {
+        @include input;
+        box-shadow: inset 0 0 0 2px $nyplsearchcolordark;
+        height: 2rem;
+        margin-right: 1px;
+        padding: 0;
+        text-indent: 0.5rem;
+        transition: all 0.2s ease-out;
+        width: 10rem;
+
+        &.active {
+          width: 16rem;
+        }
+
+        &:focus {
+          background-color: white;
+          box-shadow: inset 0 0 0 4px $focuscolor !important;
+          color: $nyplsearchcolordark;
+          outline: none;
+        }
+      }
+
+      @include media($mobile-breakpoint) {
         .form-text, .search-button, .search-radio-label {
           height: 2.5rem;
           line-height: 2.5;
         }
 
-        .form-text {
+        .form-text, .form-text.active {
           margin: 0;
           width: 70%;
         }

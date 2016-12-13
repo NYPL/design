@@ -1,5 +1,4 @@
 @import "nypl-normalize";
-@import "forms";
 @import "grid";
 @import "header";
 @import "tables-results";
@@ -9,6 +8,10 @@
 
 .content-wrapper {
   @include full-width-wrapper;
+}
+
+.page-header {
+  @include page-header;
 }
 
 #filter-search {
@@ -61,4 +64,24 @@ table, .views-table {
 
 .related-links {
   @include related-links;
+}
+
+.secondary-title {
+  @include secondary-title;
+}
+
+div.location fieldset, fieldset.select {
+  @include select-fieldset;
+}
+
+fieldset.textfield {
+  @include text-fieldset;
+}
+
+fieldset.alphabetical {
+  @include alphabetical-filter;
+}
+
+fieldset.radiogroup {
+  @include radiobutton-fieldset;
 }

@@ -1,5 +1,5 @@
 @import "measurements";
-@import "mixins";
+@import "microformats-mixins";
 @import "media-queries";
 
 footer {
@@ -42,7 +42,7 @@ footer ul {
     float: left;
     width: 25%;
 
-    @include media(screen, $mobile-breakpoint) {
+    @include media($mobile-breakpoint) {
       float: none;
       width: auto;
     }

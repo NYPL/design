@@ -374,172 +374,33 @@ textarea {
   src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
   font-weight: 400;
   font-style: normal; }
-[class*=" nypl-icon-"]:after, [class^=nypl-icon-]:after {
-  font-family: nypl-moon;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+a {
+  border-radius: 0; }
 
-.nypl-icon-arrow-meganav-large:after {
-  content: "\E801"; }
+a:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 0.1875rem; }
 
-.nypl-icon-arrow-meganav:after {
-  content: "\E800"; }
+input {
+  border-radius: 0; }
 
-.nypl-icon-card:after {
-  content: "\E623"; }
+input:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 0.1875rem; }
 
-.nypl-icon-book:after {
-  content: "\E624"; }
+select {
+  border-radius: 0; }
 
-.nypl-icon-play-large:after {
-  content: "\E625"; }
+select:focus {
+  outline-color: #ffb81d;
+  outline-style: solid;
+  outline-width: 0.1875rem; }
 
-.nypl-icon-play-med:after {
-  content: "\E626"; }
-
-.nypl-icon-play-small:after {
-  content: "\E603"; }
-
-.nypl-icon-headphones:after {
-  content: "\E627"; }
-
-.nypl-icon-solo-x:after {
-  content: "\E611"; }
-
-.nypl-icon-mail:after {
-  content: "\E61C"; }
-
-.nypl-icon-login:after {
-  content: "\E61D"; }
-
-.nypl-icon-logo-mark:after {
-  content: "\E61E"; }
-
-.nypl-icon-logo-type:after {
-  content: "\E61F"; }
-
-.nypl-icon-locator-no-dot:after {
-  content: "\E620"; }
-
-.nypl-icon-locator-small:after {
-  content: "\E616"; }
-
-.nypl-icon-locator-large:after {
-  content: "\E615"; }
-
-.nypl-icon-burger-nav:after {
-  content: "\E614"; }
-
-.nypl-icon-wedge-right:after {
-  content: "\E621"; }
-
-.nypl-icon-wedge-left:after {
-  content: "\E622"; }
-
-.nypl-icon-wedge-down:after {
-  content: "\E600"; }
-
-.nypl-icon-wedge-up:after {
-  content: "\E601"; }
-
-.nypl-icon-magnifier-thin:after {
-  content: "\E617"; }
-
-.nypl-icon-magnifier-fat:after {
-  content: "\E609"; }
-
-.nypl-icon-magnifier-circle:after {
-  content: "\E602"; }
-
-.nypl-icon-facebook-circle:after {
-  content: "\E62E"; }
-
-.nypl-icon-facebook-circle-large:after {
-  content: "\E62C"; }
-
-.nypl-icon-facebook-circle-hover:after {
-  content: "\E630"; }
-
-.nypl-icon-twitter-circle:after {
-  content: "\E62F"; }
-
-.nypl-icon-twitter-circle-large:after {
-  content: "\E62D"; }
-
-.nypl-icon-twitter-circle-hover:after {
-  content: "\E631"; }
-
-.nypl-icon-facebook:after {
-  content: "\E604"; }
-
-.nypl-icon-twitter:after {
-  content: "\E605"; }
-
-.nypl-icon-tumblr:after {
-  content: "\E606"; }
-
-.nypl-icon-instagram:after {
-  content: "\E618"; }
-
-.nypl-icon-soundcloud:after {
-  content: "\E619"; }
-
-.nypl-icon-itunes:after {
-  content: "\E61A"; }
-
-.nypl-icon-youtube:after {
-  content: "\E61B"; }
-
-.nypl-icon-bldg:after {
-  content: "\E607"; }
-
-.nypl-icon-equals-small:after {
-  content: "\E608"; }
-
-.nypl-icon-arrow-up:after {
-  content: "\E60A"; }
-
-.nypl-icon-arrow-down:after {
-  content: "\E629"; }
-
-.nypl-icon-arrow-left:after {
-  content: "\E62A"; }
-
-.nypl-icon-arrow-right:after {
-  content: "\E62B"; }
-
-.nypl-icon-circle-arrow-left:after {
-  content: "\E60B"; }
-
-.nypl-icon-circle-arrow-right:after {
-  content: "\E60C"; }
-
-.nypl-icon-circle-wedge-left:after {
-  content: "\E60D"; }
-
-.nypl-icon-circle-wedge-right:after {
-  content: "\E60E"; }
-
-.nypl-icon-circle-more:after {
-  content: "\E60F"; }
-
-.nypl-icon-more-dots:after {
-  content: "\E610"; }
-
-.nypl-icon-circle-x:after {
-  content: "\E612"; }
-
-.nypl-icon-circle-check:after {
-  content: "\E613"; }
-
-.nypl-icon-check-solo:after {
-  content: "\E628"; }
+button.collapsible {
+  border: none;
+  cursor: pointer; }
 
 body {
   color: #100f0e; }
@@ -585,6 +446,29 @@ ul {
 li {
   margin-left: 1.5rem; }
 
+code, pre {
+  background-color: #dddbd9;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+
+code {
+  padding-left: 0.25em;
+  padding-right: 0.25em; }
+
+legend {
+  display: table; }
+
+input[type=button], input[type=submit] {
+  background-color: #c5c2be;
+  border: none;
+  padding: 0;
+  background-color: #605c57;
+  color: white;
+  height: 2rem;
+  padding: 0 1rem; }
+  input[type=button]:focus, input[type=submit]:focus {
+    box-shadow: inset 0 0 0 4px #ffb81d;
+    outline: none; }
+
 a {
   text-decoration: none; }
   a:link {
@@ -627,12 +511,5 @@ a.inverted:hover, a.inverted:visited:hover {
 
 .hidden {
   display: none; }
-
-.page-header {
-  background-color: #dddbd9; }
-  .page-header h1 {
-    margin: 0; }
-  .page-header .breadcrumb {
-    margin-bottom: ms(-1); }
 
 /*# sourceMappingURL=nypl-normalize.css.map */

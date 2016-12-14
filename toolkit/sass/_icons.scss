@@ -33,206 +33,155 @@
 }
 
 %nypl-icon-arrow-meganav-large:after {
-  @include nypl-icon;
-  content:" \E801";
+  @include nypl-icon($as-font: true, $font-content: " \E801");
 }
 %nypl-icon-arrow-meganav:after {
-  @include nypl-icon;
-  content:" \E800";
+  @include nypl-icon($as-font: true, $font-content: " \E800");
 }
 %nypl-icon-card:after {
-  @include nypl-icon;
-  content:" \E623";
+  @include nypl-icon($as-font: true, $font-content: " \E623");
 }
 %nypl-icon-book:after {
-  @include nypl-icon;
-  content:" \E624";
+  @include nypl-icon($as-font: true, $font-content: " \E624");
 }
 %nypl-icon-play-large:after {
-  @include nypl-icon;
-  content:" \E625";
+  @include nypl-icon($as-font: true, $font-content: " \E625");
 }
 %nypl-icon-play-med:after {
-  @include nypl-icon;
-  content:" \E626";
+  @include nypl-icon($as-font: true, $font-content: " \E626");
 }
 %nypl-icon-play-small:after {
-  @include nypl-icon;
-  content:" \E603";
+  @include nypl-icon($as-font: true, $font-content: " \E603");
 }
 %nypl-icon-headphones:after {
-  @include nypl-icon;
-  content:" \E627";
+  @include nypl-icon($as-font: true, $font-content: " \E627");
 }
 %nypl-icon-solo-x:after {
-  @include nypl-icon;
-  content:" \E611";
+  @include nypl-icon($as-font: true, $font-content: " \E611");
 }
 %nypl-icon-mail:after {
-  @include nypl-icon;
-  content:" \E61C";
+  @include nypl-icon($as-font: true, $font-content: " \E61C");
 }
 %nypl-icon-login:after {
-  @include nypl-icon;
-  content:" \E61D";
+  @include nypl-icon($as-font: true, $font-content: " \E61D");
 }
 %nypl-icon-logo-mark:after {
-  @include nypl-icon;
-  content:" \E61E";
+  @include nypl-icon($as-font: true, $font-content: " \E61E");
 }
 %nypl-icon-logo-type:after {
-  @include nypl-icon;
-  content:" \E61F";
+  @include nypl-icon($as-font: true, $font-content: " \E61F");
 }
 %nypl-icon-locator-no-dot:after {
-  @include nypl-icon;
-  content:" \E620";
+  @include nypl-icon($as-font: true, $font-content: " \E620");
 }
 %nypl-icon-locator-small:after {
-  @include nypl-icon;
-  content:" \E616";
+  @include nypl-icon($as-font: true, $font-content: " \E616");
 }
 %nypl-icon-locator-large:after {
-  @include nypl-icon;
-  content:" \E615";
+  @include nypl-icon($as-font: true, $font-content: " \E615");
 }
 %nypl-icon-burger-nav:after {
-  @include nypl-icon;
-  content:" \E614";
+  @include nypl-icon($as-font: true, $font-content: " \E614");
 }
 %nypl-icon-wedge-right:after {
-  @include nypl-icon;
-  content:" \E621";
+  @include nypl-icon($as-font: true, $font-content: " \E621");
 }
 %nypl-icon-wedge-left:after {
-  @include nypl-icon;
-  content:" \E622";
+  @include nypl-icon($as-font: true, $font-content: " \E622");
 }
 %nypl-icon-wedge-up:after {
-  @include nypl-icon;
-  content:" \E601";
+  @include nypl-icon($as-font: true, $font-content: " \E601");
 }
 %nypl-icon-magnifier-thin:after {
-  @include nypl-icon;
-  content:" \E617";
+  @include nypl-icon($as-font: true, $font-content: " \E617");
 }
 %nypl-icon-magnifier-fat:after {
-  @include nypl-icon;
-  content:" \E609";
+  @include nypl-icon($as-font: true, $font-content: " \E609");
 }
 %nypl-icon-magnifier-circle:after {
-  @include nypl-icon;
-  content:" \E602";
+  @include nypl-icon($as-font: true, $font-content: " \E602");
 }
 %nypl-icon-facebook-circle:after {
-  @include nypl-icon;
-  content:" \E62E";
+  @include nypl-icon($as-font: true, $font-content: " \E62E");
 }
 %nypl-icon-facebook-circle-large:after {
-  @include nypl-icon;
-  content:" \E62C";
+  @include nypl-icon($as-font: true, $font-content: " \E62C");
 }
 %nypl-icon-facebook-circle-hover:after {
-  @include nypl-icon;
-  content:" \E630";
+  @include nypl-icon($as-font: true, $font-content: " \E630");
 }
 %nypl-icon-twitter-circle:after {
-  @include nypl-icon;
-  content:" \E62F";
+  @include nypl-icon($as-font: true, $font-content: " \E62F");
 }
 %nypl-icon-twitter-circle-large:after {
-  @include nypl-icon;
-  content:" \E62D";
+  @include nypl-icon($as-font: true, $font-content: " \E62D");
 }
 %nypl-icon-twitter-circle-hover:after {
-  @include nypl-icon;
-  content:" \E631";
+  @include nypl-icon($as-font: true, $font-content: " \E631");
 }
 %nypl-icon-facebook:after {
-  @include nypl-icon;
-  content:" \E604";
+  @include nypl-icon($as-font: true, $font-content: " \E604");
 }
 %nypl-icon-twitter:after {
-  @include nypl-icon;
-  content:" \E605";
+  @include nypl-icon($as-font: true, $font-content: " \E605");
 }
 %nypl-icon-tumblr:after {
-  @include nypl-icon;
-  content:" \E606";
+  @include nypl-icon($as-font: true, $font-content: " \E606");
 }
 %nypl-icon-instagram:after {
-  @include nypl-icon;
-  content:" \E618";
+  @include nypl-icon($as-font: true, $font-content: " \E618");
 }
 %nypl-icon-soundcloud:after {
-  @include nypl-icon;
-  content:" \E619";
+  @include nypl-icon($as-font: true, $font-content: " \E619");
 }
 %nypl-icon-itunes:after {
-  @include nypl-icon;
-  content:" \E61A";
+  @include nypl-icon($as-font: true, $font-content: " \E61A");
 }
 %nypl-icon-youtube:after {
-  @include nypl-icon;
-  content:" \E61B";
+  @include nypl-icon($as-font: true, $font-content: " \E61B");
 }
 %nypl-icon-bldg:after {
-  @include nypl-icon;
-  content:" \E607";
+  @include nypl-icon($as-font: true, $font-content: " \E607");
 }
 %nypl-icon-equals-small:after {
-  @include nypl-icon;
-  content:" \E608";
+  @include nypl-icon($as-font: true, $font-content: " \E608");
 }
 %nypl-icon-arrow-up:after {
-  @include nypl-icon;
-  content:" \E60A";
+  @include nypl-icon($as-font: true, $font-content: " \E60A");
 }
 %nypl-icon-arrow-down:after {
-  @include nypl-icon;
-  content:" \E629";
+  @include nypl-icon($as-font: true, $font-content: " \E629");
 }
 %nypl-icon-arrow-left:after {
-  @include nypl-icon;
-  content:" \E62A";
+  @include nypl-icon($as-font: true, $font-content: " \E62A");
 }
 %nypl-icon-arrow-right:after {
-  @include nypl-icon;
-  content:" \E62B";
+  @include nypl-icon($as-font: true, $font-content: " \E62B");
 }
 %nypl-icon-circle-arrow-left:after {
-  @include nypl-icon;
-  content:" \E60B";
+  @include nypl-icon($as-font: true, $font-content: " \E60B");
 }
 %nypl-icon-circle-arrow-right:after {
-  @include nypl-icon;
-  content:" \E60C";
+  @include nypl-icon($as-font: true, $font-content: " \E60C");
 }
 %nypl-icon-circle-wedge-left:after {
-  @include nypl-icon;
-  content:" \E60D";
+  @include nypl-icon($as-font: true, $font-content: " \E60D");
 }
 %nypl-icon-circle-wedge-right:after {
-  @include nypl-icon;
-  content:" \E60E";
+  @include nypl-icon($as-font: true, $font-content: " \E60E");
 }
 %nypl-icon-circle-more:after {
-  @include nypl-icon;
-  content:" \E60F";
+  @include nypl-icon($as-font: true, $font-content: " \E60F");
 }
 %nypl-icon-more-dots:after {
-  @include nypl-icon;
-  content:" \E610";
+  @include nypl-icon($as-font: true, $font-content: " \E610");
 }
 %nypl-icon-circle-x:after {
-  @include nypl-icon;
-  content:" \E612";
+  @include nypl-icon($as-font: true, $font-content: " \E612");
 }
 %nypl-icon-circle-check:after {
-  @include nypl-icon;
-  content:" \E613";
+  @include nypl-icon($as-font: true, $font-content: " \E613");
 }
 %nypl-icon-check-solo:after {
-  @include nypl-icon;
-  content:" \E628";
+  @include nypl-icon($as-font: true, $font-content: " \E628");
 }

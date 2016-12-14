@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1155,39 +1154,27 @@ footer ul {
   .results-pagination .page-count {
     text-align: center;
     width: 30%; }
-  .results-pagination a:after {
+  .results-pagination a svg {
+    background-color: white;
+    display: inline-block;
+    fill: #100f0e;
+    width: 1em;
+    speak: none;
     display: block;
+    fill: #e32b31;
+    float: right;
     font-size: 3rem;
     line-height: 0.9; }
+    .results-pagination a svg.reversed {
+      background-color: inherit;
+      fill: white; }
     @media (max-width: 965px) {
-      .results-pagination a:after {
+      .results-pagination a svg {
         float: none; } }
-  .results-pagination a:first-child:after {
-    content: " ";
-    font-family: nypl-moon;
-    line-height: 1;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    speak: none;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  .results-pagination a:first-child svg {
     float: left; }
   .results-pagination a:last-child {
     text-align: right; }
-    .results-pagination a:last-child:after {
-      content: " ";
-      font-family: nypl-moon;
-      line-height: 1;
-      font-style: normal;
-      font-weight: 400;
-      font-variant: normal;
-      speak: none;
-      text-transform: none;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      float: right; }
 
 table, .views-table {
   display: table;

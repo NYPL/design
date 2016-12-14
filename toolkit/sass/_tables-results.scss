@@ -53,8 +53,11 @@
     width: 30%;
   }
 
-  a:after {
+  a svg {
+    @include nypl-icon;
     display: block;
+    fill: $linkcolor;
+    float: right;
     font-size: 3rem;
     line-height: 0.9;
 
@@ -63,21 +66,12 @@
     }
   }
 
-  a:first-child:after {
-    @include nypl-icon($as-font: true, $font-content: " \E62A");
+  a:first-child svg {
     float: left;
   }
 
   a:last-child {
     text-align: right;
-
-    &:after {
-      @include nypl-icon($as-font: true, $font-content: " \E62B");
-      float: right;
-    }
-  }
-
-  .next {
   }
 }
 

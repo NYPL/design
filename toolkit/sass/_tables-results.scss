@@ -58,8 +58,7 @@
     display: block;
     fill: $linkcolor;
     float: right;
-    font-size: 3rem;
-    line-height: 0.9;
+    width: 2.6rem;
 
     @include media($mobile-breakpoint) {
       float: none;

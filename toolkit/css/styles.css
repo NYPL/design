@@ -1163,8 +1163,7 @@ footer ul {
     display: block;
     fill: #e32b31;
     float: right;
-    font-size: 3rem;
-    line-height: 0.9; }
+    width: 2.6rem; }
     .results-pagination a svg.reversed {
       background-color: inherit;
       fill: white; }

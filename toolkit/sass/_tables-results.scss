@@ -27,6 +27,10 @@
     padding: 0;
     text-decoration: none;
     vertical-align: super;
+
+    &:hover {
+      color: $linkcolor;
+    }
   }
 }
 
@@ -40,37 +44,47 @@
     display: block;
     float: left;
     text-decoration: none;
-    width: 35%;
+    width: 30%;
     @include clearfix;
+  }
+
+  .page-count {
+    text-align: center;
+    width: 40%;
 
     @include media($mobile-breakpoint) {
       font-size: 1rem;
     }
   }
 
-  .page-count {
-    text-align: center;
-    width: 30%;
-  }
-
-  a svg {
-    @include nypl-icon;
-    display: block;
-    fill: $linkcolor;
-    float: right;
-    width: 2.6rem;
-
-    @include media($mobile-breakpoint) {
-      float: none;
-    }
+  a:last-child {
+    text-align: right;
   }
 
   a:first-child svg {
     float: left;
   }
 
-  a:last-child {
-    text-align: right;
+  a {
+    svg {
+      @include nypl-icon;
+      display: block;
+      fill: $linkcolor;
+      float: right;
+      width: 2.6rem;
+    }
+
+    @include media($mobile-breakpoint) {
+      line-height: 1.3;
+
+      &:first-child svg {
+        float: none;
+      }
+
+      &:last-child svg {
+        margin-left: 100%;
+      }
+    }
   }
 }
 

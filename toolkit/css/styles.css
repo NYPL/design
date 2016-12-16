@@ -1030,7 +1030,12 @@ footer ul {
 .full {
   width: 100%;
   float: none;
-  min-height: 1rem; }
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .full:before, .full:after {
     content: "";
     display: table; }
@@ -1039,12 +1044,18 @@ footer ul {
   @media (max-width: 965px) {
     .full {
       float: none;
+      padding: 0;
       width: auto; } }
 
 .quarter {
   width: 25%;
   float: left;
-  min-height: 1rem; }
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .quarter:before, .quarter:after {
     content: "";
     display: table; }
@@ -1053,12 +1064,18 @@ footer ul {
   @media (max-width: 965px) {
     .quarter {
       float: none;
+      padding: 0;
       width: auto; } }
 
 .third {
   width: 33.33333%;
   float: left;
-  min-height: 1rem; }
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .third:before, .third:after {
     content: "";
     display: table; }
@@ -1067,12 +1084,18 @@ footer ul {
   @media (max-width: 965px) {
     .third {
       float: none;
+      padding: 0;
       width: auto; } }
 
 .two-third {
   width: 66.66667%;
   float: left;
-  min-height: 1rem; }
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .two-third:before, .two-third:after {
     content: "";
     display: table; }
@@ -1081,12 +1104,18 @@ footer ul {
   @media (max-width: 965px) {
     .two-third {
       float: none;
+      padding: 0;
       width: auto; } }
 
 .three-quarter {
   width: 75%;
   float: left;
-  min-height: 1rem; }
+  margin-bottom: 2rem;
+  min-height: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .three-quarter:before, .three-quarter:after {
     content: "";
     display: table; }
@@ -1095,15 +1124,8 @@ footer ul {
   @media (max-width: 965px) {
     .three-quarter {
       float: none;
+      padding: 0;
       width: auto; } }
-
-.inner {
-  margin-bottom: 2rem;
-  min-height: 1rem;
-  padding: 0 0.5rem 0 0.5rem; }
-  @media (max-width: 965px) {
-    .inner {
-      padding: 0; } }
 
 .results-summary {
   line-height: 1;

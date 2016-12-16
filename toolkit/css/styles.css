@@ -557,6 +557,7 @@ a.inverted:hover, a.inverted:visited:hover {
       background-color: #e32b31;
       display: inline-block;
       fill: white;
+      height: 1em;
       width: 1em;
       speak: none; }
       .main-menu-toggle .nypl-icon.reversed {
@@ -688,6 +689,7 @@ header .service-buttons {
       background-color: #e32b31;
       display: inline-block;
       fill: white;
+      height: 1em;
       width: 1em;
       speak: none;
       transition: all 0.2s; }
@@ -752,6 +754,7 @@ header .login-toggle {
       background-color: #7B756F;
       display: inline-block;
       fill: white;
+      height: 1em;
       width: 1em;
       speak: none;
       transition: all 0.2s; }
@@ -1186,6 +1189,7 @@ footer ul {
     background-color: white;
     display: inline-block;
     fill: #100f0e;
+    height: 1em;
     width: 1em;
     speak: none;
     display: block;

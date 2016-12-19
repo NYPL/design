@@ -989,6 +989,7 @@ header li.search #main-search {
 .squared-button {
   border-radius: 3px;
   border-color: #100f0e;
+  color: #100f0e;
   padding: 8px 18px; }
 
 .rounded-button {
@@ -1000,7 +1001,7 @@ header li.search #main-search {
   text-transform: uppercase; }
   .rounded-button:hover {
     background-color: #e32b31;
-    color: #FFF; }
+    color: #fff; }
 
 footer {
   background-color: #54514A;

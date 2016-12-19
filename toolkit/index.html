@@ -46,6 +46,7 @@
       <li><a href="#forms">Forms</a></li>
       <li><a href="#results">Tables and Data</a></li>
       <li><a href="#general">General Microformats</a></li>
+      <li><a href="#buttons">Buttons</a></li>
     </ul>
 
     <a name="grid"></a>
@@ -411,28 +412,28 @@
     <p><strong>NOTE:</strong> Mobile support for english only for now.</p>
 
     <div class="toolkit-example">
-    <table class="location-hours">
-      <tbody>
-        <tr>
-    <th>Monday</th>
-    <th class="current">Tuesday</th>
-    <th>Wednesday</th>
-    <th>Thursday</th>
-    <th>Friday</th>
-    <th>Saturday</th>
-    <th>Sunday</th>
-        </tr>
-        <tr>
-    <td>10:00 AM - <br>5:45 PM</td>
-    <td>10:00 AM - <br>7:45 PM</td>
-    <td>10:00 AM - <br>7:45 PM</td>
-    <td>10:00 AM - <br>5:45 PM</td>
-    <td>10:00 AM - <br>5:45 PM</td>
-    <td>10:00 AM - <br>5:45 PM</td>
-    <td>1:00 PM - <br>4:45 PM</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="location-hours">
+        <tbody>
+          <tr>
+      <th>Monday</th>
+      <th class="current">Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+          </tr>
+          <tr>
+      <td>10:00 AM - <br>5:45 PM</td>
+      <td>10:00 AM - <br>7:45 PM</td>
+      <td>10:00 AM - <br>7:45 PM</td>
+      <td>10:00 AM - <br>5:45 PM</td>
+      <td>10:00 AM - <br>5:45 PM</td>
+      <td>10:00 AM - <br>5:45 PM</td>
+      <td>1:00 PM - <br>4:45 PM</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <pre><code class="scss">
     .location-hours {
@@ -463,6 +464,31 @@
       &lt;/tbody&gt;
     &lt;/table&gt;
     </code></pre>
+
+
+    <h2 id="buttons">General Button Styles</h2>
+
+    <h3>Square Button</h3>
+    <p>A very generic squarish button w/ very a very simple inverted hover state
+    </p>
+      <div class="toolkit-example">
+        <button class="squared-button">Button</button>
+      </div>
+      <pre><code class="scss">
+        .squaredButton {
+          @include squared-button;
+      }
+      </code></pre>
+    <h3>Rounded Button</h3>
+    <p>A very simple version of the existent rounded button style. It can be configured as such</p>
+      <div class="toolkit-example">
+        <button class="rounded-button">Button</button>
+      </div>
+      <pre><code class="scss">
+      .roundedButton {
+        @include roundedButton;
+      }
+      </code></pre>
 
     </div>
 

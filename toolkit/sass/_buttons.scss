@@ -1,5 +1,59 @@
 // Buttons stylings
+@warn 'TODO: move button style in _forms.scss to this partial';
 
-$buttontextcolor: #333;
+@mixin buttonDefault {
+  background-color: $buttonBackgroundColor;
+  border: $buttonTextColor solid 2px;
+  color: $buttonTextColor;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700; // equivalent of a medium weight
+  text-transform: uppercase;
 
-$buttonbackgroundcolor: white;
+  &:focus {
+    box-shadow: 0 0 0 4px $focuscolor;
+    outline: none;
+  }
+}
+
+@mixin squaredButton ($button-type-color: $buttonTextColor, $button-border-color: $buttonTextColor, $button-background-color: $buttonBackgroundColor) {
+  border-radius: 3px;
+  border-color: $button-border-color;
+  color: $button-type-color;
+  padding: 8px 18px;
+}
+
+// we might want to have the flexibilty to decied what colors are
+// used in a given button, hence the arguments:
+@mixin roundedButton ($button-type-color: $nyplred, $button-border-color: $nyplred, $button-background-color: $buttonBackgroundColor) {
+  background-color: $button-background-color;
+  border-color: $button-border-color;
+  border-radius: 26px;
+  color: $button-type-color;
+  padding: 8px 18px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $button-border-color;
+    color: $buttonBackgroundColor;
+  }
+}
+
+%button-default {
+  @include buttonDefault;
+
+  &:hover {
+    background: invert($buttonBackgroundColor);
+    color: invert($buttonTextColor);
+  }
+}
+
+.squared-button {
+  @extend %button-default;
+  @include squaredButton;
+}
+
+.rounded-button {
+  @extend %button-default;
+  @include roundedButton;
+}

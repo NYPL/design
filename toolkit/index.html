@@ -469,25 +469,38 @@
     <h2 id="buttons">General Button Styles</h2>
 
     <h3>Square Button</h3>
-    <p>A very generic squarish button w/ very a very simple inverted hover state
+    <p>A very generic squarish button w/ very a very simple inverted hover state. Also a version that utilizes a blue button pattern.
     </p>
       <div class="toolkit-example">
         <button class="squared-button">Button</button>
+        <button class="request-button">Request a Button</button>
       </div>
       <pre><code class="scss">
-        .squaredButton {
-          @include squared-button;
-      }
+        .squared-button {
+          @extend %button-default;
+          @include squaredButton;
+          }
+        }
+        .request-button {
+          @extend %button-default;
+          @include squaredButton ($buttonBackgroundColor, $nyplbluedark, $nyplbluedark);
+          }
+        }
       </code></pre>
+      <pre><code class="html">
+      &lt;button class=&quot;squared-button&quot;&gt;Button&lt;/button&gt;
+      &lt;button class=&quot;request-button&quot;&gt;Request a Button&lt;/button&gt;
+    </code></pre>
     <h3>Rounded Button</h3>
     <p>A very simple version of the existent rounded button style.</p>
       <div class="toolkit-example">
         <button class="rounded-button">Button</button>
       </div>
       <pre><code class="scss">
-      .roundedButton {
-        @include roundedButton;
-      }
+        .rounded-button {
+          @extend %button-default;
+          @include roundedButton;
+        }
       </code></pre>
 
     </div>

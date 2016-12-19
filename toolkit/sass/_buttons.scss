@@ -1,5 +1,6 @@
 // Buttons stylings
-@warn 'TODO: move button style in _forms.scss to this partial';
+//TODO: move button style in _forms.scss to this partial
+//      add in styles for request button
 
 @mixin buttonDefault {
   background-color: $buttonBackgroundColor;
@@ -9,16 +10,12 @@
   font-size: .8rem;
   font-weight: 700; // equivalent of a medium weight
   text-transform: uppercase;
-
-  &:focus {
-    box-shadow: 0 0 0 4px $focuscolor;
-    outline: none;
-  }
 }
 
 @mixin squaredButton ($button-type-color: $buttonTextColor, $button-border-color: $buttonTextColor, $button-background-color: $buttonBackgroundColor) {
-  border-radius: 3px;
+  background-color: $button-background-color;
   border-color: $button-border-color;
+  border-radius: 3px;
   color: $button-type-color;
   padding: 8px 18px;
 }
@@ -31,7 +28,6 @@
   border-radius: 26px;
   color: $button-type-color;
   padding: 8px 18px;
-  text-transform: uppercase;
 
   &:hover {
     background-color: $button-border-color;
@@ -46,6 +42,11 @@
     background: invert($buttonBackgroundColor);
     color: invert($buttonTextColor);
   }
+
+  &:focus {
+    box-shadow: 0 0 0 4px $focuscolor;
+    outline: none;
+  }
 }
 
 .squared-button {
@@ -56,4 +57,15 @@
 .rounded-button {
   @extend %button-default;
   @include roundedButton;
+}
+
+.request-button {
+  @extend %button-default;
+  @include squaredButton ($buttonBackgroundColor, $nyplbluedark, $nyplbluedark);
+
+  &:hover {
+    background: $buttonBackgroundColor;
+    border-color: $nyplbluedark;
+    color: $nyplbluedark;
+  }
 }

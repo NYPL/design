@@ -477,13 +477,11 @@
       </div>
       <pre><code class="scss">
         .squared-button {
-          @extend %button-default;
           @include squaredButton;
           }
         }
         .request-button {
-          @extend %button-default;
-          @include squaredButton ($buttonBackgroundColor, $nyplbluedark, $nyplbluedark);
+          @include squaredButton ($button-text-color, $buttonTextColor, $button-border-color);
           }
         }
       </code></pre>
@@ -498,11 +496,12 @@
       </div>
       <pre><code class="scss">
         .rounded-button {
-          @extend %button-default;
           @include roundedButton;
         }
       </code></pre>
-
+      <pre><code class="html">
+      &lt;button class=&quot;rounded-button&quot;&gt;Button&lt;/button&gt;
+    </code></pre>
     </div>
 
   </div>

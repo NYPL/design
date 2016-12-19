@@ -12,21 +12,33 @@
   text-transform: uppercase;
 }
 
-@mixin squaredButton ($button-type-color: $buttonTextColor, $button-border-color: $buttonTextColor, $button-background-color: $buttonBackgroundColor) {
+@mixin squaredButton ($button-text-color: $buttonTextColor, $button-border-color: $buttonTextColor, $button-background-color: $buttonBackgroundColor) {
+  @include buttonDefault;
   background-color: $button-background-color;
   border-color: $button-border-color;
   border-radius: 3px;
-  color: $button-type-color;
+  color: $button-text-color;
   padding: 8px 18px;
+
+  &:hover {
+    background: invert($buttonBackgroundColor);
+    color: invert($buttonTextColor);
+    }
+
+  &:focus {
+    box-shadow: 0 0 0 4px $focuscolor;
+    outline: none;
+  }
 }
 
 // we might want to have the flexibilty to decied what colors are
 // used in a given button, hence the arguments:
-@mixin roundedButton ($button-type-color: $nyplred, $button-border-color: $nyplred, $button-background-color: $buttonBackgroundColor) {
+@mixin roundedButton ($button-text-color: $nyplred, $button-border-color: $nyplred, $button-background-color: $buttonBackgroundColor) {
+  @include buttonDefault;
   background-color: $button-background-color;
   border-color: $button-border-color;
   border-radius: 26px;
-  color: $button-type-color;
+  color: $button-text-color;
   padding: 8px 18px;
 
   &:hover {
@@ -37,30 +49,17 @@
 
 %button-default {
   @include buttonDefault;
-
-  &:hover {
-    background: invert($buttonBackgroundColor);
-    color: invert($buttonTextColor);
   }
-
-  &:focus {
-    box-shadow: 0 0 0 4px $focuscolor;
-    outline: none;
-  }
-}
 
 .squared-button {
-  @extend %button-default;
   @include squaredButton;
 }
 
 .rounded-button {
-  @extend %button-default;
   @include roundedButton;
 }
 
 .request-button {
-  @extend %button-default;
   @include squaredButton ($buttonBackgroundColor, $nyplbluedark, $nyplbluedark);
 
   &:hover {

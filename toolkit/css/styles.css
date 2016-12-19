@@ -971,29 +971,34 @@ header li.search #main-search {
   src: url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.eot?viik85#iefix") format("embedded-opentype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff2?viik85") format("woff2"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.ttf?viik85") format("truetype"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.woff?viik85") format("woff"), url("//d2znry4lg8s0tq.cloudfront.net/nypl-moon/nypl-moon.svg?viik85#nypl-moon") format("svg");
   font-weight: 400;
   font-style: normal; }
-.squared-button, .rounded-button, .request-button {
+.squared-button {
   background-color: #fff;
   border: #100f0e solid 2px;
   color: #100f0e;
   cursor: pointer;
   font-size: .8rem;
   font-weight: 700;
-  text-transform: uppercase; }
-  .squared-button:hover, .rounded-button:hover, .request-button:hover {
-    background: black;
-    color: #eff0f1; }
-  .squared-button:focus, .rounded-button:focus, .request-button:focus {
-    box-shadow: 0 0 0 4px #ffb81d;
-    outline: none; }
-
-.squared-button {
+  text-transform: uppercase;
   background-color: #fff;
   border-color: #100f0e;
   border-radius: 3px;
   color: #100f0e;
   padding: 8px 18px; }
+  .squared-button:hover {
+    background: black;
+    color: #eff0f1; }
+  .squared-button:focus {
+    box-shadow: 0 0 0 4px #ffb81d;
+    outline: none; }
 
 .rounded-button {
+  background-color: #fff;
+  border: #100f0e solid 2px;
+  color: #100f0e;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: #fff;
   border-color: #e32b31;
   border-radius: 26px;
@@ -1004,11 +1009,24 @@ header li.search #main-search {
     color: #fff; }
 
 .request-button {
+  background-color: #fff;
+  border: #100f0e solid 2px;
+  color: #100f0e;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: #1980a9;
   border-color: #1980a9;
   border-radius: 3px;
   color: #fff;
   padding: 8px 18px; }
+  .request-button:hover {
+    background: black;
+    color: #eff0f1; }
+  .request-button:focus {
+    box-shadow: 0 0 0 4px #ffb81d;
+    outline: none; }
   .request-button:hover {
     background: #fff;
     border-color: #1980a9;

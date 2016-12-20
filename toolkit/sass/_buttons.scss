@@ -1,0 +1,63 @@
+// Buttons stylings
+//TODO: move button style in _forms.scss to this partial
+//      add in styles for request button
+
+@mixin button-default {
+  background-color: $buttonBackgroundColor;
+  border: $buttonTextColor solid 2px;
+  color: $buttonTextColor;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700; // equivalent of a medium weight
+  text-transform: uppercase;
+
+  &:focus {
+    box-shadow: 0 0 0 4px $focuscolor;
+    outline: none;
+  }
+}
+
+@mixin basic-button ($button-text-color: $buttonTextColor, $button-border-color: $buttonTextColor, $button-background-color: $buttonBackgroundColor, $border-radius: 0) {
+  @include button-default;
+  background-color: $button-background-color;
+  border-color: $button-border-color;
+  border-radius: $border-radius;
+  color: $button-text-color;
+  padding: 8px 18px;
+
+  &:hover {
+    background: invert($buttonBackgroundColor);
+    color: invert($buttonTextColor);
+    }
+}
+
+// we might want to have the flexibilty to decied what colors are
+// used in a given button, hence the arguments:
+@mixin rounded-button ($button-text-color: $nyplred, $button-border-color: $nyplred, $button-background-color: $buttonBackgroundColor) {
+  @include button-default;
+  background-color: $button-background-color;
+  border-color: $button-border-color;
+  border-radius: 26px;
+  color: $button-text-color;
+  padding: 8px 18px;
+
+  &:hover {
+    background-color: $button-border-color;
+    color: $buttonBackgroundColor;
+  }
+}
+
+
+%button-default {
+  @include button-default;
+  }
+
+@mixin request-button {
+  @include basic-button ($buttonBackgroundColor, $nyplbluedark, $nyplbluedark, 3px);
+
+  &:hover {
+    background: $buttonBackgroundColor;
+    border-color: $nyplbluedark;
+    color: $nyplbluedark;
+  }
+}

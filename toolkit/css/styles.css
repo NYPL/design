@@ -1443,4 +1443,68 @@ fieldset.radiogroup {
     height: initial;
     margin-right: 0.25rem; }
 
+.your-button-class {
+  background-color: #fff;
+  border: #100f0e solid 2px;
+  color: #100f0e;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-color: #100f0e;
+  border-radius: 0;
+  color: #100f0e;
+  padding: 8px 18px; }
+  .your-button-class:focus {
+    box-shadow: 0 0 0 4px #ffb81d;
+    outline: none; }
+  .your-button-class:hover {
+    background: black;
+    color: #eff0f1; }
+
+.request-button {
+  background-color: #fff;
+  border: #100f0e solid 2px;
+  color: #100f0e;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #1980a9;
+  border-color: #1980a9;
+  border-radius: 3px;
+  color: #fff;
+  padding: 8px 18px; }
+  .request-button:focus {
+    box-shadow: 0 0 0 4px #ffb81d;
+    outline: none; }
+  .request-button:hover {
+    background: black;
+    color: #eff0f1; }
+  .request-button:hover {
+    background: #fff;
+    border-color: #1980a9;
+    color: #1980a9; }
+
+.your-rounded-button {
+  background-color: #fff;
+  border: #100f0e solid 2px;
+  color: #100f0e;
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-color: #e32b31;
+  border-radius: 26px;
+  color: #e32b31;
+  padding: 8px 18px; }
+  .your-rounded-button:focus {
+    box-shadow: 0 0 0 4px #ffb81d;
+    outline: none; }
+  .your-rounded-button:hover {
+    background-color: #e32b31;
+    color: #fff; }
+
 /*# sourceMappingURL=styles.css.map */

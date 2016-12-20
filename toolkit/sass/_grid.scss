@@ -1,5 +1,5 @@
 @import "measurements";
-@import "css3";
+//@import "css3";
 @import "microformats-mixins";
 @import "media-queries";
 
@@ -31,7 +31,8 @@
   padding: 0 0.5rem 0 0.5rem;
   width: $width;
   @include clearfix;
-  @include box-sizing(border-box);
+  @warn "missing mixin here...";
+  //@include box-sizing(border-box);
 
   @include media($mobile-breakpoint) {
     float: none;

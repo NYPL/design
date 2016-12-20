@@ -86,3 +86,16 @@ fieldset.alphabetical {
 fieldset.radiogroup {
   @include radiobutton-fieldset;
 }
+
+// buttons
+.your-button-class {
+  @include basic-button;
+}
+
+.request-button {
+  @include request-button;
+}
+
+.your-rounded-button {
+  @include rounded-button;
+}

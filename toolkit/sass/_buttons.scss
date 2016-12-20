@@ -2,7 +2,7 @@
 //TODO: move button style in _forms.scss to this partial
 //      add in styles for request button
 
-@mixin buttonDefault {
+@mixin button-default {
   background-color: $buttonBackgroundColor;
   border: $buttonTextColor solid 2px;
   color: $buttonTextColor;
@@ -10,20 +10,6 @@
   font-size: .8rem;
   font-weight: 700; // equivalent of a medium weight
   text-transform: uppercase;
-}
-
-@mixin squaredButton ($button-text-color: $buttonTextColor, $button-border-color: $buttonTextColor, $button-background-color: $buttonBackgroundColor) {
-  @include buttonDefault;
-  background-color: $button-background-color;
-  border-color: $button-border-color;
-  border-radius: 3px;
-  color: $button-text-color;
-  padding: 8px 18px;
-
-  &:hover {
-    background: invert($buttonBackgroundColor);
-    color: invert($buttonTextColor);
-    }
 
   &:focus {
     box-shadow: 0 0 0 4px $focuscolor;
@@ -31,10 +17,24 @@
   }
 }
 
+@mixin basic-button ($button-text-color: $buttonTextColor, $button-border-color: $buttonTextColor, $button-background-color: $buttonBackgroundColor, $border-radius: 0) {
+  @include button-default;
+  background-color: $button-background-color;
+  border-color: $button-border-color;
+  border-radius: $border-radius;
+  color: $button-text-color;
+  padding: 8px 18px;
+
+  &:hover {
+    background: invert($buttonBackgroundColor);
+    color: invert($buttonTextColor);
+    }
+}
+
 // we might want to have the flexibilty to decied what colors are
 // used in a given button, hence the arguments:
-@mixin roundedButton ($button-text-color: $nyplred, $button-border-color: $nyplred, $button-background-color: $buttonBackgroundColor) {
-  @include buttonDefault;
+@mixin rounded-button ($button-text-color: $nyplred, $button-border-color: $nyplred, $button-background-color: $buttonBackgroundColor) {
+  @include button-default;
   background-color: $button-background-color;
   border-color: $button-border-color;
   border-radius: 26px;
@@ -47,20 +47,13 @@
   }
 }
 
+
 %button-default {
-  @include buttonDefault;
+  @include button-default;
   }
 
-.squared-button {
-  @include squaredButton;
-}
-
-.rounded-button {
-  @include roundedButton;
-}
-
-.request-button {
-  @include squaredButton ($buttonBackgroundColor, $nyplbluedark, $nyplbluedark);
+@mixin request-button {
+  @include basic-button ($buttonBackgroundColor, $nyplbluedark, $nyplbluedark, 3px);
 
   &:hover {
     background: $buttonBackgroundColor;

@@ -24,11 +24,12 @@
   }
 }
 
-@mixin column-type($float: left) {
+@mixin column-type($float: left, $width: auto) {
   float: $float;
   margin-bottom: 2rem;
   min-height: 1rem;
   padding: 0 0.5rem 0 0.5rem;
+  width: $width;
   @include clearfix;
   @include box-sizing(border-box);
 
@@ -40,33 +41,27 @@
 }
 
 @mixin column-full {
-  width: $full-width;
-  @include column-type(none);
+  @include column-type($float: none);
 }
 
 @mixin column-half {
-  width: $half;
-  @include column-type;
+  @include column-type($width: $half);
 }
 
 @mixin column-one-quarter {
-  width: $one-quarter;
-  @include column-type;
+  @include column-type($width: $one-quarter);
 }
 
 @mixin column-one-third {
-  width: $one-third;
-  @include column-type;
+  @include column-type($width: $one-third);
 }
 
 @mixin column-two-thirds {
-  width: $two-thirds;
-  @include column-type;
+  @include column-type($width: $two-thirds);
 }
 
 @mixin column-three-quarters {
-  width: $three-quarters;
-  @include column-type;
+  @include column-type($width: $three-quarters);
 }
 
 @mixin inner-block {
